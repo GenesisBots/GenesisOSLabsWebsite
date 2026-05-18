@@ -1,12 +1,39 @@
 console.log("GenesisOS Labs site loaded.");
 
-const footerTemplate = `
+const OFFICIAL_LOGO = "assets/img/GenesisOSLabs G Logo v1 05132026.png";
+
+function getAssetPrefix() {
+  const parts = window.location.pathname.replace(/\\/g, "/").split("/").filter(Boolean);
+  if (!parts.length) return "";
+  const last = parts[parts.length - 1];
+  const dirDepth = last.includes(".") ? parts.length - 1 : parts.length;
+  return dirDepth <= 0 ? "" : "../".repeat(dirDepth);
+}
+
+function getOfficialLogoSrc() {
+  return `${getAssetPrefix()}${OFFICIAL_LOGO}`;
+}
+
+function applyOfficialBrandLogos(container) {
+  if (!container) return;
+  const logoSrc = getOfficialLogoSrc();
+  container.querySelectorAll(".brand-logo, .brand-logo-legal").forEach((img) => {
+    img.src = logoSrc;
+    img.alt = "GenesisOS Labs Logo";
+    img.loading = "lazy";
+  });
+}
+
+function getFooterTemplate() {
+  const logoSrc = getOfficialLogoSrc();
+  return `
 <footer class="global-footer" data-global-footer>
   <div class="global-footer__inner">
     <div class="footer-brand">
-      <img src="/assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs G Logo"
-           class="brand-logo">
+      <img src="${logoSrc}"
+           alt="GenesisOS Labs Logo"
+           class="brand-logo"
+           loading="lazy">
     </div>
     <section class="global-footer__column" aria-labelledby="footer-products">
       <h2 id="footer-products">Products</h2>
@@ -40,13 +67,15 @@ const footerTemplate = `
     </section>
   </div>
   <div class="footer-legal global-footer__legal">
-    <img src="/assets/img/GenesisOSLabs G Logo v1 05132026.png"
-         alt="GenesisOS Labs G Logo"
-         class="brand-logo-legal">
+    <img src="${logoSrc}"
+         alt="GenesisOS Labs Logo"
+         class="brand-logo-legal"
+         loading="lazy">
     <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
   </div>
 </footer>
 `;
+}
 
 function mountGlobalFooter(markup) {
   const existingFooters = document.querySelectorAll(".footer, .global-footer");
@@ -60,13 +89,16 @@ function mountGlobalFooter(markup) {
   root.setAttribute("aria-live", "off");
   root.innerHTML = markup;
   body.appendChild(root);
+  applyOfficialBrandLogos(root);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  applyOfficialBrandLogos(document.querySelector("header"));
+
   fetch("/components/GlobalFooter.html")
     .then((response) => (response.ok ? response.text() : Promise.reject(new Error("Footer component unavailable"))))
     .then((markup) => mountGlobalFooter(markup))
-    .catch(() => mountGlobalFooter(footerTemplate));
+    .catch(() => mountGlobalFooter(getFooterTemplate()));
 
   const currentFile = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll("nav .links a[href]");
