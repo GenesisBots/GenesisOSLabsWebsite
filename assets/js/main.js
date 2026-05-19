@@ -44,6 +44,7 @@ function getFooterTemplate() {
         <li><a href="/gbots.html">GBots</a></li>
         <li><a href="/coliseum.html">Coliseum</a></li>
         <li><a href="/gcrm.html">GCRM</a></li>
+        <li><a href="/marketplace.html">Marketplace</a></li>
         <li><a href="/pricing.html">Pricing</a></li>
       </ul>
     </section>

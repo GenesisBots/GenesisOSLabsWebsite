@@ -960,3 +960,33 @@ img {
     gap: 20px;
   }
 }
+
+/* Marketplace page */
+.marketplace-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.marketplace-coming-soon {
+  font-size: 18px;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+
+.marketplace-note {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 10px 0 0;
+  max-width: none;
+}
+
+.marketplace-grid .card .primary-btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+}
