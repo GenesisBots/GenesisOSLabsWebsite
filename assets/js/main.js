@@ -41,6 +41,7 @@ function getFooterTemplate() {
         <li><a href="/genesisOS.html">GenesisOS</a></li>
         <li><a href="/healthcare.html">Healthcare</a></li>
         <li><a href="/gbots.html">GBots</a></li>
+        <li><a href="/coliseum.html">Coliseum</a></li>
         <li><a href="/gcrm.html">GCRM</a></li>
         <li><a href="/pricing.html">Pricing</a></li>
       </ul>
@@ -55,6 +56,15 @@ function getFooterTemplate() {
       <h2 id="footer-company">Company</h2>
       <ul>
         <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+      </ul>
+    </section>
+    <section class="global-footer__column" aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
       </ul>
     </section>
     <section class="global-footer__column" aria-labelledby="footer-legal">

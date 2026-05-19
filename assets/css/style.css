@@ -867,3 +867,61 @@ img {
     text-align: center;
   }
 }
+
+/* Coliseum page */
+.coliseum-hero {
+  position: relative;
+}
+
+.coliseum-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.coliseum-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.coliseum-hero__title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: #e5e7eb;
+  text-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
+}
+
+.coliseum-hero__subtitle {
+  font-size: 1.15rem;
+  color: #00f0ff;
+  margin: 0.35rem 0 1rem;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.35);
+}
+
+.coliseum-embed {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coliseum-embed iframe,
+.coliseum-embed .twitter-tweet {
+  margin: 0 auto !important;
+  max-width: 100%;
+}
+
+.coliseum-cta .primary-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
