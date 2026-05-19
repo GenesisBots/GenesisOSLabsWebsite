@@ -40,6 +40,7 @@ function getFooterTemplate() {
       <ul>
         <li><a href="/genesisOS.html">GenesisOS</a></li>
         <li><a href="/healthcare.html">Healthcare</a></li>
+        <li><a href="/real-estate.html">Real Estate</a></li>
         <li><a href="/gbots.html">GBots</a></li>
         <li><a href="/coliseum.html">Coliseum</a></li>
         <li><a href="/gcrm.html">GCRM</a></li>

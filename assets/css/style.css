@@ -925,3 +925,38 @@ img {
   text-decoration: none;
   text-align: center;
 }
+
+/* Real estate page */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.form-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.genesis-inline-image .form-image {
+  min-height: auto;
+  transform: none;
+  object-fit: contain;
+}
+
+.rwa-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .rwa-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
