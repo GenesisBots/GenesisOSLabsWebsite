@@ -15,6 +15,98 @@
   <meta name="twitter:description" content="Healthcare automation on GenesisOS from GenesisOS Labs—secure workflows, clearer handoffs, and options for local or cloud deployment.">
   <link rel="canonical" href="https://GenesisOSLabs.com/healthcare.html">
   <link rel="stylesheet" href="assets/css/style.css?v=1009">
+  <style>
+    .os-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 40px;
+      margin-top: 22px;
+    }
+    @media (max-width: 900px) {
+      .os-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .os-tile {
+      background: #0b0f1a;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 0;
+      box-shadow:
+        0 0 14px rgba(0, 234, 255, 0.05),
+        inset 0 0 18px rgba(168, 85, 247, 0.04);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .os-tile:hover {
+      border-color: rgba(0, 234, 255, 0.35);
+      box-shadow:
+        0 0 22px rgba(0, 234, 255, 0.18),
+        inset 0 0 22px rgba(168, 85, 247, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .os-tile .os-header h3 {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      padding-bottom: 0;
+      line-height: 1.2;
+      text-shadow: 0 0 12px rgba(0, 234, 255, 0.18);
+    }
+    .os-tile .os-header h3::after {
+      content: none;
+    }
+
+    .os-underline {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #00eaff, #a855f7);
+      margin-top: 8px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+    }
+
+    .tweet-frame {
+      margin-top: 20px;
+      overflow: hidden;
+      height: 360px;
+      position: relative;
+    }
+    .tweet-frame blockquote.twitter-tweet {
+      transform: scale(0.5);
+      transform-origin: top left;
+      width: 200% !important;
+      max-width: none !important;
+      margin: 0 !important;
+    }
+
+    .os-tile > p {
+      margin: 20px 0 0;
+      color: #9ca3af;
+      font-size: 14px;
+      line-height: 1.65;
+      font-style: italic;
+    }
+
+    @media (max-width: 700px) {
+      .os-tile {
+        padding: 20px;
+      }
+      .os-tile .os-header h3 {
+        font-size: 18px;
+      }
+      .tweet-frame {
+        height: 320px;
+      }
+    }
+  </style>
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -99,6 +191,45 @@
     </div>
   </section>
 
+  <section class="section" aria-labelledby="gchiroos-title">
+    <h2 id="gchiroos-title">GChiroOS</h2>
+
+    <div class="os-grid">
+
+      <!-- LEFT TILE — REAL CONTENT -->
+      <div class="os-tile">
+        <div class="os-header">
+          <h3>GChiroOS</h3>
+          <div class="os-underline"></div>
+        </div>
+        <div class="tweet-frame">
+          <blockquote class="twitter-tweet">
+            <a href="https://x.com/GenesisOSLabs/status/2057805160143901073?s=20"></a>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- MIDDLE TILE — COMING SOON -->
+      <div class="os-tile">
+        <div class="os-header">
+          <h3>Coming soon</h3>
+          <div class="os-underline"></div>
+        </div>
+        <p>Demo video coming soon.</p>
+      </div>
+
+      <!-- RIGHT TILE — COMING SOON -->
+      <div class="os-tile">
+        <div class="os-header">
+          <h3>Coming soon</h3>
+          <div class="os-underline"></div>
+        </div>
+        <p>Demo video coming soon.</p>
+      </div>
+
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="hc-how">
     <h2 id="hc-how">How it works</h2>
     <ol style="color:#9ca3af; max-width:720px; line-height:1.65; padding-left:1.25rem;">
@@ -154,6 +285,8 @@
     </div>
   </section>
 </main>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
 </html>
