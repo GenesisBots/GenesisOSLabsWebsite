@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Genesis System — By GenesisOS Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons. Start on your device or in the cloud.">
+  <meta property="og:title" content="The Genesis System — By GenesisOS Labs">
+  <meta property="og:description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons.">
+  <meta property="og:url" content="https://GenesisOSLabs.com/">
+  <meta property="og:image" content="https://GenesisOSLabs.com/images/og-default.jpg">
+  <meta property="og:site_name" content="GenesisOS Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs">
+  <meta name="twitter:description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons. Start on your device or in the cloud.">
+  <link rel="canonical" href="https://GenesisOSLabs.com/">
+  <link rel="stylesheet" href="assets/css/style.css?v=1009">
+  <style>
+    .os-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 40px;
+      margin-top: 22px;
+    }
+    @media (max-width: 1100px) {
+      .os-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+      }
+    }
+    @media (max-width: 700px) {
+      .os-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .os-tile {
+      background: #0b0f1a;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 0;
+      box-shadow:
+        0 0 14px rgba(0, 234, 255, 0.05),
+        inset 0 0 18px rgba(168, 85, 247, 0.04);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .os-tile:hover {
+      border-color: rgba(0, 234, 255, 0.35);
+      box-shadow:
+        0 0 22px rgba(0, 234, 255, 0.18),
+        inset 0 0 22px rgba(168, 85, 247, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .os-tile .os-header h2 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0;
+      padding-bottom: 0;
+      line-height: 1.2;
+      text-shadow: 0 0 12px rgba(0, 234, 255, 0.18);
+    }
+    .os-tile .os-header h2::after {
+      content: none;
+    }
+
+    .os-underline {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #00eaff, #a855f7);
+      margin-top: 8px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+    }
+
+    .tweet-frame {
+      margin-top: 20px;
+      overflow: hidden;
+      height: 350px;
+      position: relative;
+    }
+    .tweet-frame blockquote.twitter-tweet {
+      transform: scale(0.5);
+      transform-origin: top left;
+      width: 200% !important;
+      max-width: none !important;
+      margin: 0 !important;
+    }
+
+    @media (max-width: 700px) {
+      .os-tile {
+        padding: 20px;
+      }
+      .os-tile .os-header h2 {
+        font-size: 20px;
+      }
+      .tweet-frame {
+        height: 320px;
+      }
+    }
+  </style>
+  <script src="assets/js/main.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZNYFJFNM9');
+  </script>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="brand-container">
+      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
+           alt="GenesisOS Labs Logo"
+           class="brand-logo"
+           loading="lazy">
+      <span class="brand-title">GenesisOS Labs</span>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="GenesisOS.html">GenesisOS</a>
+      <a href="GBotAgents.html">GBot Agents</a>
+      <a href="AerysDesktop.html">Aerys Desktop</a>
+      <a href="CRM.html">CRM</a>
+      <a href="Coliseum.html">Coliseum</a>
+      <a href="Marketplace.html">Marketplace</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero"> <div class="hero-left"> <h1 class="hero-brand-h1">Aerys Desktop v1.0.0</h1> <p class="hero-brand-by">By GenesisOS Labs</p> <p> <strong>What this is:</strong> <strong>Aerys Desktop</strong> is your local‑first Company OS — the place where your business runs its automations, workflows, memory layer, audit logs, and AI‑powered operational systems without relying on a dozen scattered apps. Inside Aerys, <strong>GBot Agents</strong> act as lightweight automation workers that execute repetitive tasks, monitor processes, organize operations, and keep your company’s workflows moving automatically. </p> <p> <strong>Why it matters:</strong> Most teams drown in broken processes, manual work, and disconnected tools that never talk to each other. Aerys Desktop centralizes your operations, automates the busywork, improves visibility, and gives you a scalable system that grows with your business over time — all running directly on your machine for speed, privacy, and control. </p> <p> Built for founders, operators, and teams who want simpler automation, cleaner workflow management, and real operational intelligence — without needing a full engineering department to stitch everything together. </p> <a href="#demo-request" class="primary-btn btn-primary">Book A Demo</a> </div> <div class="hero-right"> <img src="assets/img/Aerys Image v1 06282026.jpg" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS desktop workspace showing The Genesis System interface" style="width:100%; max-width:420px; display:block; margin:0 auto;"> </div> </section>
+
+  <section class="section genesis-info-section">
+    <div class="genesis-inline-image">
+      <img src="assets/img/Aerys Laser Eyes Image v1 06282026 BB.png" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS interface preview on a workstation display">
+    </div>
+
+    <div class="genesis-info-copy">
+      <h2>Request a custom Aerys Desktop</h2>
+      <p>
+        Start by picking one task to automate in your business. We design custom builds and we can propose coordinated automation groups when that fit your goals.
+      </p>
+      <p>
+        Pricing depends on scope. If you are unsure where to start, send a short description and we will reply with next steps.
+      </p>
+    </div>
+
+    <div id="demo-request" class="lead-container genesis-inline-form">
+      <h3 class="lead-title">Request a custom Aerys Desktop</h3>
+      <p class="lead-subtitle">
+        Share your workflow, timeline, and whether you need local, cloud, or hybrid. We respond with questions only where they save you time.
+      </p>
+
+      <form action="https://formspree.io/f/xqevbgor" method="POST" class="lead-form" data-lead-form>
+        <input type="hidden" name="_subject" value="Custom Aerys Desktop request — GenesisOS Labs (Home)">
+
+        <div class="form-group">
+          <label for="lead-name">Your name</label>
+          <input id="lead-name" type="text" name="name" autocomplete="name" minlength="2" maxlength="80" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lead-email">Your email</label>
+          <input id="lead-email" type="email" name="email" autocomplete="email" inputmode="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lead-message">What do you want to build?</label>
+          <textarea id="lead-message" name="message" rows="3" minlength="10" maxlength="2000" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="lead-referral">Who referred you? (optional)</label>
+          <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
+        </div>
+
+        <button type="submit" class="primary-btn lead-btn" data-submit-label="Submit request">Submit request</button>
+        <p class="form-status" aria-live="polite"></p>
+        <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
+      </form>
+    </div>
+  </section>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="badge">Live today</div>
+        <h3>Run it locally</h3>
+        <p>
+          Keep sensitive work on your own hardware. Aerys can run without relying on outside services for core tasks.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="badge">Optional</div>
+        <h3>Run it online</h3>
+        <p>
+          Deploy Aerys to the cloud when you need remote access or shared workspaces. Aerys becomes your command center—your automated operating system.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="badge">When you need it</div>
+        <h3>Optional digital economy features</h3>
+        <p>
+          If your roadmap includes tokenized workflows or GenesisCoin (GCoin), we can help you enable them in a controlled, well-scoped way.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+    <h2>Tokenization: Optional. You choose</h2>
+    <p>Aerys Desktop is flexible. Need clean audit trails? Pick the mode that matches your risk and compliance needs.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Non-tokenized</h3>
+        <p>Automation only—no blockchain requirements.</p>
+      </div>
+
+      <div class="card">
+        <h3>Genesis Coin mainnet</h3>
+        <p>GCoin (GC): For teams that want on-chain workflows when product and legal review are complete.</p>
+      </div>
+
+      <div class="card">
+        <h3>Private currency experiments</h3>
+        <p>For simulations, training environments, or tightly scoped pilots—discuss with us before production use.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</body>
+</html>
