@@ -14,7 +14,7 @@
   .aerys-page h1.hero-brand-h1 {
     font-family: "Manrope", sans-serif;
     font-size: var(--text-h1);
-    font-weight: var(--font-weight-heading);
+    font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.01em;
     margin: 0 0 var(--space-2);
@@ -37,7 +37,7 @@
   .aerys-page .hero__headline {
     font-family: "Manrope", sans-serif;
     font-size: var(--text-h2);
-    font-weight: var(--font-weight-heading);
+    font-weight: 800;
     line-height: 1.2;
     margin: 0 0 var(--space-2);
     max-width: 36ch;

@@ -70,7 +70,7 @@ h1,
 .hero .hero-brand-h1,
 h1.hero-brand-h1 {
   font-family: "Manrope", sans-serif;
-  font-weight: var(--font-weight-heading);
+  font-weight: 800;
   font-size: var(--text-h1);
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -85,7 +85,7 @@ h2,
 h1.hero-page-h2,
 h2.hero-page-h2 {
   font-family: "Manrope", sans-serif;
-  font-weight: var(--font-weight-heading);
+  font-weight: 800;
   font-size: var(--text-h2);
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -106,7 +106,7 @@ h3,
 .lead-title,
 .faq-list summary {
   font-family: "Manrope", sans-serif;
-  font-weight: var(--font-weight-heading);
+  font-weight: 700;
   font-size: var(--text-h3);
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -130,6 +130,44 @@ textarea,
 select,
 .btn {
   font-family: "Manrope", sans-serif;
+}
+
+
+/* ---------- Header + hero heading contrast ---------- */
+.site-header,
+.site-header .brand-lockup__title,
+.site-header .brand-title,
+.site-header .nav-links a,
+.site-header .site-nav .links a {
+  font-family: "Manrope", sans-serif;
+}
+
+.hero h1,
+.hero .hero-brand-h1,
+.hero .hero__brand,
+.hero .hero__headline,
+.hero .section__title,
+.hero .page-title {
+  font-family: "Manrope", sans-serif;
+  color: var(--brand-white);
+}
+
+.section--white h1,
+.section--white h2,
+.section--white h3,
+.section--white .section__title {
+  color: var(--brand-black);
+}
+
+.section--black h1,
+.section--black h2,
+.section--black h3,
+.section--black .section__title,
+.section--blue h1,
+.section--blue h2,
+.section--blue h3,
+.section--blue .section__title {
+  color: var(--brand-white);
 }
 
 img {
@@ -323,7 +361,7 @@ a:focus-visible {
 .section__title {
   font-family: "Manrope", sans-serif;
   font-size: var(--text-h2);
-  font-weight: var(--font-weight-heading);
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin: 0 0 var(--space-3);
@@ -489,9 +527,9 @@ a:focus-visible {
 .brand-lockup__title,
 .brand-title {
   font-family: "Manrope", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   color: var(--brand-white);
 }
 
@@ -508,8 +546,8 @@ a:focus-visible {
 .site-nav .links a {
   color: var(--brand-white);
   font-family: "Manrope", sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -537,6 +575,8 @@ a:focus-visible {
   color: var(--brand-white);
   min-height: 2.5rem;
   padding: 0.4rem 0.75rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -591,7 +631,7 @@ a:focus-visible {
 h1.hero-brand-h1 {
   font-family: "Manrope", sans-serif;
   font-size: var(--text-h1);
-  font-weight: var(--font-weight-heading);
+  font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin: 0 0 var(--space-2);
@@ -618,7 +658,7 @@ h1.hero-page-h2,
 h2.hero-page-h2 {
   font-family: "Manrope", sans-serif;
   font-size: var(--text-h2);
-  font-weight: var(--font-weight-heading);
+  font-weight: 800;
   line-height: 1.2;
   margin: 0 0 var(--space-2);
   max-width: 36ch;
