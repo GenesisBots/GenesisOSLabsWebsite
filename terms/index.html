@@ -14,7 +14,11 @@
   <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs | Terms &amp; Conditions">
   <meta name="twitter:description" content="Terms and conditions for using GenesisOSLabs.com, operated by GenesisOS Labs LLC.">
   <link rel="canonical" href="https://GenesisOSLabs.com/terms/index.html">
-  <link rel="stylesheet" href="../assets/css/style.css?v=1009">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="../assets/css/style.css?v=brand4">
   <script src="../assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -27,29 +31,26 @@
 </head>
 <body>
   <div class="site-banner">The Genesis System · By GenesisOS Labs</div>
-  <header>
-    <nav>
-      <div class="brand-container">
-        <img src="../assets/img/GenesisOSLabs G Logo v1 05132026.png"
-             alt="GenesisOS Labs Logo"
-             class="brand-logo"
-             loading="lazy">
-        <span class="brand-title">GenesisOS Labs</span>
-      </div>
-      <div class="links">
+  <header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="../index.html">
+      <img class="brand-lockup__logo brand-logo" src="../assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
         <a href="../index.html">Home</a>
         <a href="../genesisOS.html">GenesisOS</a>
         <a href="../healthcare.html">Healthcare</a>
         <a href="../real-estate.html">Real Estate</a>
         <a href="../gcrm.html">GCRM</a>
-        <a href="../gbots.html">GBots</a>
         <a href="../coliseum.html">Coliseum</a>
         <a href="../marketplace.html">Marketplace</a>
         <a href="../pricing.html">Pricing</a>
         <a href="https://github.com/GenesisBots" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
-    </nav>
-  </header>
+  </nav>
+</header>
 
   <main class="legal-page">
     <article class="legal-container">
@@ -60,7 +61,7 @@
       </p>
 
       <section>
-        <h2>1. Acceptance of Terms</h2>
+        <h2 class="section__title">1. Acceptance of Terms</h2>
         <ol>
           <li>By accessing or using GenesisOSLabs.com, GenesisOS content, and related service pages, you agree to be bound by these Terms &amp; Conditions.</li>
           <li>If you do not agree with these terms, you must discontinue use of this website and associated services immediately.</li>
@@ -69,7 +70,7 @@
       </section>
 
       <section>
-        <h2>2. Services Overview</h2>
+        <h2 class="section__title">2. Services Overview</h2>
         <ol>
           <li>GenesisOS Labs provides information, software concepts, and service offerings related to automation, AI systems, business tooling, and custom build workflows for The Genesis System.</li>
           <li>Any feature descriptions, previews, pricing references, and roadmap statements are informational and may change without prior notice.</li>
@@ -78,7 +79,7 @@
       </section>
 
       <section>
-        <h2>3. Account, Communications, and Eligibility</h2>
+        <h2 class="section__title">3. Account, Communications, and Eligibility</h2>
         <ol>
           <li>You may be required to provide accurate contact or business information for consultations, demos, and service requests.</li>
           <li>You are responsible for keeping your submitted information current and for ensuring communications from your organization are authorized.</li>
@@ -87,7 +88,7 @@
       </section>
 
       <section>
-        <h2>4. Acceptable Use</h2>
+        <h2 class="section__title">4. Acceptable Use</h2>
         <ol>
           <li>You agree not to misuse the website, including attempts to disrupt service, reverse engineer protected systems, or bypass security controls.</li>
           <li>You may not use GenesisOS Labs services for unlawful activity, harmful automation, unauthorized surveillance, or prohibited content generation.</li>
@@ -96,7 +97,7 @@
       </section>
 
       <section>
-        <h2>5. Intellectual Property</h2>
+        <h2 class="section__title">5. Intellectual Property</h2>
         <ol>
           <li>All trademarks, branding, copy, architecture concepts, and proprietary implementation materials are owned by GenesisOS Labs LLC or its licensors unless stated otherwise.</li>
           <li>No license is granted to reproduce, distribute, or commercialize protected materials without prior written permission.</li>
@@ -105,7 +106,7 @@
       </section>
 
       <section>
-        <h2>6. Payments, Quotes, and Commercial Terms</h2>
+        <h2 class="section__title">6. Payments, Quotes, and Commercial Terms</h2>
         <ol>
           <li>All pricing examples are estimates unless formalized in a signed proposal, statement of work, or contract.</li>
           <li>Custom builds, integrations, and service milestones may require deposits, staged billing, and scope acceptance checkpoints.</li>
@@ -114,7 +115,7 @@
       </section>
 
       <section>
-        <h2>7. Disclaimers</h2>
+        <h2 class="section__title">7. Disclaimers</h2>
         <ol>
           <li>The website and related materials are provided on an "as is" and "as available" basis without warranties of any kind, express or implied.</li>
           <li>We do not guarantee uninterrupted operation, complete accuracy, specific performance outcomes, or fitness for a particular purpose.</li>
@@ -123,7 +124,7 @@
       </section>
 
       <section>
-        <h2>8. Limitation of Liability</h2>
+        <h2 class="section__title">8. Limitation of Liability</h2>
         <ol>
           <li>To the maximum extent permitted by law, GenesisOS Labs LLC will not be liable for indirect, incidental, special, consequential, or punitive damages.</li>
           <li>Our aggregate liability for claims arising out of or relating to these Terms will not exceed amounts paid to us for the relevant service period, if any.</li>
@@ -132,7 +133,7 @@
       </section>
 
       <section>
-        <h2>9. Indemnification</h2>
+        <h2 class="section__title">9. Indemnification</h2>
         <ol>
           <li>You agree to indemnify and hold harmless GenesisOS Labs LLC, its operators, partners, and affiliates from claims arising from your misuse of services or breach of these Terms.</li>
           <li>This includes third-party claims, losses, liabilities, damages, and reasonable legal costs tied to your conduct.</li>
@@ -140,7 +141,7 @@
       </section>
 
       <section>
-        <h2>10. Governing Law and Dispute Resolution</h2>
+        <h2 class="section__title">10. Governing Law and Dispute Resolution</h2>
         <ol>
           <li>These Terms are governed by applicable laws of the jurisdiction in which GenesisOS Labs LLC operates, without regard to conflict-of-law principles.</li>
           <li>Parties will attempt good-faith informal resolution before filing formal legal claims.</li>
@@ -149,7 +150,7 @@
       </section>
 
       <section>
-        <h2>11. Changes to Terms</h2>
+        <h2 class="section__title">11. Changes to Terms</h2>
         <ol>
           <li>We may update these Terms periodically to reflect legal, operational, or product changes.</li>
           <li>Updated versions become effective upon posting to this page unless a later effective date is stated.</li>
@@ -158,7 +159,7 @@
       </section>
 
       <section>
-        <h2>12. Contact Information</h2>
+        <h2 class="section__title">12. Contact Information</h2>
         <ol>
           <li>For legal or terms-related inquiries, email <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a> or write to the postal address we provide upon request.</li>
           <li>Operational support or commercial inquiries may be directed through the request forms published on GenesisOSLabs.com.</li>
