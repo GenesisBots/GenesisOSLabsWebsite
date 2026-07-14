@@ -2,111 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Genesis System — By GenesisOS Labs</title>
+  <title>Aerys Desktop — Local-First Company OS | GenesisOS Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons. Start on your device or in the cloud.">
-  <meta property="og:title" content="The Genesis System — By GenesisOS Labs">
-  <meta property="og:description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons.">
-  <meta property="og:url" content="https://GenesisOSLabs.com/">
-  <meta property="og:image" content="https://GenesisOSLabs.com/images/og-default.jpg">
+  <meta name="description" content="Aerys Desktop by GenesisOS Labs is a local-first Company OS. Run GBot Autonomous Agents, CRMOS, FinanceOS, ExecutiveOS, Ingestion Engine, and GDX Integration on your machine, in the cloud, or hybrid.">
+  <meta property="og:title" content="Aerys Desktop — Local-First Company OS | GenesisOS Labs">
+  <meta property="og:description" content="Run your agents, workflows, and operating modules from one Company OS — local-first for speed, privacy, and control.">
+  <meta property="og:url" content="https://GenesisOSLabs.com/AerysDesktop.html">
+  <meta property="og:image" content="https://GenesisOSLabs.com/assets/img/Aerys%20Image%20v1%2006282026.jpg">
   <meta property="og:site_name" content="GenesisOS Labs">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs">
-  <meta name="twitter:description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons. Start on your device or in the cloud.">
-  <link rel="canonical" href="https://GenesisOSLabs.com/">
-  <link rel="stylesheet" href="assets/css/style.css?v=1009">
+  <meta name="twitter:title" content="Aerys Desktop — Local-First Company OS | GenesisOS Labs">
+  <meta name="twitter:description" content="Run your agents, workflows, and operating modules from one Company OS — local-first for speed, privacy, and control.">
+  <link rel="canonical" href="https://GenesisOSLabs.com/AerysDesktop.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/aerys-desktop.css?v=brand4">
   <style>
-    .os-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 40px;
-      margin-top: 22px;
-    }
-    @media (max-width: 1100px) {
-      .os-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 32px;
-      }
-    }
-    @media (max-width: 700px) {
-      .os-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
-      }
+    /* Page-scoped hero media constraints (does not change global CSS) */
+    .aerys-page .hero:not(:has(> .hero__media)) {
+      min-height: 0;
+      max-height: none;
+      height: auto;
     }
 
-    .os-tile {
-      background: #0b0f1a;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      min-width: 0;
-      box-shadow:
-        0 0 14px rgba(0, 234, 255, 0.05),
-        inset 0 0 18px rgba(168, 85, 247, 0.04);
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-    }
-    .os-tile:hover {
-      border-color: rgba(0, 234, 255, 0.35);
-      box-shadow:
-        0 0 22px rgba(0, 234, 255, 0.18),
-        inset 0 0 22px rgba(168, 85, 247, 0.08);
-      transform: translateY(-2px);
+    .aerys-page .hero-right img {
+      max-height: 17.5rem;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
     }
 
-    .os-tile .os-header h2 {
-      color: #fff;
-      font-size: 22px;
+    .aerys-page .hero__headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.125rem, 2.2vw, 1.5rem);
       font-weight: 700;
-      margin: 0;
-      padding-bottom: 0;
-      line-height: 1.2;
-      text-shadow: 0 0 12px rgba(0, 234, 255, 0.18);
-    }
-    .os-tile .os-header h2::after {
-      content: none;
+      line-height: 1.25;
+      margin: 0 0 var(--space-2);
+      max-width: 32ch;
+      color: var(--brand-white);
     }
 
-    .os-underline {
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #00eaff, #a855f7);
-      margin-top: 8px;
-      border-radius: 2px;
-      box-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+    .aerys-page .hero__support {
+      margin: 0 0 var(--space-4);
+      max-width: 36rem;
+      font-size: 1rem;
+      color: var(--brand-white);
     }
 
-    .tweet-frame {
-      margin-top: 20px;
-      overflow: hidden;
-      height: 350px;
-      position: relative;
-    }
-    .tweet-frame blockquote.twitter-tweet {
-      transform: scale(0.5);
-      transform-origin: top left;
-      width: 200% !important;
-      max-width: none !important;
-      margin: 0 !important;
+    .aerys-page .hero .btn--secondary {
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
     }
 
-    @media (max-width: 700px) {
-      .os-tile {
-        padding: 20px;
+    .aerys-page .hero .btn--secondary:hover,
+    .aerys-page .hero .btn--secondary:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+    }
+
+    @media (max-width: 720px) {
+      .aerys-page .hero-right img {
+        max-height: 12.5rem;
+        aspect-ratio: 16 / 9;
       }
-      .os-tile .os-header h2 {
-        font-size: 20px;
-      }
-      .tweet-frame {
-        height: 320px;
-      }
+    }
+
+    /* Form text readable on black lead-form panel */
+    .aerys-page #demo-request .lead-form,
+    .aerys-page #demo-request .lead-form .lead-title,
+    .aerys-page #demo-request .lead-form .lead-subtitle,
+    .aerys-page #demo-request .lead-form .form-group label,
+    .aerys-page #demo-request .lead-form .form-status,
+    .aerys-page #demo-request .lead-form .form-note,
+    .aerys-page #demo-request .lead-form p {
+      color: var(--brand-white);
+    }
+
+    .aerys-page #demo-request .lead-form input,
+    .aerys-page #demo-request .lead-form textarea {
+      color: var(--brand-white);
+      background: var(--brand-black);
+      border-color: var(--brand-blue);
+    }
+
+    .aerys-page #demo-request .lead-form input::placeholder,
+    .aerys-page #demo-request .lead-form textarea::placeholder {
+      color: var(--brand-white);
+      opacity: 0.7;
+    }
+
+    .aerys-page #demo-request .lead-form .form-note a {
+      color: var(--brand-blue);
+      font-weight: 700;
+    }
+
+    .aerys-page #demo-request .lead-form .btn--primary {
+      color: var(--brand-white);
+      background: var(--brand-blue);
+      border-color: var(--brand-blue);
     }
   </style>
   <script src="assets/js/main.js" defer></script>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -115,23 +117,28 @@
     gtag('config', 'G-7ZNYFJFNM9');
   </script>
 </head>
+<body class="aerys-page" data-skip-global-footer>
 
-<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img
+        class="brand-lockup__logo"
+        src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
+        width="28"
+        height="28"
+        alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+      Menu
+    </button>
+    <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
       <a href="GenesisOS.html">GenesisOS</a>
-      <a href="GBotAgents.html">GBot Agents</a>
-      <a href="AerysDesktop.html">Aerys Desktop</a>
+      <a href="AerysDesktop.html" aria-current="page">Aerys Desktop</a>
       <a href="CRM.html">CRM</a>
       <a href="Coliseum.html">Coliseum</a>
       <a href="Marketplace.html">Marketplace</a>
@@ -139,116 +146,282 @@
   </nav>
 </header>
 
-<main>
+<main id="main">
 
-<section class="hero"> <div class="hero-left"> <h1 class="hero-brand-h1">Aerys Desktop v1.0.0</h1> <p class="hero-brand-by">By GenesisOS Labs</p> <p> <strong>Aerys Desktop</strong> is your local‑first Company OS — the platform where your business runs its agents, automations, workflows, business intelligence, and AI‑powered systems without relying on a dozen scattered apps. Inside Aerys, <strong>GBot Agents</strong> act as lightweight automation workers that execute repetitive tasks, monitor processes, organize operations, and keep your company’s workflows moving automatically. </p> <p> Most teams drown in broken processes, manual work, and disconnected tools that never talk to each other. Aerys Desktop centralizes your operations, automates the busywork, improves visibility, & provides a scalable platform that grows with the business over time — all running directly on your machine for speed, privacy, and control of your data. </p> <p> Built for founders, operators, and teams who want simpler automation, cleaner workflow management, and real operational enterprise intelligence — without needing a full engineering department. </p> <a href="#demo-request" class="primary-btn btn-primary">Book A Demo</a> </div> <div class="hero-right"> <img src="assets/img/Aerys Image v1 06282026.jpg" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS desktop workspace showing The Genesis System interface" style="width:100%; max-width:420px; display:block; margin:0 auto;"> </div> </section>
-
-  <section class="section genesis-info-section">
-    <div class="genesis-inline-image">
-      <img src="assets/img/Aerys Laser Eyes Image v1 06282026 BB.png" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS interface preview on a workstation display">
+  <!-- Hero: balanced copy + constrained media -->
+  <section class="hero" aria-labelledby="hero-brand">
+    <div class="hero-left">
+      <p class="hero-brand-by">By GenesisOS Labs</p>
+      <h1 id="hero-brand" class="hero-brand-h1">Aerys Desktop</h1>
+      <p class="hero__headline">Your local-first Company OS for GBot Agents, workflows, & operating intelligence.</p>
+      <p class="hero__support">
+        One controlled Enterprise OS — Inside Aerys are GBot Autonomous Agents, modules for CRM, Finance, Executive Ops, & deployment that stay on your local machines when privacy matters.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="#demo-request">Book a Demo</a>
+      </div>
     </div>
-
-    <div class="genesis-info-copy">
-      <h2>Request a custom Aerys Desktop</h2>
-      <p>
-        Start by picking 1-3 tasks to automate in your business. We design custom builds and we can propose coordinated automation groups when that fit your goals.
-      </p>
-      <p>
-        Pricing depends on scope. If you are unsure where to start, send a short description and we will reply with next steps.
-      </p>
-    </div>
-
-    <div id="demo-request" class="lead-container genesis-inline-form">
-      <h3 class="lead-title">Request a custom Aerys Desktop</h3>
-      <p class="lead-subtitle">
-        Share your workflow, timeline, and whether you need local, cloud, or hybrid. We respond with questions only where they save you time.
-      </p>
-
-      <form action="https://formspree.io/f/xqevbgor" method="POST" class="lead-form" data-lead-form>
-        <input type="hidden" name="_subject" value="Custom Aerys Desktop request — GenesisOS Labs (Home)">
-
-        <div class="form-group">
-          <label for="lead-name">Your name</label>
-          <input id="lead-name" type="text" name="name" autocomplete="name" minlength="2" maxlength="80" required>
-        </div>
-
-        <div class="form-group">
-          <label for="lead-email">Your email</label>
-          <input id="lead-email" type="email" name="email" autocomplete="email" inputmode="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="lead-message">What do you want to build?</label>
-          <textarea id="lead-message" name="message" rows="3" minlength="10" maxlength="2000" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="lead-referral">Who referred you? (optional)</label>
-          <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
-        </div>
-
-        <button type="submit" class="primary-btn lead-btn" data-submit-label="Submit request">Submit request</button>
-        <p class="form-status" aria-live="polite"></p>
-        <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
-      </form>
+    <div class="hero-right">
+      <img
+        src="assets/img/Aerys Image v1 06282026.jpg"
+        width="720"
+        height="540"
+        alt="Aerys Desktop product visual — GenesisOS Labs Company OS"
+        fetchpriority="high"
+        decoding="async">
     </div>
   </section>
 
-    <div class="cards">
+  <!-- Demo funnel -->
+  <section class="section section--white" id="demo-request" aria-labelledby="demo-title">
+    <div class="container">
+      <div class="demo-layout">
+        <div>
+          <p class="section__eyebrow">Demo</p>
+          <h2 id="demo-title" class="section__title">Book a Demo. Leave with a build path.</h2>
+          <p class="section__lead">
+            On the demo we walk your 1–3 priority tasks, recommend modules (CRMOS, FinanceOS, ExecutiveOS, agents, ingestion, GDX), and confirm the right deployment model.
+          </p>
+          <ul class="demo-points">
+            <li>
+              <strong>What you get</strong>
+              A concrete next-step plan for a custom Aerys Desktop.
+            </li>
+            <li>
+              <strong>What we need</strong>
+              Your workflow constraints, timeline, and whether you need local, cloud, or hybrid.
+            </li>
+            <li>
+              <strong>What happens after</strong>
+              Scope, sequencing, and pricing based on what you asked us to automate.
+            </li>
+          </ul>
+          <div class="demo-visual">
+            <img
+              src="assets/img/Aerys Image v1 06282026.jpg"
+              width="900"
+              height="700"
+              alt="Aerys Desktop product visual — GenesisOS Labs Company OS interface"
+              loading="lazy"
+              decoding="async">
+          </div>
+        </div>
 
-      <div class="card">
-        <div class="badge">Live today</div>
-        <h3>Run it locally</h3>
-        <p>
-          Keep sensitive work on your own hardware. Aerys can run without relying on outside services for core tasks.
-        </p>
+        <div class="lead-container">
+          <form
+            class="lead-form"
+            action="https://formspree.io/f/xqevbgor"
+            method="POST"
+            data-lead-form>
+            <h3 class="lead-title">Book a Demo</h3>
+            <p class="lead-subtitle">
+              Share your workflow, timeline, and whether you need local, cloud, or hybrid. We respond with questions only where they save you time.
+            </p>
+
+            <input type="hidden" name="_subject" value="Custom Aerys Desktop request — GenesisOS Labs (AerysDesktop)">
+
+            <div class="form-group">
+              <label for="lead-name">Your name</label>
+              <input id="lead-name" type="text" name="name" autocomplete="name" minlength="2" maxlength="80" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lead-email">Your email</label>
+              <input id="lead-email" type="email" name="email" autocomplete="email" inputmode="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lead-message">What do you want to build?</label>
+              <textarea id="lead-message" name="message" rows="3" minlength="10" maxlength="2000" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="lead-referral">Who referred you? (optional)</label>
+              <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" data-submit-label="Book a Demo">Book a Demo</button>
+            <p class="form-status" aria-live="polite"></p>
+            <p class="form-note">Or email <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></p>
+          </form>
+        </div>
       </div>
-
-      <div class="card">
-        <div class="badge">Optional</div>
-        <h3>Run it online</h3>
-        <p>
-          Deploy Aerys to the cloud when you need remote access or shared workspaces. Aerys becomes your command center—your automated operating system.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="badge">When you need it</div>
-        <h3>Optional digital economy features</h3>
-        <p>
-          If your roadmap includes tokenized workflows, we can help you enable them in a controlled, well-scoped way.
-        </p>
-      </div>
-
     </div>
-
   </section>
 
-  <section class="section">
-    <h2>Tokenization: Optional. You choose</h2>
-    <p>Aerys Desktop is flexible. Need clean audit trails? Pick the mode that matches your risk and compliance needs.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Non-tokenized</h3>
-        <p>Automation only—no blockchain requirements.</p>
+  <!-- Solution -->
+  <section class="section section--black" id="solution" aria-labelledby="solution-title">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">The solution</p>
+        <h2 id="solution-title" class="section__title">Aerys Desktop: one Company OS. Your hardware. Your control.</h2>
+        <p class="section__lead">
+          Aerys Desktop is the platform where your business runs agents, automations, workflows, business intelligence, and AI-powered systems — without depending on a dozen disconnected apps.
+        </p>
       </div>
-
-      <div class="card">
-        <h3>Private mainnet</h3>
-        <p>For teams that want on-chain workflows when product and legal review are needed.</p>
+      <div class="solution-grid">
+        <article class="solution-panel">
+          <h3>Centralize ops</h3>
+          <p>One surface for workflows, monitoring, and operational intelligence built for founders and operators — not only engineering teams.</p>
+        </article>
+        <article class="solution-panel">
+          <h3>Automate the busywork</h3>
+          <p>GBot Autonomous Agents execute repetitive tasks, watch processes, organize work, and keep pipelines moving.</p>
+        </article>
+        <article class="solution-panel">
+          <h3>Keep work local-first</h3>
+          <p>Run core workloads on your machine for speed, privacy, and custody of your data — then expand to cloud or hybrid when the team needs it.</p>
+        </article>
       </div>
+      <p class="section__lead section__lead--spaced">
+        Built for founders, operators, and teams who want cleaner workflow management and real operational intelligence — without staffing a full engineering department.
+      </p>
+    </div>
+  </section>
 
-      <div class="card">
-        <h3>Private cryptography experiments</h3>
-        <p>For simulations, training environments, or tightly scoped pilots—discuss with us before production use.</p>
+  <!-- Deployment -->
+  <section class="section section--white" id="deployment" aria-labelledby="deploy-title">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Deployment</p>
+        <h2 id="deploy-title" class="section__title">Local. Cloud. Hybrid. You choose.</h2>
+        <p class="section__lead">
+          Match Aerys to your risk profile and team shape. Tokenized workflows stay optional and out of the critical path until you ask for them.
+        </p>
+      </div>
+      <div class="deploy-grid">
+        <article class="deploy-option">
+          <h3>Local</h3>
+          <p>Keep sensitive work on your own hardware. Core Aerys tasks can run without relying on outside services.</p>
+        </article>
+        <article class="deploy-option">
+          <h3>Cloud</h3>
+          <p>Deploy Aerys online when you need remote access or shared workspaces — Aerys remains the command center.</p>
+        </article>
+        <article class="deploy-option">
+          <h3>Hybrid</h3>
+          <p>Run critical workloads locally and extend select workflows to the cloud when collaboration requires it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="section section--black" id="trust" aria-labelledby="trust-title">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Trust</p>
+        <h2 id="trust-title" class="section__title">Privacy, control, and a clear build process.</h2>
+        <p class="section__lead">We sell outcomes with a scoped engagement — not vague platforms and endless tool sprawl.</p>
+      </div>
+      <div class="trust-grid">
+        <article class="trust-item">
+          <h3>Local-first privacy</h3>
+          <p>Sensitive automation can stay on hardware you control. You decide what, if anything, leaves the machine.</p>
+        </article>
+        <article class="trust-item">
+          <h3>Scoped delivery</h3>
+          <p>Pricing follows scope. We start with 1–3 high-value tasks and expand only when the workflow earns it.</p>
+        </article>
+        <article class="trust-item">
+          <h3>Operator-ready</h3>
+          <p>Designed for founders and operators who need enterprise-grade operational intelligence without a full engineering department.</p>
+        </article>
+      </div>
+      <div class="trust-process">
+        <h3>How GenesisOS Labs works with you</h3>
+        <ol>
+          <li>You share workflows, timeline, and local / cloud / hybrid preference.</li>
+          <li>We reply with clarifying questions only when they save you time.</li>
+          <li>You receive a custom Aerys Desktop plan with module recommendations and next steps.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section section--blue final-cta" id="final-cta" aria-labelledby="final-title">
+    <div class="container">
+      <h2 id="final-title" class="section__title">Put your company on one operating surface.</h2>
+      <p class="section__lead">
+        Book a demo with GenesisOS Labs. We will map your first 1–3 automations onto Aerys Desktop — local, cloud, or hybrid.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="#demo-request">Book a Demo</a>
+        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email support</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<footer class="page-footer" data-aerys-footer>
+  <div class="page-footer__inner">
+    <div class="footer-brand">
+      <img
+        class="brand-logo"
+        src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
+        width="28"
+        height="28"
+        alt="GenesisOS Labs Logo"
+        loading="lazy">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </div>
+    <section aria-labelledby="footer-products">
+      <h2 id="footer-products">Products</h2>
+      <ul>
+        <li><a href="GenesisOS.html">GenesisOS</a></li>
+        <li><a href="AerysDesktop.html" aria-current="page">Aerys Desktop</a></li>
+        <li><a href="GBotAgents.html">GBot Agents</a></li>
+        <li><a href="CRM.html">CRM</a></li>
+        <li><a href="Coliseum.html">Coliseum</a></li>
+        <li><a href="Marketplace.html">Marketplace</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-company">
+      <h2 id="footer-company">Company</h2>
+      <ul>
+        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="terms/index.html">Terms &amp; Conditions</a></li>
+        <li><a href="privacy/index.html">Privacy Policy</a></li>
+        <li><a href="accessibility/index.html">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="page-footer__legal">
+    <img
+      class="brand-logo-legal"
+      src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
+      width="22"
+      height="22"
+      alt=""
+      loading="lazy">
+    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+<div class="sticky-cta" data-sticky-cta role="region" aria-label="Book a demo">
+  <p>Ready to run Aerys Desktop?</p>
+  <a class="btn btn--primary" href="#demo-request">Book a Demo</a>
+</div>
+
+<a class="btn btn--primary scroll-cta" data-scroll-cta href="#demo-request">Book a Demo</a>
 
 </body>
 </html>

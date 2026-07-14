@@ -14,7 +14,11 @@
   <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs | Pricing &amp; Custom Builds">
   <meta name="twitter:description" content="Transparent starting points for GenesisOS and add-ons from GenesisOS Labs. Request a scoped estimate for personal, business, or enterprise builds.">
   <link rel="canonical" href="https://GenesisOSLabs.com/pricing.html">
-  <link rel="stylesheet" href="assets/css/style.css?v=1009">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand4">
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -28,19 +32,16 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
       <a href="GenesisOS.html">GenesisOS</a>
-      <a href="GBotAgents.html">GBot Agents</a>
       <a href="AerysDesktop.html">Aerys Desktop</a>
       <a href="CRM.html">CRM</a>
       <a href="Coliseum.html">Coliseum</a>
@@ -55,7 +56,7 @@
     <div class="hero-left pricing-hero-copy">
       <h1 class="hero-brand-h1">Pricing: GenesisOS Custom Builds</h1>
       <p class="hero-brand-by">By GenesisOS Labs</p>
-      <h2 class="pricing-hero-title hero-page-h2">Build your automation OS with clear starting points</h2>
+      <h2 class="pricing-hero-title hero-page-h2 section__title">Build your automation OS with clear starting points</h2>
       <p class="pricing-hero-tagline">Your workflows. Your branding. Your roadmap.</p>
       <p class="hero-subline pricing-hero-subline">
         Every engagement begins with GenesisOS. From there you can add GBots, team coordination packs, and larger rollouts—scoped so you know what you are buying. Ask about our FREE workflow audits!
@@ -63,12 +64,12 @@
     </div>
 
     <div class="hero-right pricing-hero-image">
-      <img src="assets/img/GenesisOSLabs PC Image v1 05182026.png" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS custom branding preview on a workstation" style="width:100%; max-width:420px; display:block; margin:0 auto;">
+      <img src="assets/img/GenesisOSLabs PC Image v1 05182026.png" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS custom branding preview on a workstation" decoding="async" fetchpriority="high" width="720" height="540">
     </div>
   </section>
 
-  <section class="section" aria-labelledby="pricing-what-get">
-    <h2 id="pricing-what-get">What you get</h2>
+  <section class="section section--white" aria-labelledby="pricing-what-get">
+    <h2 id="pricing-what-get" class="section__title">What you get</h2>
     <p>A structured estimate, written in plain language, with what is included, what is optional, and what requires a follow-up discovery call.</p>
     <div class="cards">
       <div class="card"><h3>Clarity first</h3><p>No surprise “phase 27” language—milestones map to outcomes you can test.</p></div>
@@ -77,13 +78,13 @@
     </div>
   </section>
 
-  <section class="section genesis-info-section pricing-inline-section" id="estimate-form">
+  <section class="section section--black genesis-info-section pricing-inline-section" id="estimate-form">
     <div class="genesis-inline-image">
       <img src="assets/img/Gbot and Swarm v1 05182026.PNG" alt="GenesisOS pricing consultation workspace on a laptop">
     </div>
 
     <div class="genesis-info-copy">
-      <h2>Request your estimate</h2>
+      <h2 class="section__title">Request your estimate</h2>
       <p>
         Tell us your tier (personal, business, or enterprise), what you want to automate, and your budget range. GenesisOS Labs returns a scoped recommendation.
       </p>
@@ -147,15 +148,15 @@
           <input id="estimate-referral" type="text" name="referral" autocomplete="off" maxlength="120">
         </div>
 
-        <button type="submit" class="primary-btn lead-btn" data-submit-label="Get my estimate">Get my estimate</button>
+        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Get my estimate">Get my estimate</button>
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Pricing overview</h2>
+  <section class="section section--white">
+    <h2 class="section__title">Pricing overview</h2>
     <p>
       Every package starts with <strong>GenesisOS</strong>. Add-ons include GBots, coordination packs for teams that run many bots together, and enterprise rollouts with dedicated support.
     </p>
@@ -163,10 +164,10 @@
       Some customers also use collectible-style digital cards for inventory and identity. When that applies, sales can be logged in a simple audit trail: daily operations summaries, finance rollups, and a company-wide dashboard—so leadership can see revenue, inventory, and ownership in one place.
     </p>
 
-    <h3 style="margin-top:28px; margin-bottom:12px;">1. GenesisOS — core platform</h3>
+    <h3>1. GenesisOS — core platform</h3>
     <p>Your operating workspace is the foundation. <strong>Every package includes it.</strong></p>
 
-    <div class="cards" style="margin-top:20px;">
+    <div class="cards">
 
       <div class="card">
         <div class="badge">Personal</div>
@@ -214,8 +215,8 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2>Bot packages (add-ons)</h2>
+  <section class="section section--black">
+    <h2 class="section__title">Bot packages (add-ons)</h2>
     <p>
       GBots are sold in clear bundles. Each bot should ship with documentation, a license slot in your OS, and predictable upgrade notes.
     </p>
@@ -223,7 +224,7 @@
       Optional digital cards (for example QR-linked metadata) are available for teams that want a tangible inventory story—talk to us before assuming NFT requirements.
     </p>
 
-    <h3 style="margin-top:28px; margin-bottom:12px;">2. Custom GBots</h3>
+    <h3>2. Custom GBots</h3>
     <p>
       <strong>Personal:</strong> $37–$197 per bot<br>
       <strong>Business:</strong> $133–$997 per bot<br>
@@ -247,7 +248,7 @@
       <li>Slot inside your GenesisOS workspace</li>
     </ul>
 
-    <div class="cards" style="margin-top:28px;">
+    <div class="cards">
 
       <div class="card">
         <div class="badge">Coordination</div>
@@ -296,8 +297,8 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2>How pricing works</h2>
+  <section class="section section--white">
+    <h2 class="section__title">How pricing works</h2>
     <p>Estimates combine:</p>
     <ul style="margin:12px 0 0 18px; opacity:0.95;">
       <li>OS tier (Personal / Business / Enterprise)</li>
@@ -307,17 +308,17 @@
       <li>Custom modules</li>
       <li>Branding depth</li>
     </ul>
-    <p style="margin-top:16px;">
+    <p>
       Reporting rolls up from day-to-day operations to finance to the executive dashboard—so finance and technical leads read the same numbers.
     </p>
   </section>
 
-  <section class="section cta-section">
-    <h2>Ready for numbers you can act on?</h2>
+  <section class="section section--black cta-section">
+    <h2 class="section__title">Ready for numbers you can act on?</h2>
     <p>
       Upload optional brand assets and describe the workflows you want GenesisOS Labs to automate first.
     </p>
-    <button type="button" class="primary-btn" onclick="document.getElementById('estimate-form').scrollIntoView({ behavior: 'smooth' })">
+    <button type="button" class="btn btn--primary" onclick="document.getElementById('estimate-form').scrollIntoView({ behavior: 'smooth' })">
       Get my estimate
     </button>
   </section>

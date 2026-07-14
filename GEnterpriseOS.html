@@ -14,28 +14,11 @@
   <meta name="twitter:title" content="GEnterpriseOS — The Operating System for Modern Enterprises">
   <meta name="twitter:description" content="AI-driven workflows, tokenization rails, and hybrid-intelligence automation for every department. Built on GenesisOS by GenesisOS Labs.">
   <link rel="canonical" href="https://GenesisOSLabs.com/GEnterpriseOS">
-  <link rel="stylesheet" href="assets/css/style.css?v=1009">
-  <style>
-    .tweet-frame {
-      margin-top: 20px;
-      overflow: hidden;
-      height: 350px;
-      position: relative;
-    }
-    .tweet-frame blockquote.twitter-tweet {
-      transform: scale(0.5);
-      transform-origin: top left;
-      width: 200% !important;
-      max-width: none !important;
-      margin: 0 !important;
-    }
-
-    @media (max-width: 700px) {
-      .tweet-frame {
-        height: 320px;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand4">
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -49,19 +32,16 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
       <a href="GenesisOS.html">GenesisOS</a>
-      <a href="GBotAgents.html">GBot Agents</a>
       <a href="AerysDesktop.html">Aerys Desktop</a>
       <a href="CRM.html">CRM</a>
       <a href="Coliseum.html">Coliseum</a>
@@ -87,14 +67,14 @@
       <p class="subtext">
         AI&#8209;driven workflows & intelligence automation for every department.
       </p>
-      <a href="#demo-request" class="primary-btn btn-primary">Book a Demo</a>
+      <a href="#demo-request" class="btn btn--primary">Book a Demo</a>
     </div>
 
   </section>
 
   <!-- 2. DEMO VIDEO SECTION -->
-  <section class="section" aria-labelledby="gent-video-title">
-    <h2 id="gent-video-title">See GEnterpriseOS in Action</h2>
+  <section class="section section--white" aria-labelledby="gent-video-title">
+    <h2 id="gent-video-title" class="section__title">See GEnterpriseOS in Action</h2>
     <p>A guided walkthrough of the GEnterpriseOS command center &mdash; from department automation to tokenized settlement rails.</p>
     <div class="tweet-frame">
       <blockquote class="twitter-tweet">
@@ -104,8 +84,8 @@
   </section>
 
   <!-- 3. CORE VALUE PROPS -->
-  <section class="section" aria-labelledby="gent-value-props">
-    <h2 id="gent-value-props">Core value props</h2>
+  <section class="section section--black" aria-labelledby="gent-value-props">
+    <h2 id="gent-value-props" class="section__title">Core value props</h2>
     <p>Enterprise-grade automation, settlement, and coordination &mdash; unified inside one operating system.</p>
     <div class="cards">
       <div class="card">
@@ -144,8 +124,8 @@
   </section>
 
   <!-- 4. FEATURE BLOCKS -->
-  <section class="section genesisos-section" aria-labelledby="gent-feature-blocks">
-    <h2 id="gent-feature-blocks">How GEnterpriseOS transforms your organization</h2>
+  <section class="section section--white genesisos-section" aria-labelledby="gent-feature-blocks">
+    <h2 id="gent-feature-blocks" class="section__title">How GEnterpriseOS transforms your organization</h2>
 
     <div class="genesisos-flex">
       <div class="genesisos-left">
@@ -209,13 +189,13 @@
   </section>
 
   <!-- 6. FORM FILL SECTION (exact homepage structure) -->
-  <section class="section genesis-info-section">
+  <section class="section section--black genesis-info-section">
     <div class="genesis-inline-image">
       <img src="assets/img/Gbot and Swarm v1 05182026.PNG" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS interface preview on a workstation display">
     </div>
 
     <div class="genesis-info-copy">
-      <h2>Request a custom GenesisOS or GBot</h2>
+      <h2 class="section__title">Request a custom GenesisOS or GBot</h2>
       <p>
         Start by picking one task to automate in your business. We design custom builds and we can propose coordinated automation groups when that fit your goals.
       </p>
@@ -253,7 +233,7 @@
           <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
         </div>
 
-        <button type="submit" class="primary-btn lead-btn" data-submit-label="Submit request">Submit request</button>
+        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Submit request">Submit request</button>
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>
@@ -261,10 +241,10 @@
   </section>
 
   <!-- 7. CTA SECTION -->
-  <section class="section cta-section" aria-labelledby="gent-cta">
-    <h2 id="gent-cta">See GEnterpriseOS in Action</h2>
+  <section class="section section--white cta-section" aria-labelledby="gent-cta">
+    <h2 id="gent-cta" class="section__title">See GEnterpriseOS in Action</h2>
     <p>Book a guided demo and walk through department automation, tokenization rails, and the unified command center live.</p>
-    <a href="#demo-request" class="primary-btn btn-primary">Book a Demo</a>
+    <a href="#demo-request" class="btn btn--primary">Book a Demo</a>
   </section>
 
 </main>

@@ -14,7 +14,11 @@
   <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs | Real Estate &amp; DeedOS">
   <meta name="twitter:description" content="DeedOS on GenesisOS—tokenized real estate, 3–5 second settlement, and RWA workflows for brokers, agents, buyers, and sellers.">
   <link rel="canonical" href="https://GenesisOSLabs.com/real-estate.html">
-  <link rel="stylesheet" href="assets/css/style.css?v=1010">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand4">
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -27,19 +31,16 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
       <a href="GenesisOS.html">GenesisOS</a>
-      <a href="GBotAgents.html">GBot Agents</a>
       <a href="AerysDesktop.html">Aerys Desktop</a>
       <a href="CRM.html">CRM</a>
       <a href="Coliseum.html">Coliseum</a>
@@ -59,7 +60,7 @@
       <p>
         <strong>Why it matters:</strong> Traditional closings drag on paperwork, wire delays, and reconciling systems that do not talk to each other. DeedOS unifies deal rooms, settlement rails, and RWA tooling in one place you can run local, in the cloud, or hybrid.
       </p>
-      <button type="button" class="primary-btn" onclick="document.getElementById('real-estate-demo').scrollIntoView({behavior:'smooth'})">
+      <button type="button" class="btn btn--primary" onclick="document.getElementById('real-estate-demo').scrollIntoView({behavior:'smooth'})">
         Request a real estate demo
       </button>
     </div>
@@ -72,12 +73,12 @@
         height="315"
         loading="eager"
         decoding="async"
-        onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';">
+        onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" fetchpriority="high">
     </div>
   </section>
 
-  <section class="section" aria-labelledby="re-deedos">
-    <h2 id="re-deedos">DeedOS — real estate operating system</h2>
+  <section class="section section--white" aria-labelledby="re-deedos">
+    <h2 id="re-deedos" class="section__title">DeedOS — real estate operating system</h2>
     <p>
       DeedOS sits on GenesisOS and gives every party in a transaction a shared, auditable workspace—from listing through close and optional on-chain settlement.
     </p>
@@ -101,10 +102,10 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="re-tokenized">
-    <h2 id="re-tokenized">Tokenized transactions &amp; fast settlement</h2>
+  <section class="section section--black" aria-labelledby="re-tokenized">
+    <h2 id="re-tokenized" class="section__title">Tokenized transactions &amp; fast settlement</h2>
     <p>
-      When your legal and compliance teams approve tokenized workflows, DeedOS can route settlement across supported chains with <strong style="color:#e5e7eb;">3–5 second</strong> blockchain finality—replacing wire-wait anxiety with verifiable on-chain confirmation.
+      When your legal and compliance teams approve tokenized workflows, DeedOS can route settlement across supported chains with <strong>3–5 second</strong> blockchain finality—replacing wire-wait anxiety with verifiable on-chain confirmation.
     </p>
     <div class="cards">
       <div class="card">
@@ -125,8 +126,8 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="re-rwa">
-    <h2 id="re-rwa">RWA tokenization</h2>
+  <section class="section section--white" aria-labelledby="re-rwa">
+    <h2 id="re-rwa" class="section__title">RWA tokenization</h2>
     <p>
       Real-world asset (RWA) workflows let you represent property interest, revenue shares, or fund units on supported networks—with audit trails tied back to DeedOS deal records.
     </p>
@@ -146,8 +147,8 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="re-chains">
-    <h2 id="re-chains">Supported chains</h2>
+  <section class="section section--black" aria-labelledby="re-chains">
+    <h2 id="re-chains" class="section__title">Supported chains</h2>
     <p>DeedOS settlement and RWA minting can target the networks your partners already use.</p>
     <div class="cards">
       <div class="card"><div class="badge">XRP</div><h3>XRP Ledger</h3><p>Low-cost payments and token issuance for high-volume brokerage workflows.</p></div>
@@ -159,7 +160,7 @@
     </div>
   </section>
 
-  <section class="section genesis-info-section" id="real-estate-demo">
+  <section class="section section--black genesis-info-section" id="real-estate-demo">
     <div class="genesis-inline-image">
       <img
         src="assets/img/TokenizedRealEstate v2 05192026.png"
@@ -172,7 +173,7 @@
         onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';">
     </div>
     <div class="genesis-info-copy">
-      <h2>Connect with us</h2>
+      <h2 class="section__title">Connect with us</h2>
       <p>Share your market, deal volume, and whether you need traditional closings, tokenized settlement, or both.</p>
       <p>We route submissions to the right specialist at GenesisOS Labs for a focused follow-up.</p>
     </div>
@@ -198,7 +199,7 @@
           <label for="re-interest">What are you interested in?</label>
           <textarea id="re-interest" name="message" rows="4" minlength="10" maxlength="2000" required></textarea>
         </div>
-        <button type="submit" class="primary-btn lead-btn" data-submit-label="Request demo">Request demo</button>
+        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Request demo">Request demo</button>
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>

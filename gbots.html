@@ -14,7 +14,11 @@
   <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs | GBots &amp; GenesisBots">
   <meta name="twitter:description" content="Explore GBots and the public GenesisBots library from GenesisOS Labs—modular automations you can run inside The Genesis System.">
   <link rel="canonical" href="https://GenesisOSLabs.com/gbots.html">
-  <link rel="stylesheet" href="assets/css/style.css?v=1009">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand4">
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -28,22 +32,19 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
       <a href="genesisOS.html">GenesisOS</a>
       <a href="healthcare.html">Healthcare</a>
       <a href="real-estate.html">Real Estate</a>
       <a href="gcrm.html">GCRM</a>
-      <a href="gbots.html">GBots</a>
       <a href="coliseum.html">Coliseum</a>
       <a href="marketplace.html">Marketplace</a>
       <a href="pricing.html">Pricing</a>
@@ -67,7 +68,7 @@
         <strong>Why it matters:</strong> you can start with off-the-shelf automations, then ask GenesisOS Labs to tailor or combine them for your business—without throwing away what already works.
       </p>
 
-      <button class="primary-btn" onclick="window.location.href='https://github.com/GenesisBots?tab=repositories'">
+      <button class="btn btn--primary" onclick="window.location.href='https://github.com/GenesisBots?tab=repositories'">
         View all repos on GitHub
       </button>
 
@@ -81,13 +82,13 @@
       <img src="assets/img/Gbot and Swarm v1 05182026.PNG"
            onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';"
            alt="GenesisOS GBots ecosystem artwork with optional digital economy elements"
-           style="width:100%; max-width:420px; display:block; margin:0 auto;">
+           decoding="async" fetchpriority="high" width="720" height="540">
     </div>
 
   </section>
 
-  <section class="section" aria-labelledby="gbots-what">
-    <h2 id="gbots-what">What you get</h2>
+  <section class="section section--white" aria-labelledby="gbots-what">
+    <h2 id="gbots-what" class="section__title">What you get</h2>
     <div class="cards">
       <div class="card"><h3>Transparency</h3><p>Public repos show what each bot does, how it is configured, and how to run it safely.</p></div>
       <div class="card"><h3>Modularity</h3><p>Swap bots in or out as your workflows change—GenesisOS keeps the surrounding workspace consistent.</p></div>
@@ -95,8 +96,8 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="gbots-who">
-    <h2 id="gbots-who">Who this is for</h2>
+  <section class="section section--black" aria-labelledby="gbots-who">
+    <h2 id="gbots-who" class="section__title">Who this is for</h2>
     <p>Operators who want automations they can explain to finance, and developers who want repos they can fork.</p>
     <div class="cards">
       <div class="card"><h3>Non-technical leaders</h3><p>Pick a starting bot, run a pilot, measure hours saved.</p></div>
@@ -104,19 +105,19 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="gbots-how">
-    <h2 id="gbots-how">How it works</h2>
-    <ol style="color:#9ca3af; max-width:720px; line-height:1.65; padding-left:1.25rem;">
-      <li><strong style="color:#e5e7eb;">Choose a bot</strong> from the library or ask for a custom match.</li>
-      <li><strong style="color:#e5e7eb;">Run it inside GenesisOS</strong> locally or online.</li>
-      <li><strong style="color:#e5e7eb;">Measure outcomes</strong> for two weeks before expanding scope.</li>
-      <li><strong style="color:#e5e7eb;">Layer more GBots</strong> once the first workflow is stable.</li>
+  <section class="section section--white" aria-labelledby="gbots-how">
+    <h2 id="gbots-how" class="section__title">How it works</h2>
+    <ol>
+      <li><strong>Choose a bot</strong> from the library or ask for a custom match.</li>
+      <li><strong>Run it inside GenesisOS</strong> locally or online.</li>
+      <li><strong>Measure outcomes</strong> for two weeks before expanding scope.</li>
+      <li><strong>Layer more GBots</strong> once the first workflow is stable.</li>
     </ol>
   </section>
 
   <!-- GSwarms row: reorder or remove this section as needed -->
-  <section class="section" aria-labelledby="gbots-gswarms">
-    <h2 id="gbots-gswarms">GSwarms</h2>
+  <section class="section section--black" aria-labelledby="gbots-gswarms">
+    <h2 id="gbots-gswarms" class="section__title">GSwarms</h2>
     <div class="cards">
       <div class="card">
         <h3>GSwarms</h3>
@@ -136,13 +137,13 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="gbots-why">
-    <h2 id="gbots-why">Why GenesisOS Labs</h2>
+  <section class="section section--white" aria-labelledby="gbots-why">
+    <h2 id="gbots-why" class="section__title">Why GenesisOS Labs</h2>
     <p>We describe bots the way support teams wish vendors would: inputs, outputs, failure modes, and who to email when something breaks.</p>
   </section>
 
-  <section class="section">
-    <h2>GenesisBots library</h2>
+  <section class="section section--black">
+    <h2 class="section__title">GenesisBots library</h2>
     <p>
       Each link opens the public GitHub repository so you can inspect code, issues, and release notes before you install anything.
     </p>
@@ -220,7 +221,7 @@
     </div>
 
     <div class="genesis-info-copy">
-      <h2>Request a custom GBot</h2>
+      <h2 class="section__title">Request a custom GBot</h2>
       <p>
         Describe the manual work you want gone. We respond with a proposed bot outline, dependencies, and pricing band before any deep engineering begins.
       </p>
@@ -253,7 +254,7 @@
           <input id="gbots-referral" type="text" name="referral" autocomplete="off" maxlength="120">
         </div>
 
-        <button type="submit" class="primary-btn lead-btn" data-submit-label="Submit request">Submit request</button>
+        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Submit request">Submit request</button>
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>

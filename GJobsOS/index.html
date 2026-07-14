@@ -15,8 +15,12 @@
   <meta name="twitter:title" content="GJobsOS — Your Job Hunt, Automated.">
   <meta name="twitter:description" content="Stop drowning in applications. GJobsOS turns your job search into a command-center workflow powered by automation, AI, and your own local LLM.">
   <link rel="canonical" href="https://GenesisOSLabs.com/GJobsOS/index.html">
-  <link rel="stylesheet" href="../assets/css/style.css?v=1009">
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="../assets/css/style.css?v=brand4">
+  <link rel="stylesheet" href="style.css?v=brand4">
   <script src="../assets/js/main.js" defer></script>
   <script src="gjobsos.js" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -31,22 +35,19 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="../assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="../index.html">
+      <img class="brand-lockup__logo brand-logo" src="../assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
       <a href="../index.html">Home</a>
       <a href="../genesisOS.html">GenesisOS</a>
       <a href="../healthcare.html">Healthcare</a>
       <a href="../real-estate.html">Real Estate</a>
       <a href="../gcrm.html">GCRM</a>
-      <a href="../gbots.html">GBots</a>
       <a href="../coliseum.html">Coliseum</a>
       <a href="../marketplace.html">Marketplace</a>
       <a href="../pricing.html">Pricing</a>
@@ -65,7 +66,7 @@
         Stop drowning in applications. GJobsOS turns your fragmented job search into a command&#8209;center workflow powered by automation, AI, and your own local LLM. Subcribe for as low as $17.77/mo!
       </p>
       <div class="gjobs-hero-ctas">
-        <button type="button" class="primary-btn gjobs-cta-primary" data-scroll-target="#demo-form">
+        <button type="button" class="btn btn--primary gjobs-cta-primary" data-scroll-target="#demo-form">
           Book a Free Demo
         </button>
       </div>
@@ -100,8 +101,8 @@
   </section>
 
   <!-- 2. DEMO VIDEO SECTION -->
-  <section class="section gjobs-video-section" aria-labelledby="gjobs-video-title">
-    <h2 id="gjobs-video-title">See GJobsOS in Action</h2>
+  <section class="section section--white gjobs-video-section" aria-labelledby="gjobs-video-title">
+    <h2 id="gjobs-video-title" class="section__title">See GJobsOS in Action</h2>
     <p class="gjobs-section-sub">
       A guided walkthrough of the GJobsOS command center &mdash; from tailored resumes to recruiter outreach to interview prep.
     </p>
@@ -117,7 +118,7 @@
   <section id="demo-form" class="section gjobs-form-section" aria-labelledby="gjobs-form-title">
     <div class="gjobs-form-grid">
       <div class="gjobs-form-copy">
-        <h2 id="gjobs-form-title">Book a Free Demo of GJobsOS</h2>
+        <h2 id="gjobs-form-title" class="section__title">Book a Free Demo of GJobsOS</h2>
         <p>
           See how the job&#8209;finding operating system works &mdash; live, guided, and tailored to your career goals.
         </p>
@@ -167,7 +168,7 @@
           <textarea id="gjobs-goals" name="goals" rows="4" maxlength="2000" placeholder="What does a win look like in the next 90 days?"></textarea>
         </div>
 
-        <button type="submit" class="primary-btn gjobs-submit" data-submit-label="Book My Demo">
+        <button type="submit" class="btn btn--primary gjobs-submit btn--block" data-submit-label="Book My Demo">
           Book My Demo
         </button>
         <p class="gjobs-form-status" role="status" aria-live="polite"></p>
@@ -179,10 +180,10 @@
   </section>
 
   <!-- 4. WHAT IS GJOBSOS SECTION -->
-  <section class="section gjobs-what" aria-labelledby="gjobs-what-title">
+  <section class="section section--black gjobs-what" aria-labelledby="gjobs-what-title">
     <div class="gjobs-what-grid">
       <div class="gjobs-what-copy">
-        <h2 id="gjobs-what-title">What is GJobsOS?</h2>
+        <h2 id="gjobs-what-title" class="section__title">What is GJobsOS?</h2>
         <p>
           GJobsOS is a job&#8209;finding operating system built inside GenesisOS &mdash; a full&#8209;stack, AI&#8209;powered career engine running locally, privately, and fully automated. It replaces the dozen tabs, spreadsheets, and copy&#8209;paste rituals of a modern job search with one connected workspace.
         </p>
@@ -211,8 +212,8 @@
   </section>
 
   <!-- 5. CORE FEATURES SECTION -->
-  <section class="section gjobs-features" aria-labelledby="gjobs-features-title">
-    <h2 id="gjobs-features-title">Core Features</h2>
+  <section class="section section--white gjobs-features" aria-labelledby="gjobs-features-title">
+    <h2 id="gjobs-features-title" class="section__title">Core Features</h2>
     <p class="gjobs-section-sub">Six engines working together inside one operating system.</p>
 
     <div class="gjobs-feature-grid">
@@ -255,9 +256,9 @@
   </section>
 
   <!-- 6. WHY GJOBSOS EXISTS SECTION -->
-  <section class="section gjobs-why" aria-labelledby="gjobs-why-title">
+  <section class="section section--black gjobs-why" aria-labelledby="gjobs-why-title">
     <div class="gjobs-why-inner">
-      <h2 id="gjobs-why-title">Why GJobsOS Exists</h2>
+      <h2 id="gjobs-why-title" class="section__title">Why GJobsOS Exists</h2>
       <p>
         The modern job search is broken. Candidates are told to "apply to hundreds of jobs," but the tooling has not changed in a decade &mdash; resumes are still rewritten by hand, outreach is still copy&#8209;pasted, and every application platform tries to lock you into its walled garden. Meanwhile, AI changed everything else about work.
       </p>

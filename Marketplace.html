@@ -14,7 +14,11 @@
   <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs | Marketplace">
   <meta name="twitter:description" content="Explore GenesisOS marketplaces for bots, swarms, skins, merchandise, and digital assets—coming soon.">
   <link rel="canonical" href="https://GenesisOSLabs.com/Marketplace.html">
-  <link rel="stylesheet" href="assets/css/style.css?v=1010">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand4">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand4">
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -27,19 +31,16 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="brand-container">
-      <img src="assets/img/GenesisOSLabs G Logo v1 05132026.png"
-           alt="GenesisOS Labs Logo"
-           class="brand-logo"
-           loading="lazy">
-      <span class="brand-title">GenesisOS Labs</span>
-    </div>
-    <div class="links">
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
       <a href="GenesisOS.html">GenesisOS</a>
-      <a href="GBotAgents.html">GBot Agents</a>
       <a href="AerysDesktop.html">Aerys Desktop</a>
       <a href="CRM.html">CRM</a>
       <a href="Coliseum.html">Coliseum</a>
@@ -56,7 +57,7 @@
       <p>
         Explore all GenesisOS marketplaces — bots, swarms, skins, branded merchandise, and digital assets.
       </p>
-      <button type="button" class="primary-btn" onclick="document.getElementById('marketplace-contact').scrollIntoView({behavior:'smooth'})">
+      <button type="button" class="btn btn--primary" onclick="document.getElementById('marketplace-contact').scrollIntoView({behavior:'smooth'})">
         Get marketplace updates
       </button>
     </div>
@@ -69,55 +70,55 @@
         width="420"
         height="315"
         loading="eager"
-        decoding="async">
+        decoding="async" fetchpriority="high">
     </div>
   </section>
 
-  <section class="section" aria-labelledby="mp-categories">
-    <h2 id="mp-categories">Marketplace categories</h2>
+  <section class="section section--white" aria-labelledby="mp-categories">
+    <h2 id="mp-categories" class="section__title">Marketplace categories</h2>
     <p>Browse what is launching on The Genesis System. Purchasing and downloads are not live yet—we are wiring commerce next.</p>
     <div class="marketplace-grid">
       <div class="card">
         <h3>GBot Marketplace</h3>
         <p>Discover focused automation bots for business, operations, and creative workflows—ready to deploy on GenesisOS.</p>
-        <button type="button" class="primary-btn small-btn" disabled>View Marketplace</button>
+        <button type="button" class="btn btn--primary small-btn" disabled>View Marketplace</button>
         <p class="marketplace-note">Purchasing &amp; downloads coming soon.</p>
       </div>
       <div class="card">
         <h3>GSwarm Marketplace</h3>
         <p>Coordinate multi-bot swarms for larger jobs—handoffs, shared context, and team-style automation in one place.</p>
-        <button type="button" class="primary-btn small-btn" disabled>View Marketplace</button>
+        <button type="button" class="btn btn--primary small-btn" disabled>View Marketplace</button>
         <p class="marketplace-note">Purchasing &amp; downloads coming soon.</p>
       </div>
       <div class="card">
         <h3>Skins Marketplace</h3>
         <p>OS skins, bot skins, and swarm skins to match your brand—personalize GenesisOS without rebuilding from scratch.</p>
-        <button type="button" class="primary-btn small-btn" disabled>View Marketplace</button>
+        <button type="button" class="btn btn--primary small-btn" disabled>View Marketplace</button>
         <p class="marketplace-note">Purchasing &amp; downloads coming soon.</p>
       </div>
       <div class="card">
         <h3>Branded Merchandise Marketplace</h3>
         <p>Hoodies, shirts, hats, stickers, accessories, and limited drops for teams and community builders.</p>
-        <button type="button" class="primary-btn small-btn" disabled>View Marketplace</button>
+        <button type="button" class="btn btn--primary small-btn" disabled>View Marketplace</button>
         <p class="marketplace-note">Purchasing &amp; downloads coming soon.</p>
       </div>
       <div class="card">
         <h3>Digital Assets Marketplace</h3>
         <p>Future token packs, modules, and upgrade packs for partners extending The Genesis System on-chain or off.</p>
-        <button type="button" class="primary-btn small-btn" disabled>View Marketplace</button>
+        <button type="button" class="btn btn--primary small-btn" disabled>View Marketplace</button>
         <p class="marketplace-note">Purchasing &amp; downloads coming soon.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="mp-whitelabel">
-    <h2 id="mp-whitelabel">Built on The Genesis System</h2>
+  <section class="section section--black" aria-labelledby="mp-whitelabel">
+    <h2 id="mp-whitelabel" class="section__title">Built on The Genesis System</h2>
     <p>
       All marketplaces are spun up from The Genesis System and can be white‑labeled for enterprise partners.
     </p>
   </section>
 
-  <section class="section genesis-info-section" id="marketplace-contact">
+  <section class="section section--black genesis-info-section" id="marketplace-contact">
     <div class="genesis-inline-image">
       <img
         src="assets/img/Gbot and Swarm v1 05182026.PNG"
@@ -130,7 +131,7 @@
         decoding="async">
     </div>
     <div class="genesis-info-copy">
-      <h2>Connect with us</h2>
+      <h2 class="section__title">Connect with us</h2>
       <p>Tell us which marketplace you care about and whether you need consumer storefronts, partner catalogs, or enterprise white-label.</p>
       <p>We route submissions to the right specialist at GenesisOS Labs for a focused follow-up.</p>
     </div>
@@ -156,7 +157,7 @@
           <label for="mp-interest">What are you interested in?</label>
           <textarea id="mp-interest" name="message" rows="4" minlength="10" maxlength="2000" required></textarea>
         </div>
-        <button type="submit" class="primary-btn lead-btn" data-submit-label="Request updates">Request updates</button>
+        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Request updates">Request updates</button>
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>
