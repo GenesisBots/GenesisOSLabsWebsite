@@ -12,42 +12,44 @@
 
   .aerys-page .hero .hero-brand-h1,
   .aerys-page h1.hero-brand-h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5.5vw, 3.25rem);
-    font-weight: 800;
-    line-height: 0.98;
-    letter-spacing: -0.03em;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-heading);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
     margin: 0 0 var(--space-2);
     color: var(--brand-white);
-    max-width: 14ch;
+    max-width: none;
     text-shadow: none;
   }
 
   .aerys-page .hero .hero-brand-by,
   .aerys-page p.hero-brand-by {
     margin: 0 0 var(--space-3);
-    font-family: var(--font-body);
-    font-size: 0.8125rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--brand-blue);
   }
 
   .aerys-page .hero__headline {
-    font-family: var(--font-display);
-    font-size: clamp(1.125rem, 2.2vw, 1.5rem);
-    font-weight: 700;
-    line-height: 1.25;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-heading);
+    line-height: 1.2;
     margin: 0 0 var(--space-2);
-    max-width: 32ch;
+    max-width: 36ch;
     color: var(--brand-white);
   }
 
   .aerys-page .hero__support {
     margin: 0 0 var(--space-4);
     max-width: 36rem;
-    font-size: 1rem;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-body);
+    line-height: 1.6;
     color: var(--brand-white);
   }
 
@@ -127,7 +129,9 @@
 
   .demo-points strong {
     display: block;
-    font-family: var(--font-display);
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-body);
+    font-weight: 700;
     margin-bottom: 0.25rem;
     color: var(--brand-white);
   }

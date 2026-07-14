@@ -28,8 +28,9 @@
 
   /* Underline only for non-BEM titles on legacy pages */
   .section h2:not(.section__title) {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-heading);
     margin: 0 0 var(--space-3);
     color: inherit;
     position: relative;
@@ -131,10 +132,10 @@
     min-height: 3rem;
     padding: 0.75rem 1.5rem;
     margin-top: var(--space-4);
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     border: 2px solid var(--brand-blue);
     background: var(--brand-blue);
     color: var(--brand-white);
@@ -170,7 +171,7 @@
   .btn.small-btn {
     min-height: 2.5rem;
     padding: 0.5rem 1rem;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     margin-top: var(--space-2);
   }
 
@@ -213,9 +214,9 @@
   /* ---------- OS tile chrome (unique to legacy index) ---------- */
   .os-tile .os-header h2 {
     color: var(--brand-white);
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-heading);
     margin: 0;
     padding-bottom: 0;
     line-height: 1.2;
@@ -275,8 +276,9 @@
 
   .genesis-hero-content h1 {
     margin: 0 0 var(--space-2);
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-heading);
     color: var(--brand-white);
     text-shadow: none;
   }
@@ -288,8 +290,9 @@
   }
 
   .genesis-hero-content .hero-product-title {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h3);
+    font-weight: var(--font-weight-heading);
     margin: 0 0 var(--space-2);
   }
 
@@ -423,9 +426,9 @@
   }
 
   .coliseum-hero__title {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-heading);
     line-height: 1.15;
     color: var(--brand-white);
     text-shadow: none;
@@ -433,7 +436,9 @@
   }
 
   .coliseum-hero__subtitle {
-    font-size: 1.15rem;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-body);
+    font-weight: 600;
     color: var(--brand-blue);
     margin: var(--space-2) 0 var(--space-4);
     text-shadow: none;
@@ -468,14 +473,16 @@
   }
 
   .marketplace-coming-soon {
-    font-size: 1.125rem;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-body);
     font-weight: 700;
     color: var(--brand-blue);
     margin: 0 0 var(--space-3);
   }
 
   .marketplace-note {
-    font-size: 0.75rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.9375rem;
     color: inherit;
     margin: var(--space-2) 0 0;
     max-width: none;
@@ -502,7 +509,9 @@
   }
 
   .legal-container h1 {
-    font-family: var(--font-display);
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-heading);
     margin: 0 0 var(--space-2);
     color: var(--brand-white);
   }
@@ -521,8 +530,9 @@
 
   .legal-container h2 {
     margin: 0 0 var(--space-3);
-    font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-family: "Manrope", sans-serif;
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-heading);
     color: var(--brand-blue);
   }
 

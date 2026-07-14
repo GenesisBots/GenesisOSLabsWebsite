@@ -11,8 +11,14 @@
   --brand-white: #FFFFFF;
   --brand-black: #000000;
 
-  --font-display: "Syne", system-ui, sans-serif;
-  --font-body: "Manrope", system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font: "Manrope", sans-serif;
+  --text-body: 1.125rem;
+  --text-h1: 3rem;
+  --text-h2: 2.25rem;
+  --text-h3: 1.75rem;
+  --font-weight-heading: 700;
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -47,12 +53,83 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-body);
+  font-weight: 400;
   line-height: 1.6;
   background: var(--brand-black);
   color: var(--brand-white);
   overflow-x: hidden;
+}
+
+/* ---------- Unified typography ---------- */
+h1,
+.hero__title,
+.page-title,
+.hero__brand,
+.hero .hero-brand-h1,
+h1.hero-brand-h1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h1);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: inherit;
+  text-shadow: none;
+}
+
+h2,
+.section__title,
+.hero__headline,
+.hero .hero-page-h2,
+h1.hero-page-h2,
+h2.hero-page-h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: inherit;
+  text-shadow: none;
+}
+
+h3,
+.card h3,
+.panel h3,
+.solution-panel h3,
+.module-panel h3,
+.deploy-option h3,
+.trust-item h3,
+.steps h3,
+.trust-process h3,
+.lead-form h3,
+.lead-title,
+.faq-list summary {
+  font-family: "Manrope", sans-serif;
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h3);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: inherit;
+  text-shadow: none;
+}
+
+p,
+li,
+.section__lead,
+.hero__support {
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-body);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+button,
+input,
+textarea,
+select,
+.btn {
+  font-family: "Manrope", sans-serif;
 }
 
 img {
@@ -189,8 +266,9 @@ a:focus-visible {
 
 .card h3,
 .panel h3 {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
   margin: 0 0 var(--space-2);
 }
 
@@ -198,7 +276,8 @@ a:focus-visible {
 .panel p {
   margin: 0 0 var(--space-3);
   max-width: none;
-  font-size: 0.95rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
   flex: 1;
 }
 
@@ -208,9 +287,9 @@ a:focus-visible {
   width: fit-content;
   padding: 0.15rem 0.5rem;
   margin-bottom: var(--space-2);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   border: 1px solid var(--brand-blue);
   color: var(--brand-blue);
@@ -224,10 +303,10 @@ a:focus-visible {
 }
 
 .section__eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brand-blue);
   margin: 0 0 var(--space-2);
@@ -242,19 +321,20 @@ a:focus-visible {
 }
 
 .section__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   margin: 0 0 var(--space-3);
-  max-width: 22ch;
+  max-width: 28ch;
 }
 
 .section__lead {
   margin: 0;
   max-width: 42rem;
-  font-size: 1.0625rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 .section__header {
@@ -273,10 +353,10 @@ a:focus-visible {
   gap: var(--space-2);
   min-height: 3rem;
   padding: 0.75rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
@@ -408,10 +488,10 @@ a:focus-visible {
 
 .brand-lockup__title,
 .brand-title {
-  font-family: var(--font-display);
-  font-size: 0.9375rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--brand-white);
 }
 
@@ -427,7 +507,8 @@ a:focus-visible {
 .nav-links a,
 .site-nav .links a {
   color: var(--brand-white);
-  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -508,14 +589,14 @@ a:focus-visible {
 .hero__brand,
 .hero .hero-brand-h1,
 h1.hero-brand-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5.5vw, 3.25rem);
-  font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h1);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0 0 var(--space-2);
   color: var(--brand-white);
-  max-width: 14ch;
+  max-width: none;
   text-shadow: none;
 }
 
@@ -523,10 +604,10 @@ h1.hero-brand-h1 {
 .hero .hero-brand-by,
 p.hero-brand-by {
   margin: 0 0 var(--space-3);
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--brand-blue);
 }
@@ -535,12 +616,12 @@ p.hero-brand-by {
 .hero .hero-page-h2,
 h1.hero-page-h2,
 h2.hero-page-h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
-  font-weight: 700;
-  line-height: 1.25;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.2;
   margin: 0 0 var(--space-2);
-  max-width: 32ch;
+  max-width: 36ch;
   color: var(--brand-white);
   text-shadow: none;
 }
@@ -549,7 +630,8 @@ h2.hero-page-h2 {
 .hero .hero-left > p:not(.hero-brand-by):not(.hero__byline):not(.hero__headline):not(.hero-page-h2):not(.coliseum-hero__subtitle) {
   margin: 0 0 var(--space-4);
   max-width: 36rem;
-  font-size: 1rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
   color: var(--brand-white);
 }
 
@@ -640,7 +722,7 @@ h2.hero-page-h2 {
 }
 
 .split-list__marker {
-  font-family: var(--font-display);
+  font-family: "Manrope", sans-serif;
   font-weight: 800;
   color: var(--brand-blue);
   line-height: 1;
@@ -661,18 +743,20 @@ h2.hero-page-h2 {
 
 .solution-panel h3,
 .module-panel h3 {
-  font-family: var(--font-display);
+  font-family: "Manrope", sans-serif;
   margin: 0 0 var(--space-2);
 }
 
 .solution-panel h3 {
-  font-size: 1.125rem;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
 }
 
 .solution-panel p,
 .module-panel p {
   margin: 0;
-  font-size: 0.975rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 .module-panel {
@@ -697,21 +781,23 @@ h2.hero-page-h2 {
 }
 
 .module-panel__label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--brand-blue);
   margin: 0 0 var(--space-2);
 }
 
 .module-panel h3 {
-  font-size: 1.25rem;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
 }
 
 .module-panel p {
   flex: 1;
-  font-size: 0.95rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 .deploy-option {
@@ -722,8 +808,9 @@ h2.hero-page-h2 {
 }
 
 .deploy-option h3 {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
   margin: 0 0 var(--space-2);
   color: var(--brand-blue);
 }
@@ -738,14 +825,16 @@ h2.hero-page-h2 {
 }
 
 .trust-item h3 {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
   margin: 0 0 var(--space-2);
 }
 
 .trust-item p {
   margin: 0;
-  font-size: 0.975rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 .trust-process {
@@ -755,9 +844,10 @@ h2.hero-page-h2 {
 }
 
 .trust-process h3 {
-  font-family: var(--font-display);
+  font-family: "Manrope", sans-serif;
   margin: 0 0 var(--space-3);
-  font-size: 1.25rem;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
 }
 
 .trust-process ol {
@@ -786,23 +876,25 @@ h2.hero-page-h2 {
 .steps li::before {
   content: "0" counter(step);
   display: block;
-  font-family: var(--font-display);
+  font-family: "Manrope", sans-serif;
   font-size: 0.875rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   color: var(--brand-blue);
   margin-bottom: var(--space-2);
 }
 
 .steps h3 {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
   margin: 0 0 var(--space-2);
 }
 
 .steps p {
   margin: 0;
-  font-size: 0.975rem;
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 /* ---------- Forms ---------- */
@@ -818,8 +910,9 @@ h2.hero-page-h2 {
 
 .lead-form h3,
 .lead-title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-heading);
   margin: 0 0 var(--space-2);
   color: var(--brand-white);
 }
@@ -837,7 +930,7 @@ h2.hero-page-h2 {
 .form-group label {
   display: block;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-bottom: var(--space-2);
   color: var(--brand-white);
 }
@@ -934,7 +1027,7 @@ h2.hero-page-h2 {
 
 .form-hint {
   margin: 0 0 var(--space-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--brand-white);
 }
 
@@ -980,9 +1073,9 @@ h2.hero-page-h2 {
 
 .faq-list summary {
   cursor: pointer;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.0625rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h3);
   list-style: none;
 }
 
@@ -1021,7 +1114,7 @@ h2.hero-page-h2 {
   max-width: none;
   margin-inline: auto;
   color: var(--brand-white);
-  font-family: var(--font-display);
+  font-family: "Manrope", sans-serif;
 }
 
 .final-cta .section__lead,
@@ -1061,7 +1154,7 @@ h2.hero-page-h2 {
 .sticky-cta p {
   margin: 0;
   font-weight: 700;
-  font-family: var(--font-display);
+  font-family: "Manrope", sans-serif;
 }
 
 .sticky-cta .btn--primary {
@@ -1130,9 +1223,10 @@ body.has-sticky-cta {
 .global-footer__column h2,
 .page-footer h2.section__title,
 .global-footer__column h2.section__title {
-  font-family: var(--font-display);
-  font-size: 0.875rem;
-  letter-spacing: 0.08em;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: var(--font-weight-heading);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 0 0 var(--space-3);
   color: var(--brand-blue);
@@ -1150,14 +1244,14 @@ body.has-sticky-cta {
 
 .os-tile h2,
 .os-tile h2.section__title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-heading);
   margin: 0;
   padding-bottom: 0;
   max-width: none;
   color: var(--brand-white);
-  letter-spacing: 0;
+  letter-spacing: -0.01em;
   text-transform: none;
 }
 
@@ -1215,7 +1309,8 @@ body.has-sticky-cta {
 .page-footer a,
 .global-footer__column a {
   color: var(--brand-white);
-  font-size: 0.9375rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
 }
 
 .page-footer a:hover,
@@ -1236,7 +1331,8 @@ body.has-sticky-cta {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9375rem;
   color: var(--brand-white);
 }
 
@@ -1252,12 +1348,14 @@ body.has-sticky-cta {
 
 .site-banner {
   text-align: center;
-  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
   color: var(--brand-white);
   padding: var(--space-2) var(--space-4);
   border-bottom: 1px solid var(--brand-blue);
   background: var(--brand-black);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 /* ---------- Responsive ---------- */
