@@ -49,33 +49,42 @@ function applyOfficialBrandLogos(container) {
 function getFooterTemplate() {
   const logoSrc = getOfficialLogoSrc();
   return `
-<footer class="global-footer" data-global-footer>
-  <div class="global-footer__inner">
+<footer class="page-footer" data-aerys-footer>
+  <div class="page-footer__inner">
     <div class="footer-brand">
-      <img src="${logoSrc}" alt="GenesisOS Labs Logo" class="brand-logo" loading="lazy">
+      <img
+        class="brand-logo"
+        src="${logoSrc}"
+        width="28"
+        height="28"
+        alt="GenesisOS Labs Logo"
+        loading="lazy">
       <span class="brand-lockup__title">GenesisOS Labs</span>
     </div>
-    <section class="global-footer__column" aria-labelledby="footer-products">
+    <section aria-labelledby="footer-products">
       <h2 id="footer-products">Products</h2>
       <ul>
         <li><a href="/GenesisOS.html">GenesisOS</a></li>
         <li><a href="/AerysDesktop.html">Aerys Desktop</a></li>
         <li><a href="/CRM.html">CRM</a></li>
-        <li><a href="/Coliseum.html">Coliseum</a></li>
-        <li><a href="/Marketplace.html">Marketplace</a></li>
-        <li><a href="/healthcare.html">Healthcare</a></li>
-        <li><a href="/real-estate.html">Real Estate</a></li>
-        <li><a href="/pricing.html">Pricing</a></li>
       </ul>
     </section>
-    <section class="global-footer__column" aria-labelledby="footer-company">
+    <section aria-labelledby="footer-company">
       <h2 id="footer-company">Company</h2>
       <ul>
         <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
         <li><a href="/index.html">Home</a></li>
       </ul>
     </section>
-    <section class="global-footer__column" aria-labelledby="footer-social">
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="/terms/index.html">Terms &amp; Conditions</a></li>
+        <li><a href="/privacy/index.html">Privacy Policy</a></li>
+        <li><a href="/accessibility/index.html">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
       <h2 id="footer-social">Follow us</h2>
       <ul>
         <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
@@ -84,17 +93,15 @@ function getFooterTemplate() {
         <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
       </ul>
     </section>
-    <section class="global-footer__column" aria-labelledby="footer-legal">
-      <h2 id="footer-legal">Legal</h2>
-      <ul>
-        <li><a href="/terms/index.html">Terms &amp; Conditions</a></li>
-        <li><a href="/privacy/index.html">Privacy Policy</a></li>
-        <li><a href="/accessibility/index.html">Accessibility</a></li>
-      </ul>
-    </section>
   </div>
-  <div class="footer-legal global-footer__legal">
-    <img src="${logoSrc}" alt="" class="brand-logo-legal" loading="lazy">
+  <div class="page-footer__legal">
+    <img
+      class="brand-logo-legal"
+      src="${logoSrc}"
+      width="22"
+      height="22"
+      alt=""
+      loading="lazy">
     <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
   </div>
 </footer>
