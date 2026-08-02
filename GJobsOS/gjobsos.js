@@ -105,7 +105,7 @@
       var watchdog = window.setTimeout(function () {
         if (submitBtn && submitBtn.disabled) {
           submitBtn.disabled = false;
-          submitBtn.textContent = originalLabel || "Book My Demo";
+          submitBtn.textContent = originalLabel || "Book a Demo";
           setStatus(status, "Network is slow. Please try submitting again.", "is-error");
         }
       }, 15000);
@@ -207,7 +207,7 @@
   function failSubmit(submitBtn, originalLabel, status, msg) {
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.textContent = originalLabel || "Book My Demo";
+      submitBtn.textContent = originalLabel || "Book a Demo";
     }
     setStatus(status, msg, "is-error");
   }
