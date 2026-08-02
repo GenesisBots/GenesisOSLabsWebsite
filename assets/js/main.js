@@ -64,9 +64,10 @@ function getFooterTemplate() {
     <section aria-labelledby="footer-products">
       <h2 id="footer-products">Products</h2>
       <ul>
-        <li><a href="/GenesisOS.html">GenesisOS</a></li>
         <li><a href="/AerysDesktop.html">Aerys Desktop</a></li>
+        <li><a href="/GCoin.html">GCoin</a></li>
         <li><a href="/CRM.html">CRM</a></li>
+        <li><a href="/Gaming.html">GGamingOS</a></li>
       </ul>
     </section>
     <section aria-labelledby="footer-company">
