@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GenesisOS Labs</title>
+  <title>GenesisOS Labs — Aerys Desktop, GCoin, CRM &amp; GGamingOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons. Start on your device or in the cloud.">
-  <meta property="og:title" content="The Genesis System — By GenesisOS Labs">
-  <meta property="og:description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons.">
+  <meta name="description" content="GenesisOS Labs builds Aerys Desktop, GBot Agents, GCoin, CRM, and GGamingOS — local-first automation and workflows for founders and operators.">
+  <meta property="og:title" content="GenesisOS Labs — Aerys Desktop, GCoin, CRM &amp; GGamingOS">
+  <meta property="og:description" content="Local-first automation with Aerys Desktop, GBot Agents, GCoin, CRM, and GGamingOS from GenesisOS Labs.">
   <meta property="og:url" content="https://GenesisOSLabs.com/">
   <meta property="og:image" content="https://GenesisOSLabs.com/images/og-default.jpg">
   <meta property="og:site_name" content="GenesisOS Labs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Genesis System — By GenesisOS Labs">
-  <meta name="twitter:description" content="The Genesis System is GenesisOS Labs’ automation platform: GenesisOS as your control center, GBots for tasks, and optional add-ons. Start on your device or in the cloud.">
+  <meta name="twitter:title" content="GenesisOS Labs — Aerys Desktop, GCoin, CRM &amp; GGamingOS">
+  <meta name="twitter:description" content="Local-first automation with Aerys Desktop, GBot Agents, GCoin, CRM, and GGamingOS from GenesisOS Labs.">
   <link rel="canonical" href="https://GenesisOSLabs.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +34,9 @@
       color: var(--brand-white);
     }
 
-    .genesis-os-suite .os-tile h2,
-    .genesis-os-suite .os-tile .os-header h2 {
+    .genesis-os-suite .os-tile h3,
+    .genesis-os-suite .os-tile .os-header h3,
+    .genesis-os-suite .os-tile .tile-title {
       color: var(--brand-white);
       opacity: 1;
       visibility: visible;
@@ -50,8 +51,10 @@
       background: var(--brand-blue);
     }
 
-    .genesis-os-suite .os-tile:hover h2,
-    .genesis-os-suite .os-tile:focus-within h2 {
+    .genesis-os-suite .os-tile:hover h3,
+    .genesis-os-suite .os-tile:focus-within h3,
+    .genesis-os-suite .os-tile:hover .tile-title,
+    .genesis-os-suite .os-tile:focus-within .tile-title {
       color: var(--brand-white);
     }
 
@@ -80,12 +83,12 @@
       <span class="brand-lockup__title">GenesisOS Labs</span>
     </a>
     <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <div class="nav-links links" id="primary-nav">
+        <div class="nav-links links" id="primary-nav">
       <a href="index.html">Home</a>
-      <a href="GenesisOS.html">GenesisOS</a>
       <a href="AerysDesktop.html">Aerys Desktop</a>
       <a href="GCoin.html">GCoin</a>
       <a href="CRM.html">CRM</a>
+      <a href="Gaming.html">GGamingOS</a>
     </div>
   </nav>
 </header>
@@ -94,10 +97,10 @@
 
 <section class="hero" aria-labelledby="home-hero-title">
     <div class="hero-left">
-      <h1 id="home-hero-title" class="hero-brand-h1">GenesisOS & Aerys Desktop</h1>
-      <p class="hero-brand-by">For Your Agents, Workflows, & Automations</p>
+      <h1 id="home-hero-title" class="hero-brand-h1">GenesisOS Labs</h1>
+      <p class="hero-brand-by">For Your GBot Agents, Workflows, &amp; Automations</p>
       <p>
-        <strong>GenesisOS & Aerys Desktop App</strong> give businesses &amp; personal Users one place to run Agents, automations, workflows, and AI-powered task systems — without juggling dozens of disconnected tools. <strong>GBot Agents</strong> are lightweight automation workers built inside GenesisOS that handle repetitive tasks, monitor workflows, organize operations, and keep processes moving automatically.
+        <strong>GenesisOS &amp; <a href="AerysDesktop.html">Aerys Desktop</a></strong> give businesses &amp; personal users one place to run GBot Agents, automations, workflows, and AI-powered task systems — without juggling dozens of disconnected tools. <strong>GBot Agents</strong> are lightweight automation workers built inside GenesisOS that handle repetitive tasks, monitor workflows, organize operations, and keep processes moving automatically.
       </p>
       <p>
         Most teams are overwhelmed by broken processes, repetitive work, and too many apps that don’t connect. GenesisOS helps centralize workflows, automate busywork, improve visibility, and create a scalable system that grows with your operations over time.
@@ -105,7 +108,7 @@
       <p>
         Built for founders, operators, and teams looking for simpler business automation, cleaner workflow management, and better audit visibility without needing a full engineering team.
       </p>
-      <a href="#demo-request" class="btn btn--primary">Book A Demo</a>
+      <a href="#demo-request" class="btn btn--primary">Book a Demo</a>
     </div>
     <div class="hero-right">
       <img
@@ -125,11 +128,11 @@
     <div class="cards">
       <div class="card">
         <h3>One control center</h3>
-        <p>GenesisOS & Aerys Desktop are where companies run automations, connect GBot Agents, and see what is happening—on-device or in the cloud.</p>
+        <p>GenesisOS &amp; <a href="AerysDesktop.html">Aerys Desktop</a> are where companies run automations, connect GBot Agents, and see what is happening—on-device or in the cloud.</p>
       </div>
       <div class="card">
-        <h3>Modular helpers (GBots)</h3>
-        <p>GBots add capabilities as you need them: research, operations, customer workflows without rebuilding everything from scratch.</p>
+        <h3>GBot Agents</h3>
+        <p>GBot Agents add capabilities as you need them: research, operations, customer workflows without rebuilding everything from scratch.</p>
       </div>
       <div class="card">
         <h3>Flexible deployment</h3>
@@ -152,7 +155,7 @@
       </div>
       <div class="card">
         <h3>Healthcare and Regulated Contexts</h3>
-        <p>We offer local-first options, audit-friendly workflows, and a partner who can scope responsibly. See our Healthcare page.</p>
+        <p>We offer local-first options, audit-friendly workflows, and a partner who can scope responsibly.</p>
       </div>
     </div>
   </section>
@@ -161,7 +164,7 @@
     <h2 id="how-works" class="section__title">How it works</h2>
     <ol>
       <li><strong>Pick your starting mode</strong> — local, cloud, or hybrid.</li>
-      <li><strong>Install Aerys Desktop App & GenesisOS</strong> becomes your command center.</li>
+      <li><strong>Install <a href="AerysDesktop.html">Aerys Desktop</a> &amp; GenesisOS</strong> as your command center.</li>
       <li><strong>Add GBot Agents</strong> for the jobs you want off your plate.</li>
       <li><strong>Add GSwarms</strong> for increased accuracy & performance.</li>
       <li><strong>Expand when you are ready</strong> — pricing & custom builds all start with the same intake.</li>
@@ -174,9 +177,9 @@
     </div>
 
     <div class="genesis-info-copy">
-      <h2 class="section__title">Request a custom GenesisOS or GBot Agent</h2>
+      <h2 class="section__title">Book a Demo</h2>
       <p>
-        Start by picking one task to automate in your business. We design custom builds and we can propose coordinated automation groups when that fit your goals.
+        Start by picking one task to automate in your business. We design custom builds and we can propose coordinated automation groups when that fits your goals.
       </p>
       <p>
         Pricing depends on scope. If you are unsure where to start, send a short description and we will reply with next steps.
@@ -184,13 +187,13 @@
     </div>
 
     <div id="demo-request" class="lead-container genesis-inline-form">
-      <h3 class="lead-title">Request a custom GenesisOS or GBot Agent</h3>
+      <h3 class="lead-title">Book a Demo</h3>
       <p class="lead-subtitle">
         Share your workflow, timeline, and whether you need local, cloud, or hybrid. We respond with questions only where they save you time.
       </p>
 
       <form action="https://formspree.io/f/mdayayqv" method="POST" class="lead-form" data-lead-form>
-        <input type="hidden" name="_subject" value="Custom GenesisOS or GBot request — GenesisOS Labs (Home)">
+        <input type="hidden" name="_subject" value="Custom GenesisOS or GBot Agent request — GenesisOS Labs (Home)">
 
         <div class="form-group">
           <label for="lead-name">Your name</label>
@@ -212,7 +215,7 @@
           <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
         </div>
 
-        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Submit request">Submit request</button>
+        <button type="submit" class="btn btn--primary btn--block" data-submit-label="Book a Demo">Book a Demo</button>
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>
@@ -228,9 +231,7 @@
           GenesisOS unifies business operations, has a layer auditability & fixes broken workflows.
           It’s a single workspace that launches custom GBot Agents to automate repetitive tasks reducing the number of tools in your stack.
         </p>
-        <button class="btn btn--primary" onclick="window.location.href='GenesisOS.html'">
-          Learn more about GenesisOS
-        </button>
+        <a class="btn btn--primary" href="#demo-request">Book a Demo</a>
       </div>
 
       <div class="genesisos-right">
@@ -261,36 +262,14 @@
 
       <div class="card">
         <div class="badge">When you need it</div>
-        <h3>Optional digital economy features</h3>
+        <h3>Tokenization: optional</h3>
         <p>
-          If your roadmap includes tokenized workflows or GenesisCoin (GCoin), we can help you enable them in a controlled, well-scoped way.
+          Non-tokenized automation by default. Add <a href="GCoin.html">GCoin</a> mainnet or private currency experiments only when product and legal review are complete.
         </p>
       </div>
 
     </div>
 
-  </section>
-
-  <section class="section section--black">
-    <h2 class="section__title">Tokenization: Optional. You choose</h2>
-    <p>GenesisOS is flexible. Need clean audit trails? Pick the mode that matches your risk and compliance needs.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Non-tokenized</h3>
-        <p>Automation only—no blockchain requirements.</p>
-      </div>
-
-      <div class="card">
-        <h3>Genesis Coin mainnet</h3>
-        <p>GCoin (GC): For teams that want on-chain workflows when product and legal review are complete.</p>
-      </div>
-
-      <div class="card">
-        <h3>Private currency experiments</h3>
-        <p>For simulations, training environments, or tightly scoped pilots—discuss with us before production use.</p>
-      </div>
-    </div>
   </section>
 
   <section class="section section--white genesis-os-suite" aria-labelledby="genesis-portfolio-title">
@@ -301,7 +280,7 @@
       <!-- GJobsOS -->
       <div class="os-tile">
         <div class="os-header">
-          <h2>GJobsOS</h2>
+          <h3 class="tile-title">GJobsOS</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
@@ -314,12 +293,12 @@
       <!-- GGamingOS -->
       <div class="os-tile">
         <div class="os-header">
-          <h2>GStudentOS</h2>
+          <h3 class="tile-title"><a href="Gaming.html">GGamingOS</a></h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
           <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2057527346245025867"></a>
+            <a href="https://x.com/GenesisOSLabs/status/2083870629481079276?s=20"></a>
           </blockquote>
         </div>
       </div>
@@ -327,7 +306,7 @@
       <!-- GCreatorOS -->
       <div class="os-tile">
         <div class="os-header">
-          <h2>GCreatorOS</h2>
+          <h3 class="tile-title">GCreatorOS</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
@@ -337,10 +316,10 @@
         </div>
       </div>
 
-      <!-- GEnterpriseOS -->
+      <!-- GSportManager -->
       <div class="os-tile">
         <div class="os-header">
-          <h2>GSportManager</h2>
+          <h3 class="tile-title">GSportManager</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
@@ -353,12 +332,12 @@
       <!-- GFinanceOS -->
       <div class="os-tile">
         <div class="os-header">
-          <h2>GFinanceOS</h2>
+          <h3 class="tile-title">GStudentOS</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
           <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2057458790149103725?s=20"></a>
+            <a href="https://x.com/GenesisOSLabs/status/2057527346245025867"></a>
           </blockquote>
         </div>
       </div>
@@ -366,7 +345,7 @@
       <!-- GMarketingOS -->
       <div class="os-tile">
         <div class="os-header">
-          <h2>GMarketingOS</h2>
+          <h3 class="tile-title">GMarketingOS</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
