@@ -49,7 +49,7 @@ function applyOfficialBrandLogos(container) {
 function getFooterTemplate() {
   const logoSrc = getOfficialLogoSrc();
   return `
-<footer class="page-footer" data-aerys-footer>
+<footer class="page-footer" data-footer>
   <div class="page-footer__inner">
     <div class="footer-brand">
       <img
@@ -67,7 +67,8 @@ function getFooterTemplate() {
         <li><a href="/AerysDesktop.html">Aerys Desktop</a></li>
         <li><a href="/GCoin.html">GCoin</a></li>
         <li><a href="/CRM.html">CRM</a></li>
-        <li><a href="/Gaming.html">GGamingOS</a></li>
+        <li><a href="/GGamingOS.html">GGamingOS</a></li>
+        <li><a href="/GStudentOS.html">GStudentOS</a></li>
       </ul>
     </section>
     <section aria-labelledby="footer-company">
@@ -338,9 +339,10 @@ document.addEventListener("DOMContentLoaded", () => {
   markCurrentNav();
   modernizeLegacyButtons();
 
-  if (document.body.hasAttribute("data-aerys-page")) {
-    /* Aerys page owns nav, form chips, and sticky CTAs via aerys-desktop.js */
-    return;
+  if (document.body.classList.contains("aerys-page")) {
+    /* Detected via .aerys-page (not data-aerys-page). Continue shared init:
+       AerysDesktop uses data-lead-form; aerys-desktop.js is not loaded and
+       only handles form[data-aerys-form]. */
   }
 
   initNav();
