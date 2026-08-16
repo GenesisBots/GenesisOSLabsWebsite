@@ -568,6 +568,91 @@ a:focus-visible {
   padding-bottom: 0.1rem;
 }
 
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown__toggle {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--brand-white);
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.nav-dropdown__toggle:hover,
+.nav-dropdown__toggle:focus-visible,
+.nav-dropdown.is-open > .nav-dropdown__toggle,
+.nav-dropdown:hover > .nav-dropdown__toggle,
+.nav-dropdown:focus-within > .nav-dropdown__toggle,
+.nav-dropdown__toggle[aria-current="page"] {
+  color: var(--brand-blue);
+}
+
+.nav-dropdown__toggle[aria-current="page"] {
+  border-bottom: 2px solid var(--brand-blue);
+  padding-bottom: 0.1rem;
+}
+
+/* Flush under the trigger so the pointer never leaves the dropdown region */
+.nav-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 11.5rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0.55rem 0 0.4rem;
+  margin: 0;
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  border-radius: var(--radius);
+  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover > .nav-dropdown__menu,
+  .nav-dropdown:focus-within > .nav-dropdown__menu {
+    display: flex;
+  }
+}
+
+.nav-dropdown.is-open > .nav-dropdown__menu {
+  display: flex;
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  color: var(--brand-white);
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a:focus-visible,
+.nav-dropdown__menu a[aria-current="page"],
+.nav-dropdown__menu a.active {
+  color: var(--brand-blue);
+  background: color-mix(in srgb, var(--brand-blue) 12%, transparent);
+  border-bottom: 0;
+  padding-bottom: 0.55rem;
+}
+
 .nav-toggle {
   display: none;
   background: transparent;
@@ -1435,6 +1520,38 @@ body.has-sticky-cta {
 
   .site-nav.is-open .nav-links,
   .site-nav.is-open .links {
+    display: flex;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-dropdown__toggle {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-dropdown__menu {
+    position: static;
+    top: auto;
+    left: auto;
+    min-width: 0;
+    width: 100%;
+    margin-top: 0.35rem;
+    padding-top: 0.4rem;
+    box-shadow: none;
+  }
+
+  /* Mobile: hover must not open; tap sets .is-open */
+  .nav-dropdown:hover > .nav-dropdown__menu,
+  .nav-dropdown:focus-within > .nav-dropdown__menu {
+    display: none;
+  }
+
+  .nav-dropdown.is-open > .nav-dropdown__menu {
     display: flex;
   }
 

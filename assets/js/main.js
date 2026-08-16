@@ -66,9 +66,7 @@ function getFooterTemplate() {
       <ul>
         <li><a href="/AerysDesktop.html">Aerys Desktop</a></li>
         <li><a href="/GCoin.html">GCoin</a></li>
-        <li><a href="/CRM.html">CRM</a></li>
-        <li><a href="/GGamingOS.html">GGamingOS</a></li>
-        <li><a href="/GStudentOS.html">GStudentOS</a></li>
+        <li><a href="/Education.html">Education</a></li>
       </ul>
     </section>
     <section aria-labelledby="footer-company">
@@ -125,6 +123,76 @@ function mountGlobalFooter(markup) {
   applyOfficialBrandLogos(root);
 }
 
+function closeNavDropdown(dropdown) {
+  if (!dropdown) return;
+  dropdown.classList.remove("is-open");
+  const btn = qs(".nav-dropdown__toggle", dropdown);
+  if (btn) btn.setAttribute("aria-expanded", "false");
+}
+
+function openNavDropdown(dropdown) {
+  if (!dropdown) return;
+  dropdown.classList.add("is-open");
+  const btn = qs(".nav-dropdown__toggle", dropdown);
+  if (btn) btn.setAttribute("aria-expanded", "true");
+}
+
+function prefersHoverNav() {
+  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+}
+
+function initNavDropdowns(nav) {
+  const dropdowns = qsa("[data-nav-dropdown]", nav);
+  if (!dropdowns.length) return;
+
+  dropdowns.forEach((dropdown) => {
+    const btn = qs(".nav-dropdown__toggle", dropdown);
+    if (!btn) return;
+
+    // Desktop: open/close on hover of the whole Products region (tab + menu)
+    dropdown.addEventListener("mouseenter", () => {
+      if (!prefersHoverNav()) return;
+      dropdowns.forEach((other) => {
+        if (other !== dropdown) closeNavDropdown(other);
+      });
+      openNavDropdown(dropdown);
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      if (!prefersHoverNav()) return;
+      closeNavDropdown(dropdown);
+    });
+
+    // Mobile / touch: tap to toggle. Desktop click is not required to open.
+    btn.addEventListener("click", (event) => {
+      if (prefersHoverNav()) {
+        event.preventDefault();
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+      const willOpen = !dropdown.classList.contains("is-open");
+      dropdowns.forEach((other) => {
+        if (other !== dropdown) closeNavDropdown(other);
+      });
+      if (willOpen) openNavDropdown(dropdown);
+      else closeNavDropdown(dropdown);
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) closeNavDropdown(dropdown);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    dropdowns.forEach((dropdown) => closeNavDropdown(dropdown));
+  });
+}
+
 function initNav() {
   const nav = qs(".site-nav") || qs("header nav");
   if (!nav) return;
@@ -148,27 +216,45 @@ function initNav() {
   toggle.addEventListener("click", () => {
     const open = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    if (!open) {
+      qsa("[data-nav-dropdown]", nav).forEach((dropdown) => closeNavDropdown(dropdown));
+    }
   });
+
+  initNavDropdowns(nav);
 
   qsa(".nav-links a, .links a", nav).forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
+      qsa("[data-nav-dropdown]", nav).forEach((dropdown) => closeNavDropdown(dropdown));
     });
   });
 }
 
 function markCurrentNav() {
   const currentFile = window.location.pathname.split("/").pop() || "index.html";
+  const productPages = new Set(["CRM.html", "GGamingOS.html", "GStudentOS.html", "Products.html", "Gaming.html"]);
+
   qsa("nav .links a[href], nav .nav-links a[href]").forEach((link) => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("http") || href.startsWith("mailto:")) return;
     const file = href.split("/").pop();
-    if (file === currentFile || href === currentFile) {
+    const isMatch =
+      file === currentFile ||
+      href === currentFile ||
+      (currentFile === "Gaming.html" && file === "GGamingOS.html");
+    if (isMatch) {
       link.classList.add("active");
       link.setAttribute("aria-current", "page");
     }
   });
+
+  if (productPages.has(currentFile)) {
+    qsa(".nav-dropdown__toggle").forEach((btn) => {
+      btn.setAttribute("aria-current", "page");
+    });
+  }
 }
 
 function syncSelectedTasks(form) {
