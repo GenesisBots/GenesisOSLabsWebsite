@@ -230,7 +230,7 @@
   .tweet-frame {
     margin-top: var(--space-4);
     overflow: hidden;
-    height: 350px;
+    height: 325px;
     position: relative;
   }
 
