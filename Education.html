@@ -69,6 +69,72 @@
       height: 180px;
       object-fit: cover;
     }
+
+    /* Education knowledge base — one tweet size on all breakpoints (scoped) */
+    .education-kb .tweet-frame {
+      height: 320px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .education-kb .tweet-frame iframe,
+    .education-kb .tweet-frame .twitter-tweet-rendered {
+      transform: scale(0.90);
+      transform-origin: top left;
+      width: 120% !important;
+      max-width: none !important;
+    }
+
+    .education-kb .os-tile {
+      padding: 1rem;
+      min-height: auto;
+    }
+
+    .education-kb .kb-filters {
+      position: sticky;
+      top: calc(var(--header-height) + 0.5rem);
+      background: var(--brand-black);
+      padding: 0.75rem 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .education-kb .kb-filters button {
+      appearance: none;
+      font-family: "Manrope", sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--brand-white);
+      background: transparent;
+      border: 1px solid var(--brand-blue);
+      min-height: 2.25rem;
+      padding: 0.4rem 0.85rem;
+      cursor: pointer;
+    }
+
+    .education-kb .kb-filters button:hover,
+    .education-kb .kb-filters button:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+    }
+
+    .education-kb .kb-filters button.active {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+    }
+
+    .education-kb .kb-load-more-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: var(--space-5);
+    }
+
+    .education-kb .kb-load-more-wrap[hidden] {
+      display: none;
+    }
   </style>
   <script src="assets/js/main.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -139,14 +205,24 @@
 
 
   <!-- Tweet Knowledge Base (Customs Portfolio import) -->
-  <section class="section section--black genesis-os-suite" id="tweet-knowledge-base" aria-labelledby="tweet-knowledge-title">
+  <section class="section section--black genesis-os-suite education-kb" id="tweet-knowledge-base" aria-labelledby="tweet-knowledge-title">
     <h2 id="tweet-knowledge-title" class="section__title">Tokenization Knowledge Base & Digital Asset (Blockchain) Use Cases</h2>
+
+    <div class="kb-filters" role="toolbar" aria-label="Knowledge base categories">
+      <button type="button" data-cat="all" class="active" aria-pressed="true">All</button>
+      <button type="button" data-cat="agents" aria-pressed="false">Agents</button>
+      <button type="button" data-cat="industry" aria-pressed="false">Industry</button>
+      <button type="button" data-cat="logistics" aria-pressed="false">Logistics</button>
+      <button type="button" data-cat="entertainment" aria-pressed="false">Entertainment</button>
+      <button type="button" data-cat="assets" aria-pressed="false">Assets</button>
+      <button type="button" data-cat="gtm" aria-pressed="false">GTM</button>
+    </div>
 
     <div class="os-grid">
 
-       <div class="os-tile">
+      <div class="os-tile" data-category="agents">
         <div class="os-header">
-          <h3 class="tile-title">Aerys Desktop GBot Agents & Automations</h3>
+          <h3 class="tile-title">Aerys Desktop Automations</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
@@ -156,7 +232,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="industry">
         <div class="os-header">
           <h3 class="tile-title">Enterprise</h3>
           <div class="os-underline"></div>
@@ -167,8 +243,8 @@
           </blockquote>
         </div>
       </div>
-      
-      <div class="os-tile">
+
+      <div class="os-tile" data-category="entertainment">
         <div class="os-header">
           <h3 class="tile-title">Video Games</h3>
           <div class="os-underline"></div>
@@ -180,8 +256,7 @@
         </div>
       </div>
 
-      
-      <div class="os-tile">
+      <div class="os-tile" data-category="industry">
         <div class="os-header">
           <h3 class="tile-title">Healthcare</h3>
           <div class="os-underline"></div>
@@ -192,8 +267,8 @@
           </blockquote>
         </div>
       </div>
-      
-      <div class="os-tile">
+
+      <div class="os-tile" data-category="industry">
         <div class="os-header">
           <h3 class="tile-title">National Sovereignty</h3>
           <div class="os-underline"></div>
@@ -204,8 +279,8 @@
           </blockquote>
         </div>
       </div>
-      
-      <div class="os-tile">
+
+      <div class="os-tile" data-category="logistics">
         <div class="os-header">
           <h3 class="tile-title">Global Shipping</h3>
           <div class="os-underline"></div>
@@ -217,7 +292,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="logistics">
         <div class="os-header">
           <h3 class="tile-title">Logistics & Robotics</h3>
           <div class="os-underline"></div>
@@ -229,7 +304,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="industry">
         <div class="os-header">
           <h3 class="tile-title">Students & Schools</h3>
           <div class="os-underline"></div>
@@ -241,7 +316,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="assets">
         <div class="os-header">
           <h3 class="tile-title">Currencies & Commodities</h3>
           <div class="os-underline"></div>
@@ -253,9 +328,9 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="gtm">
         <div class="os-header">
-          <h3 class="tile-title">Sales & Marketing</h3>
+          <h3 class="tile-title">Marketing & Sales</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
@@ -264,10 +339,10 @@
           </blockquote>
         </div>
       </div>
-      
-      <div class="os-tile">
+
+      <div class="os-tile" data-category="gtm">
         <div class="os-header">
-          <h3 class="tile-title">Sales & Marketing</h3>
+          <h3 class="tile-title">Marketing & Sales</h3>
           <div class="os-underline"></div>
         </div>
         <div class="tweet-frame">
@@ -277,7 +352,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="entertainment">
         <div class="os-header">
           <h3 class="tile-title">Casinos, Gaming & Gambling</h3>
           <div class="os-underline"></div>
@@ -288,8 +363,8 @@
           </blockquote>
         </div>
       </div>
-      
-      <div class="os-tile">
+
+      <div class="os-tile" data-category="assets">
         <div class="os-header">
           <h3 class="tile-title">Real World Assets (RWAs)</h3>
           <div class="os-underline"></div>
@@ -301,7 +376,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="agents">
         <div class="os-header">
           <h3 class="tile-title">Alpha Gen Agents & Automations</h3>
           <div class="os-underline"></div>
@@ -312,8 +387,8 @@
           </blockquote>
         </div>
       </div>
-  
-      <div class="os-tile">
+
+      <div class="os-tile" data-category="assets">
         <div class="os-header">
           <h3 class="tile-title">Sovereign Data Exchange (GDX)</h3>
           <div class="os-underline"></div>
@@ -325,7 +400,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="entertainment">
         <div class="os-header">
           <h3 class="tile-title">Sports Operations</h3>
           <div class="os-underline"></div>
@@ -335,9 +410,9 @@
             <a href="https://x.com/GenesisOSLabs/status/2090037169637192156?s=20"></a>
           </blockquote>
         </div>
-      </div>      
+      </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="entertainment">
         <div class="os-header">
           <h3 class="tile-title">Movies & Film</h3>
           <div class="os-underline"></div>
@@ -349,7 +424,7 @@
         </div>
       </div>
 
-      <div class="os-tile">
+      <div class="os-tile" data-category="industry">
         <div class="os-header">
           <h3 class="tile-title">Human Resources (HR)</h3>
           <div class="os-underline"></div>
@@ -360,13 +435,124 @@
           </blockquote>
         </div>
       </div>
-      
+
+    </div>
+
+    <div class="kb-load-more-wrap">
+      <button type="button" class="btn btn--primary" id="kb-load-more">Load more</button>
     </div>
   </section>
 
 </main>
 
+<script>
+  // Education-only: strip twitter-tweet before widgets.js can auto-hydrate all 18 embeds.
+  document.querySelectorAll(".education-kb .os-tile blockquote.twitter-tweet").forEach((blockquote) => {
+    blockquote.classList.remove("twitter-tweet");
+    blockquote.classList.add("kb-tweet");
+  });
+</script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tiles = [...document.querySelectorAll(".education-kb .os-tile")];
+  const loadMore = document.getElementById("kb-load-more");
+  const filterBtns = [...document.querySelectorAll(".education-kb .kb-filters [data-cat]")];
+  let visible = 6;
+  let category = "all";
+
+  function matchingTiles() {
+    return tiles.filter((tile) => category === "all" || tile.getAttribute("data-category") === category);
+  }
+
+  function render() {
+    const matched = matchingTiles();
+    tiles.forEach((tile) => {
+      tile.style.display = "none";
+    });
+    matched.forEach((tile, i) => {
+      tile.style.display = i < visible ? "" : "none";
+    });
+    if (loadMore) {
+      const done = matched.length <= visible;
+      loadMore.hidden = done;
+      if (loadMore.parentElement) loadMore.parentElement.hidden = done;
+    }
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      category = btn.getAttribute("data-cat") || "all";
+      visible = 6;
+      filterBtns.forEach((other) => {
+        const active = other === btn;
+        other.classList.toggle("active", active);
+        other.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      render();
+    });
+  });
+
+  if (loadMore) {
+    loadMore.addEventListener("click", () => {
+      visible += 6;
+      render();
+    });
+  }
+
+  render();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const pending = new Set();
+
+  function hydrateTile(tile) {
+    if (!tile || tile.getAttribute("data-kb-hydrated") === "true") return;
+
+    const blockquote = tile.querySelector("blockquote.twitter-tweet, blockquote.kb-tweet");
+    if (!blockquote) return;
+
+    if (!(window.twttr && window.twttr.widgets)) {
+      pending.add(tile);
+      return;
+    }
+
+    blockquote.classList.add("twitter-tweet");
+    tile.setAttribute("data-kb-hydrated", "true");
+    pending.delete(tile);
+    window.twttr.widgets.load(tile);
+  }
+
+  function flushPending() {
+    pending.forEach((tile) => hydrateTile(tile));
+  }
+
+  if (window.twttr && typeof window.twttr.ready === "function") {
+    window.twttr.ready(flushPending);
+  } else {
+    const wait = window.setInterval(() => {
+      if (window.twttr && window.twttr.widgets) {
+        window.clearInterval(wait);
+        flushPending();
+      }
+    }, 200);
+    window.setTimeout(() => window.clearInterval(wait), 15000);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        hydrateTile(entry.target);
+      }
+    });
+  }, { rootMargin: "200px" });
+
+  document.querySelectorAll(".education-kb .os-tile").forEach((tile) => {
+    observer.observe(tile);
+  });
+});
+</script>
 
 </body>
 </html>
