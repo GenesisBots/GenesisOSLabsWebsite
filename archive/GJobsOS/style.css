@@ -1,0 +1,752 @@
+/* ==================================================
+   GJOBSOS LANDING PAGE — Page-Specific Styles
+   Inherits tri-color brand system from neon.css.
+   Colors: --brand-blue | --brand-white | --brand-black
+   ================================================== */
+
+html {
+  overflow-x: clip;
+}
+
+.gjobsos-page {
+  max-width: 1180px;
+  overflow-x: clip;
+}
+
+.gjobsos-page .section {
+  margin-top: 64px;
+}
+
+.gjobs-section-sub {
+  color: var(--brand-blue);
+  font-size: 14px;
+  max-width: 720px;
+  line-height: 1.65;
+  margin: 4px 0 22px;
+}
+
+/* --------------------------------------------------
+   GLOBAL BUTTON OVERRIDES (page-scoped)
+-------------------------------------------------- */
+
+.gjobsos-page .primary-btn,
+.gjobsos-page button.primary-btn,
+.gjobs-cta-primary,
+.gjobs-submit {
+  background: var(--brand-blue);
+  color: var(--brand-white);
+  border: 2px solid var(--brand-blue);
+  border-radius: var(--radius);
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.gjobsos-page .primary-btn:hover,
+.gjobsos-page .primary-btn:focus-visible,
+.gjobs-cta-primary:hover,
+.gjobs-cta-primary:focus-visible,
+.gjobs-submit:hover,
+.gjobs-submit:focus-visible {
+  background: var(--brand-white);
+  color: var(--brand-blue);
+  border-color: var(--brand-white);
+  transform: none;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+/* Section title underline override */
+.gjobsos-page .section h2::after {
+  background: var(--brand-blue);
+}
+
+/* --------------------------------------------------
+   HERO
+-------------------------------------------------- */
+
+.gjobs-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: var(--space-5);
+  align-items: center;
+  padding: var(--space-6) max(1rem, calc((100% - var(--max-width)) / 2));
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border-bottom: 1px solid var(--brand-blue);
+  background: var(--brand-black);
+}
+
+.gjobs-hero::before {
+  content: none;
+}
+
+.gjobs-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gjobs-hero-content {
+  padding: 6px 0 6px clamp(24px, 4vw, 56px);
+}
+
+.gjobs-hero-title {
+  font-size: clamp(26px, 3.6vw, 38px);
+  line-height: 1.1;
+  margin: 0 0 22px;
+  color: var(--brand-white);
+}
+
+.gjobs-hero-sub {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--brand-white);
+  max-width: 560px;
+  margin: 0 0 32px;
+}
+
+.gjobs-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.gjobs-cta-primary {
+  font-size: 16px;
+  padding: 14px 26px;
+  letter-spacing: 0.01em;
+}
+
+.gjobs-hero-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.gjobs-hero-tags li {
+  font-size: 12px;
+  color: var(--brand-blue);
+  padding: 5px 11px;
+  border-radius: var(--radius);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+}
+
+/* Hero visual */
+.gjobs-hero-visual {
+  position: relative;
+  align-self: center;
+  max-height: var(--hero-media-max);
+  max-width: 26rem;
+  width: 100%;
+  justify-self: end;
+  min-height: 320px;
+  border-radius: var(--radius);
+  padding: 28px;
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.gjobs-hero-visual:hover {
+  border-color: var(--brand-blue);
+  box-shadow: none;
+  transform: none;
+}
+
+.gjobs-hero-orb {
+  display: none;
+}
+
+.gjobs-hero-grid {
+  display: none;
+}
+
+.gjobs-hero-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gjobs-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--brand-white);
+  box-shadow: none;
+}
+
+.gjobs-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius);
+  flex: 0 0 9px;
+  box-shadow: none;
+}
+
+.gjobs-dot-blue {
+  background: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+.gjobs-dot-gray {
+  background: var(--brand-white);
+  color: var(--brand-white);
+}
+
+/* --------------------------------------------------
+   VIDEO SECTION
+-------------------------------------------------- */
+
+.gjobs-video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 18px auto 0;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-video-frame .demo-video,
+.demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--brand-black);
+  border-radius: var(--radius);
+  outline: none;
+  border: 1px solid var(--brand-blue);
+}
+
+/* --------------------------------------------------
+   WHAT IS GJOBSOS
+   - Title and right-column top edges aligned at top:0
+-------------------------------------------------- */
+
+.gjobs-what-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+  margin-top: 18px;
+  padding-top: 4px;
+}
+
+.gjobs-what-copy {
+  padding-top: 0;
+}
+
+.gjobs-what-copy > h2,
+.gjobs-what-copy > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.gjobs-what-copy h2::after {
+  background: var(--brand-blue);
+}
+
+.gjobs-what-copy p {
+  color: var(--brand-white);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 14px 0 0;
+  max-width: 640px;
+}
+
+.gjobs-what-copy p:first-of-type {
+  margin-top: 16px;
+}
+
+.gjobs-what-visual {
+  display: grid;
+  gap: 14px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.gjobs-stat-card {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px 18px;
+  border-radius: var(--radius);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-stat-card:first-child {
+  margin-top: 0;
+}
+
+.gjobs-stat-num {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--brand-blue);
+}
+
+.gjobs-stat-label {
+  font-size: 13px;
+  color: var(--brand-blue);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------
+   CORE FEATURES
+-------------------------------------------------- */
+
+.gjobs-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.gjobs-feature-card {
+  position: relative;
+  padding: 22px 22px 20px;
+  border-radius: var(--radius);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+  transition: border-color 0.25s ease;
+  overflow: hidden;
+}
+
+.gjobs-feature-card::after {
+  content: none;
+}
+
+.gjobs-feature-card:hover {
+  transform: none;
+  border-color: var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-feature-card:hover::after {
+  content: none;
+}
+
+.gjobs-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 14px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--brand-white);
+  background: var(--brand-blue);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-feature-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: var(--brand-white);
+}
+
+.gjobs-feature-card p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--brand-blue);
+}
+
+/* --------------------------------------------------
+   WHY GJOBSOS EXISTS
+-------------------------------------------------- */
+
+.gjobs-why-inner {
+  position: relative;
+  max-width: 920px;
+  margin: 8px auto 0;
+  padding: 32px 34px;
+  border-radius: var(--radius);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-why-inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  border-radius: var(--radius);
+  background: var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-why-inner h2 {
+  margin-top: 0;
+}
+
+.gjobs-why-inner p {
+  color: var(--brand-white);
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  max-width: none;
+}
+
+.gjobs-why-inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------
+   FORM SECTION
+-------------------------------------------------- */
+
+.gjobs-form-section {
+  scroll-margin-top: 90px;
+}
+
+.gjobs-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+  margin-top: 14px;
+}
+
+.gjobs-form-copy h2 {
+  margin-top: 0;
+}
+
+.gjobs-form-copy p {
+  color: var(--brand-white);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+.gjobs-form-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+}
+
+.gjobs-form-bullets li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: var(--brand-white);
+  line-height: 1.55;
+}
+
+.gjobs-form-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius);
+  background: var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  box-shadow: none;
+}
+
+.gjobs-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gjobs-form label {
+  font-size: 12.5px;
+  color: var(--brand-white);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.gjobs-req {
+  color: var(--brand-blue);
+  margin-left: 2px;
+}
+
+.gjobs-form input,
+.gjobs-form select,
+.gjobs-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 14px;
+  color: var(--brand-white);
+  background: var(--brand-black);
+  border: 1px solid var(--brand-blue);
+  border-radius: var(--radius);
+  font-family: inherit;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.gjobs-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.gjobs-form select {
+  appearance: none;
+  background-image: none;
+  padding-right: 32px;
+}
+
+.gjobs-form input::placeholder,
+.gjobs-form textarea::placeholder {
+  color: var(--brand-blue);
+}
+
+.gjobs-form input:focus,
+.gjobs-form select:focus,
+.gjobs-form textarea:focus {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+  border-color: var(--brand-blue);
+  box-shadow: none;
+  background: var(--brand-black);
+}
+
+.gjobs-form input.is-invalid,
+.gjobs-form select.is-invalid,
+.gjobs-form textarea.is-invalid {
+  border-color: var(--brand-white);
+  box-shadow: none;
+}
+
+.gjobs-submit {
+  margin-top: 6px;
+  padding: 13px 22px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.gjobs-submit[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gjobs-form-status {
+  margin: 4px 0 0;
+  font-size: 13px;
+  min-height: 1.2em;
+  color: var(--brand-white);
+  line-height: 1.5;
+}
+
+.gjobs-form-status.is-error {
+  color: var(--brand-white);
+}
+
+.gjobs-form-status.is-success {
+  color: var(--brand-blue);
+}
+
+.gjobs-form-note {
+  margin: 0;
+  font-size: 12px;
+  color: var(--brand-blue);
+  text-align: center;
+}
+
+.gjobs-form.is-submitted .gjobs-form-fields {
+  display: none;
+}
+
+.gjobs-form-success {
+  display: none;
+  text-align: center;
+  padding: 20px 10px 6px;
+}
+
+.gjobs-form-success h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: var(--brand-blue);
+  text-shadow: none;
+}
+
+.gjobs-form-success p {
+  color: var(--brand-white);
+  font-size: 14px;
+  margin: 0;
+}
+
+.gjobs-form.is-submitted .gjobs-form-success {
+  display: block;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .gjobs-hero {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 14px clamp(20px, 4vw, 36px) 14px 0;
+  }
+
+  .gjobs-hero-content {
+    padding-left: clamp(28px, 6vw, 48px);
+  }
+
+  .gjobs-hero-visual {
+    min-height: 0;
+    max-height: var(--hero-media-max-sm);
+    max-width: none;
+    justify-self: stretch;
+    padding: 22px;
+    margin-right: 0;
+  }
+
+  .gjobs-hero-title {
+    margin-bottom: 18px;
+  }
+
+  .gjobs-hero-sub {
+    margin-bottom: 26px;
+  }
+
+  .gjobs-hero-ctas {
+    margin-bottom: 30px;
+  }
+
+  .gjobs-what-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .gjobs-form-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .gjobs-why-inner {
+    padding: 26px 22px;
+  }
+
+  .gjobsos-page .section {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gjobs-hero {
+    padding: 12px clamp(16px, 4vw, 24px) 12px 0;
+  }
+
+  .gjobs-hero-content {
+    padding-left: clamp(16px, 5vw, 24px);
+    padding-right: 4px;
+  }
+
+  .gjobs-hero-title {
+    font-size: clamp(22px, 6.4vw, 30px);
+    margin-bottom: 16px;
+  }
+
+  .gjobs-hero-sub {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .gjobs-cta-primary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .gjobs-hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 26px;
+  }
+
+  .gjobs-feature-card {
+    padding: 18px;
+  }
+
+  .gjobs-why-inner {
+    padding: 22px 18px;
+  }
+
+  .gjobs-form {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gjobs-hero {
+    padding: 10px 16px 12px 0;
+  }
+
+  .gjobs-hero-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .gjobs-hero-sub {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .gjobs-hero-tags li {
+    font-size: 11px;
+  }
+
+  .gjobs-stat-num {
+    font-size: 24px;
+  }
+
+  .gjobs-feature-card h3 {
+    font-size: 16px;
+  }
+
+  .gjobs-form input,
+  .gjobs-form select,
+  .gjobs-form textarea {
+    font-size: 13px;
+    padding: 10px 11px;
+  }
+}

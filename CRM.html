@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CRM | GenesisOS Labs</title>
+  <title>GenesisCRM | GenesisOS Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
   <meta name="description" content="GenesisCRM (GCRM) by GenesisOS Labs — custom AI-enabled CRMs on GenesisOS, running local, cloud, or hybrid with GBot Agents your team will use.">
-  <meta property="og:title" content="CRM | GenesisOS Labs">
+  <meta property="og:title" content="GenesisCRM | GenesisOS Labs">
   <meta property="og:description" content="Custom AI-enabled CRMs on GenesisOS — local, cloud, or hybrid — with automations tailored to your team.">
-  <meta property="og:url" content="https://GenesisOSLabs.com/CRM.html">
-  <meta property="og:image" content="https://GenesisOSLabs.com/images/og-default.jpg">
-  <meta name="twitter:image" content="https://GenesisOSLabs.com/images/og-default.jpg">
+  <meta property="og:url" content="https://genesisoslabs.com/CRM.html">
+  <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
   <meta property="og:site_name" content="GenesisOS Labs">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CRM | GenesisOS Labs">
+  <meta name="twitter:title" content="GenesisCRM | GenesisOS Labs">
   <meta name="twitter:description" content="Custom AI-enabled CRMs on GenesisOS — local, cloud, or hybrid — with automations tailored to your team.">
-  <link rel="canonical" href="https://GenesisOSLabs.com/CRM.html">
+  <link rel="canonical" href="https://genesisoslabs.com/CRM.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/neon.css?v=brand6">
-  <link rel="stylesheet" href="assets/css/style.css?v=brand6">
-  <script src="assets/js/main.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand8">
+  <script src="assets/js/main.js?v=brand8" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
   <script>
@@ -29,6 +33,46 @@
     gtag('js', new Date());
     gtag('config', 'G-7ZNYFJFNM9');
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genesisoslabs.com/#organization",
+      "name": "GenesisOS Labs LLC",
+      "url": "https://genesisoslabs.com/",
+      "logo": "https://genesisoslabs.com/assets/img/logo.png",
+      "email": "support@GenesisOSLabs.com",
+      "sameAs": [
+        "https://x.com/GenesisOSLabs",
+        "https://www.linkedin.com/company/104893537",
+        "https://www.instagram.com/genesisoslabs/",
+        "https://www.facebook.com/profile.php?id=61590064982617"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://genesisoslabs.com/#website",
+      "url": "https://genesisoslabs.com/",
+      "name": "GenesisOS Labs",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "GenesisCRM",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "url": "https://genesisoslabs.com/CRM.html",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -38,23 +82,24 @@
 <header class="site-header">
   <nav class="site-nav" aria-label="Primary">
     <a class="brand-lockup" href="index.html">
-      <img class="brand-lockup__logo brand-logo" src="assets/img/GenesisOSLabs G Logo v1 05132026.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo">
       <span class="brand-lockup__title">GenesisOS Labs</span>
     </a>
     <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
-        <div class="nav-links links" id="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="AerysDesktop.html">Aerys Desktop</a>
-      <a href="GCoin.html">GCoin</a>
+    <div class="nav-links links" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="AerysDesktop.html" data-nav="aerys">Aerys Desktop</a>
+      <a href="GCoin.html" data-nav="gcoin">GCoin</a>
       <div class="nav-dropdown" data-nav-dropdown>
-        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="products-menu">Products</button>
-        <div class="nav-dropdown__menu" id="products-menu" role="menu">
-          <a href="CRM.html" role="menuitem">CRM</a>
-          <a href="GGamingOS.html" role="menuitem">GGamingOS</a>
-          <a href="GStudentOS.html" role="menuitem">GStudentOS</a>
+        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-controls="products-menu" data-nav="products">Products</button>
+        <div class="nav-dropdown__menu" id="products-menu">
+          <a href="CRM.html" data-nav="crm">CRM</a>
+          <a href="GGamingOS.html" data-nav="ggamingos">GGamingOS</a>
+          <a href="GStudentOS.html" data-nav="gstudentos">GStudentOS</a>
+          <a href="EnterpriseTokenization.html" data-nav="tokenization">Enterprise Tokenization</a>
         </div>
       </div>
-      <a href="Education.html">Education</a>
+      <a href="Education.html" data-nav="education">Education</a>
     </div>
   </nav>
 </header>
@@ -72,12 +117,15 @@
       <p>
         <strong>Why it matters:</strong> generic CRMs force you to change your motion. GCRM starts from your real stages, handoffs, and data—then removes repetitive clicks with well-scoped AI assistance.
       </p>
-      <button class="btn btn--primary" onclick="document.getElementById('gcrm-lead').scrollIntoView({ behavior: 'smooth' })">
+      <a class="btn btn--primary" href="#gcrm-lead">
         Book a Demo
-      </button>
+      </a>
     </div>
     <div class="hero-right">
-      <img src="assets/img/GenesisOSLabs PC Image v1 05182026.png" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisCRM dashboard mockup with pipelines and automation tiles" decoding="async" fetchpriority="high" width="720" height="540">
+      <picture>
+        <source type="image/webp" srcset="assets/img/hero-pc-720.webp 720w, assets/img/hero-pc-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 28rem">
+        <img src="assets/img/hero-pc-720.jpg" srcset="assets/img/hero-pc-720.jpg 720w, assets/img/hero-pc-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="480" alt="GenesisCRM dashboard mockup with pipelines and automation tiles" decoding="async" fetchpriority="high">
+      </picture>
     </div>
   </section>
 
@@ -148,7 +196,10 @@
 
   <section id="gcrm-lead" class="section genesis-info-section">
     <div class="genesis-inline-image">
-      <img src="assets/img/Gbot and Swarm v1 05182026.PNG" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS and GenesisCRM integration overview on a laptop">
+      <picture>
+        <source type="image/webp" srcset="assets/img/art-gbot-swarm-720.webp 720w, assets/img/art-gbot-swarm-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 22rem">
+        <img src="assets/img/art-gbot-swarm-720.jpg" srcset="assets/img/art-gbot-swarm-720.jpg 720w, assets/img/art-gbot-swarm-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 22rem" width="720" height="480" alt="GenesisOS and GenesisCRM integration overview on a laptop" loading="lazy" decoding="async">
+      </picture>
     </div>
     <div class="genesis-info-copy">
       <h2 class="section__title">Book a Demo</h2>
@@ -159,7 +210,7 @@
     <div class="lead-container genesis-inline-form">
       <h3 class="lead-title">Book a Demo</h3>
       <p class="lead-subtitle">We reply within a few business days with clarifying questions or a proposed call.</p>
-      <form action="https://formspree.io/f/xwvayvon" method="POST" class="lead-form" data-lead-form>
+      <form action="https://formspree.io/f/xwvayvon" method="POST" class="lead-form" data-lead-form data-lead-event="demo_request">
         <input type="hidden" name="_subject" value="GCRM inquiry — GenesisOS Labs">
         <div class="form-group">
           <label for="gcrm-name">Your name</label>
@@ -212,5 +263,53 @@
 
 </main>
 
+<footer class="page-footer" data-footer>
+  <div class="page-footer__inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo" loading="lazy">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </div>
+    <section aria-labelledby="footer-products">
+      <h2 id="footer-products">Products</h2>
+      <ul>
+        <li><a href="AerysDesktop.html">Aerys Desktop</a></li>
+        <li><a href="GCoin.html">GCoin</a></li>
+        <li><a href="CRM.html">CRM</a></li>
+        <li><a href="GGamingOS.html">GGamingOS</a></li>
+        <li><a href="GStudentOS.html">GStudentOS</a></li>
+        <li><a href="EnterpriseTokenization.html">Enterprise Tokenization</a></li>
+        <li><a href="Education.html">Education</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-company">
+      <h2 id="footer-company">Company</h2>
+      <ul>
+        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="terms/">Terms &amp; Conditions</a></li>
+        <li><a href="privacy/">Privacy Policy</a></li>
+        <li><a href="accessibility/">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="page-footer__legal">
+    <img class="brand-logo-legal" src="assets/img/logo.png" width="22" height="22" alt="" loading="lazy">
+    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,19 +1,13 @@
-console.log("GenesisOS Labs site loaded.");
-
-const OFFICIAL_LOGO = "assets/img/GenesisOSLabs G Logo v1 05132026.png";
-const MAX_TASKS = 3;
+const OFFICIAL_LOGO = "assets/img/logo.png";
 
 const DEMO_SELECTORS = [
   "[data-demo-target]",
   "#demo-request",
   "#genesis-lead",
   "#gcrm-lead",
-  "#gbot-request-form",
+  "#audit-request",
   "#marketplace-contact",
-  "#healthcare-demo",
-  "#real-estate-demo",
-  "#estimate-form",
-  "#demo-form"
+  "#demo-form",
 ].join(", ");
 
 function qs(sel, root) {
@@ -32,95 +26,8 @@ function getAssetPrefix() {
   return dirDepth <= 0 ? "" : "../".repeat(dirDepth);
 }
 
-function getOfficialLogoSrc() {
-  return `${getAssetPrefix()}${OFFICIAL_LOGO}`;
-}
-
-function applyOfficialBrandLogos(container) {
-  if (!container) return;
-  const logoSrc = getOfficialLogoSrc();
-  container.querySelectorAll(".brand-logo, .brand-logo-legal, .brand-lockup__logo").forEach((img) => {
-    img.src = logoSrc;
-    img.alt = "GenesisOS Labs Logo";
-    if (!img.hasAttribute("loading")) img.loading = "lazy";
-  });
-}
-
-function getFooterTemplate() {
-  const logoSrc = getOfficialLogoSrc();
-  return `
-<footer class="page-footer" data-footer>
-  <div class="page-footer__inner">
-    <div class="footer-brand">
-      <img
-        class="brand-logo"
-        src="${logoSrc}"
-        width="28"
-        height="28"
-        alt="GenesisOS Labs Logo"
-        loading="lazy">
-      <span class="brand-lockup__title">GenesisOS Labs</span>
-    </div>
-    <section aria-labelledby="footer-products">
-      <h2 id="footer-products">Products</h2>
-      <ul>
-        <li><a href="/AerysDesktop.html">Aerys Desktop</a></li>
-        <li><a href="/GCoin.html">GCoin</a></li>
-        <li><a href="/Education.html">Education</a></li>
-      </ul>
-    </section>
-    <section aria-labelledby="footer-company">
-      <h2 id="footer-company">Company</h2>
-      <ul>
-        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
-        <li><a href="/index.html">Home</a></li>
-      </ul>
-    </section>
-    <section aria-labelledby="footer-legal">
-      <h2 id="footer-legal">Legal</h2>
-      <ul>
-        <li><a href="/terms/index.html">Terms &amp; Conditions</a></li>
-        <li><a href="/privacy/index.html">Privacy Policy</a></li>
-        <li><a href="/accessibility/index.html">Accessibility</a></li>
-      </ul>
-    </section>
-    <section aria-labelledby="footer-social">
-      <h2 id="footer-social">Follow us</h2>
-      <ul>
-        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
-        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-      </ul>
-    </section>
-  </div>
-  <div class="page-footer__legal">
-    <img
-      class="brand-logo-legal"
-      src="${logoSrc}"
-      width="22"
-      height="22"
-      alt=""
-      loading="lazy">
-    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
-  </div>
-</footer>
-`;
-}
-
-function mountGlobalFooter(markup) {
-  const existingFooters = document.querySelectorAll(".footer, .global-footer");
-  existingFooters.forEach((footer) => footer.remove());
-
-  const body = document.body;
-  if (!body) return;
-
-  const root = document.createElement("div");
-  root.id = "global-footer-root";
-  root.setAttribute("aria-live", "off");
-  root.innerHTML = markup;
-  body.appendChild(root);
-  applyOfficialBrandLogos(root);
+function prefersHoverNav() {
+  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 }
 
 function closeNavDropdown(dropdown) {
@@ -137,10 +44,6 @@ function openNavDropdown(dropdown) {
   if (btn) btn.setAttribute("aria-expanded", "true");
 }
 
-function prefersHoverNav() {
-  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-}
-
 function initNavDropdowns(nav) {
   const dropdowns = qsa("[data-nav-dropdown]", nav);
   if (!dropdowns.length) return;
@@ -149,7 +52,6 @@ function initNavDropdowns(nav) {
     const btn = qs(".nav-dropdown__toggle", dropdown);
     if (!btn) return;
 
-    // Desktop: open/close on hover of the whole Products region (tab + menu)
     dropdown.addEventListener("mouseenter", () => {
       if (!prefersHoverNav()) return;
       dropdowns.forEach((other) => {
@@ -163,13 +65,7 @@ function initNavDropdowns(nav) {
       closeNavDropdown(dropdown);
     });
 
-    // Mobile / touch: tap to toggle. Desktop click is not required to open.
     btn.addEventListener("click", (event) => {
-      if (prefersHoverNav()) {
-        event.preventDefault();
-        return;
-      }
-
       event.preventDefault();
       event.stopPropagation();
       const willOpen = !dropdown.classList.contains("is-open");
@@ -190,6 +86,12 @@ function initNavDropdowns(nav) {
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") return;
     dropdowns.forEach((dropdown) => closeNavDropdown(dropdown));
+    const toggle = qs("[data-nav-toggle]", nav);
+    if (nav.classList.contains("is-open") && toggle) {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    }
   });
 }
 
@@ -232,170 +134,220 @@ function initNav() {
   });
 }
 
-function markCurrentNav() {
-  const currentFile = window.location.pathname.split("/").pop() || "index.html";
-  const productPages = new Set(["CRM.html", "GGamingOS.html", "GStudentOS.html", "Products.html", "Gaming.html"]);
+function navKeyFromLocation() {
+  const parts = window.location.pathname.replace(/\\/g, "/").split("/").filter(Boolean);
+  const last = parts[parts.length - 1] || "index.html";
+  const file = last.includes(".") ? last : (last.toLowerCase() === "privacy" || last.toLowerCase() === "terms" || last.toLowerCase() === "accessibility" ? last.toLowerCase() : "index.html");
+  const map = {
+    "index.html": "home",
+    "AerysDesktop.html": "aerys",
+    "GCoin.html": "gcoin",
+    "Education.html": "education",
+    "CRM.html": "crm",
+    "GGamingOS.html": "ggamingos",
+    "GStudentOS.html": "gstudentos",
+    "EnterpriseTokenization.html": "tokenization",
+    "GenesisOS.html": "genesisos",
+  };
+  return map[file] || "";
+}
 
-  qsa("nav .links a[href], nav .nav-links a[href]").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (!href || href.startsWith("http") || href.startsWith("mailto:")) return;
-    const file = href.split("/").pop();
-    const isMatch =
-      file === currentFile ||
-      href === currentFile ||
-      (currentFile === "Gaming.html" && file === "GGamingOS.html");
-    if (isMatch) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
+function markCurrentNav() {
+  const key = navKeyFromLocation();
+  if (!key) return;
+  const productKeys = new Set(["crm", "ggamingos", "gstudentos", "tokenization", "genesisos"]);
+
+  qsa("[data-nav]").forEach((el) => {
+    const match = el.getAttribute("data-nav") === key;
+    if (match) {
+      el.setAttribute("aria-current", "page");
+      el.classList.add("active");
+    } else if (el.getAttribute("aria-current") === "page" && el.getAttribute("data-nav") !== "products") {
+      el.removeAttribute("aria-current");
+      el.classList.remove("active");
     }
   });
 
-  if (productPages.has(currentFile)) {
+  if (productKeys.has(key)) {
     qsa(".nav-dropdown__toggle").forEach((btn) => {
       btn.setAttribute("aria-current", "page");
     });
   }
 }
 
-function syncSelectedTasks(form) {
-  const boxes = qsa("[data-task]", form);
-  const selected = boxes.filter((b) => b.checked).map((b) => b.value);
-  const hidden = qs("#selected-tasks", form) || qs("[name='selected_tasks']", form);
-  if (hidden) hidden.value = selected.join(" | ");
-  return selected;
-}
-
-function syncChipState(form) {
-  qsa(".task-chip", form).forEach((chip) => {
-    const input = chip.querySelector("input");
-    chip.classList.toggle("is-checked", !!(input && input.checked));
-  });
-  qsa(".deploy-radio", form).forEach((chip) => {
-    const input = chip.querySelector("input");
-    chip.classList.toggle("is-checked", !!(input && input.checked));
-  });
-}
-
-function initTaskLimits(form) {
-  const boxes = qsa("[data-task]", form);
-  if (!boxes.length) return;
-
-  const error = qs("#task-error", form) || qs(".form-error", form);
-
-  boxes.forEach((box) => {
-    box.addEventListener("change", () => {
-      const selected = boxes.filter((b) => b.checked);
-      if (selected.length > MAX_TASKS) box.checked = false;
-      syncSelectedTasks(form);
-      syncChipState(form);
-      if (error) error.classList.remove("is-visible");
+function trackLead(label) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "generate_lead", {
+      event_category: "form",
+      event_label: label || "demo_request",
     });
-  });
+  }
+}
 
-  qsa('input[name="deployment"]', form).forEach((radio) => {
-    radio.addEventListener("change", () => syncChipState(form));
-  });
+function injectHoneypot(form) {
+  if (form.querySelector("[data-honeypot]")) return;
+  const wrap = document.createElement("div");
+  wrap.className = "hp-field";
+  wrap.setAttribute("aria-hidden", "true");
+  wrap.innerHTML =
+    '<label>Company website<input type="text" name="website" tabindex="-1" autocomplete="off" data-honeypot aria-hidden="true"></label>';
+  form.insertBefore(wrap, form.firstChild);
+}
 
-  syncChipState(form);
+function ensureSuccessPanel(form) {
+  if (form.querySelector(".lead-form-success")) return;
+  const panel = document.createElement("div");
+  panel.className = "lead-form-success";
+  panel.setAttribute("role", "status");
+  panel.innerHTML =
+    "<h3>Request received.</h3><p>Thanks — we will follow up shortly at the email you provided.</p>";
+  form.appendChild(panel);
+}
+
+function setFormStatus(form, message, modifier) {
+  const status = form.querySelector(".form-status, .gjobs-form-status");
+  if (!status) return;
+  status.textContent = message || "";
+  status.classList.remove("is-error", "is-success");
+  if (modifier) status.classList.add(modifier);
 }
 
 function initLeadForms() {
-  qsa("form[data-lead-form]").forEach((form) => {
-    initTaskLimits(form);
+  qsa("form[data-lead-form], form[data-gjobs-form]").forEach((form) => {
+    injectHoneypot(form);
+    ensureSuccessPanel(form);
 
     form.addEventListener("submit", (event) => {
-      const boxes = qsa("[data-task]", form);
-      if (boxes.length) {
-        const selected = syncSelectedTasks(form);
-        const error = qs("#task-error", form) || qs(".form-error", form);
-        if (selected.length < 1 || selected.length > MAX_TASKS) {
-          event.preventDefault();
-          if (error) error.classList.add("is-visible");
-          return;
-        }
+      event.preventDefault();
+
+      const honeypot = form.querySelector("[data-honeypot]");
+      if (honeypot && honeypot.value.trim()) {
+        form.classList.add("is-submitted");
+        return;
+      }
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        setFormStatus(form, "Please complete the required fields.", "is-error");
+        return;
       }
 
       const submitBtn = form.querySelector("button[type='submit']");
-      if (!submitBtn) return;
-      const status = form.querySelector(".form-status");
+      const originalLabel = submitBtn
+        ? submitBtn.getAttribute("data-submit-label") || submitBtn.textContent || "Submit"
+        : "Submit";
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+      }
+      setFormStatus(form, "Submitting your request...", "");
 
-      submitBtn.disabled = true;
-      const originalLabel = submitBtn.getAttribute("data-submit-label") || submitBtn.textContent || "Submit";
-      submitBtn.textContent = "Submitting...";
-      if (status) status.textContent = "Submitting your request...";
+      const action = form.getAttribute("action");
+      if (!action) return;
 
-      window.setTimeout(() => {
-        if (submitBtn.disabled) {
+      const watchdog = window.setTimeout(() => {
+        if (submitBtn && submitBtn.disabled) {
           submitBtn.disabled = false;
           submitBtn.textContent = originalLabel;
-          if (status) status.textContent = "Network is slow. Please try submitting again.";
+          setFormStatus(form, "Network is slow. Please try submitting again.", "is-error");
         }
       }, 15000);
+
+      const data = new FormData(form);
+      fetch(action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      })
+        .then((res) => {
+          window.clearTimeout(watchdog);
+          if (res.ok) {
+            const subject = form.querySelector("input[name='_subject']");
+            trackLead(form.getAttribute("data-lead-event") || (subject && subject.value) || "demo_request");
+            form.classList.add("is-submitted");
+            setFormStatus(form, "", "is-success");
+            try {
+              form.reset();
+            } catch (err) {
+              /* ignore */
+            }
+            const panel = form.querySelector(".lead-form-success");
+            if (panel) {
+              try {
+                panel.scrollIntoView({ behavior: "smooth", block: "center" });
+              } catch (err) {
+                panel.scrollIntoView();
+              }
+            }
+            return;
+          }
+          return res
+            .json()
+            .then((json) => {
+              const msg =
+                json && json.errors && json.errors.length
+                  ? json.errors.map((er) => er.message).join(", ")
+                  : "Submission failed. Please try again.";
+              throw new Error(msg);
+            })
+            .catch((err) => {
+              throw err instanceof Error && err.message ? err : new Error("Submission failed. Please try again.");
+            });
+        })
+        .catch((err) => {
+          window.clearTimeout(watchdog);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+          }
+          setFormStatus(form, err && err.message ? err.message : "Network error. Please try again.", "is-error");
+        });
     });
   });
 }
 
 function ensureStickyCtas() {
-  if (qs("[data-sticky-cta]") || qs("[data-scroll-cta]")) return;
+  if (qs("[data-sticky-cta]")) return;
   if (document.body.hasAttribute("data-skip-sticky-cta")) return;
 
   const demo = qs(DEMO_SELECTORS);
   if (!demo || !demo.id) return;
 
   const href = `#${demo.id}`;
-
   const sticky = document.createElement("div");
   sticky.className = "sticky-cta";
   sticky.setAttribute("data-sticky-cta", "");
   sticky.setAttribute("role", "region");
-  sticky.setAttribute("aria-label", "Book a demo");
+  sticky.setAttribute("aria-label", "Book a Demo");
   sticky.innerHTML = `<p>Ready to get started?</p><a class="btn btn--primary" href="${href}">Book a Demo</a>`;
-
-  const scroll = document.createElement("a");
-  scroll.className = "btn btn--primary scroll-cta";
-  scroll.setAttribute("data-scroll-cta", "");
-  scroll.href = href;
-  scroll.textContent = "Book a Demo";
-
   document.body.appendChild(sticky);
-  document.body.appendChild(scroll);
 }
 
 function initStickyAndScrollCtas() {
+  qsa("[data-scroll-cta]").forEach((el) => el.remove());
   ensureStickyCtas();
 
   const sticky = qs("[data-sticky-cta]");
-  const scrollCta = qs("[data-scroll-cta]");
-  if (!sticky && !scrollCta) return;
+  if (!sticky) return;
 
-  const hero = qs(".hero, .genesis-hero, .gjobs-hero, .pricing-hero, .coliseum-hero");
+  const hero = qs(".hero, .genesis-hero");
   const demo = qs(DEMO_SELECTORS);
-  const finalCta = qs("#final-cta, .final-cta, .cta-section, .coliseum-cta");
+  const finalCta = qs("#final-cta, .final-cta, .cta-section");
 
   function update() {
     const y = window.scrollY || window.pageYOffset;
     const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 400;
     const demoRect = demo ? demo.getBoundingClientRect() : null;
     const finalRect = finalCta ? finalCta.getBoundingClientRect() : null;
-
     const pastHero = y > heroBottom - 80;
     const demoInView =
       demoRect &&
       demoRect.top < window.innerHeight * 0.85 &&
       demoRect.bottom > window.innerHeight * 0.2;
-    const finalInView =
-      finalRect && finalRect.top < window.innerHeight && finalRect.bottom > 0;
-
+    const finalInView = finalRect && finalRect.top < window.innerHeight && finalRect.bottom > 0;
     const showSticky = pastHero && !demoInView && !finalInView;
-    const showScroll = pastHero && !demoInView && !finalInView && y > heroBottom + 320;
-
-    if (sticky) {
-      sticky.classList.toggle("is-visible", showSticky);
-      document.body.classList.toggle("has-sticky-cta", showSticky);
-    }
-    if (scrollCta) {
-      scrollCta.classList.toggle("is-visible", showScroll);
-    }
+    sticky.classList.toggle("is-visible", showSticky);
+    document.body.classList.toggle("has-sticky-cta", showSticky);
   }
 
   update();
@@ -403,35 +355,80 @@ function initStickyAndScrollCtas() {
   window.addEventListener("resize", update);
 }
 
-function modernizeLegacyButtons() {
-  qsa(".primary-btn, .btn-primary, .lead-btn").forEach((el) => {
-    if (el.classList.contains("btn")) return;
-    el.classList.add("btn", "btn--primary");
-  });
+function getFooterTemplate() {
+  const prefix = getAssetPrefix();
+  const logoSrc = `${prefix}${OFFICIAL_LOGO}`;
+  return `<footer class="page-footer" data-footer>
+  <div class="page-footer__inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="${logoSrc}" width="28" height="28" alt="GenesisOS Labs Logo" loading="lazy">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </div>
+    <section aria-labelledby="footer-products">
+      <h2 id="footer-products">Products</h2>
+      <ul>
+        <li><a href="${prefix}AerysDesktop.html">Aerys Desktop</a></li>
+        <li><a href="${prefix}GCoin.html">GCoin</a></li>
+        <li><a href="${prefix}CRM.html">CRM</a></li>
+        <li><a href="${prefix}GGamingOS.html">GGamingOS</a></li>
+        <li><a href="${prefix}GStudentOS.html">GStudentOS</a></li>
+        <li><a href="${prefix}EnterpriseTokenization.html">Enterprise Tokenization</a></li>
+        <li><a href="${prefix}Education.html">Education</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-company">
+      <h2 id="footer-company">Company</h2>
+      <ul>
+        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+        <li><a href="${prefix}index.html">Home</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="${prefix}terms/">Terms &amp; Conditions</a></li>
+        <li><a href="${prefix}privacy/">Privacy Policy</a></li>
+        <li><a href="${prefix}accessibility/">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="page-footer__legal">
+    <img class="brand-logo-legal" src="${logoSrc}" width="22" height="22" alt="" loading="lazy">
+    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
+  </div>
+</footer>`;
+}
+
+function mountGlobalFooter(markup) {
+  if (qs("footer.page-footer")) return;
+  const root = document.createElement("div");
+  root.id = "global-footer-root";
+  root.innerHTML = markup;
+  document.body.appendChild(root);
+}
+
+function initFooter() {
+  if (qs("footer.page-footer")) return;
+  const prefix = getAssetPrefix();
+  fetch(`${prefix}components/site-footer.html`)
+    .then((response) => (response.ok ? response.text() : Promise.reject(new Error("Footer unavailable"))))
+    .then((markup) => mountGlobalFooter(markup.replaceAll("{{P}}", prefix)))
+    .catch(() => mountGlobalFooter(getFooterTemplate()));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  applyOfficialBrandLogos(document.querySelector("header, .site-header"));
-  applyOfficialBrandLogos(document.querySelector(".page-footer"));
-
-  if (!document.body.hasAttribute("data-skip-global-footer")) {
-    const prefix = getAssetPrefix();
-    fetch(`${prefix}components/GlobalFooter.html`)
-      .then((response) => (response.ok ? response.text() : Promise.reject(new Error("Footer unavailable"))))
-      .then((markup) => mountGlobalFooter(markup))
-      .catch(() => mountGlobalFooter(getFooterTemplate()));
-  }
-
   markCurrentNav();
-  modernizeLegacyButtons();
-
-  if (document.body.classList.contains("aerys-page")) {
-    /* Detected via .aerys-page (not data-aerys-page). Continue shared init:
-       AerysDesktop uses data-lead-form; aerys-desktop.js is not loaded and
-       only handles form[data-aerys-form]. */
-  }
-
   initNav();
   initLeadForms();
   initStickyAndScrollCtas();
+  initFooter();
 });

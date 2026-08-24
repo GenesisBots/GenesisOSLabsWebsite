@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Disallow: /archive/
+Disallow: /archive
+Disallow: /pages/
+Disallow: /pages
+Disallow: /components/
+Disallow: /scripts/
+
+Sitemap: https://genesisoslabs.com/sitemap.xml
