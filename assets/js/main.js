@@ -143,6 +143,7 @@ function navKeyFromLocation() {
     "AerysDesktop.html": "aerys",
     "GCoin.html": "gcoin",
     "Education.html": "education",
+    "About.html": "about",
     "CRM.html": "crm",
     "GGamingOS.html": "ggamingos",
     "GStudentOS.html": "gstudentos",
@@ -379,6 +380,7 @@ function getFooterTemplate() {
     <section aria-labelledby="footer-company">
       <h2 id="footer-company">Company</h2>
       <ul>
+        <li><a href="${prefix}About.html">About</a></li>
         <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
         <li><a href="${prefix}index.html">Home</a></li>
       </ul>
