@@ -2,28 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GStudentOS | GenesisOS Labs</title>
+  <title>About Us | GenesisOS Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-  <meta name="description" content="A private, Student Learning OS that helps students &amp; parents plan classes, master exams, and learn with Agentic automations that support the User's goals.">
-  <meta property="og:title" content="GStudentOS | GenesisOS Labs">
-  <meta property="og:description" content="A private, Student Learning OS that helps students &amp; parents plan classes, master exams, and learn with Agentic automations that support the User's goals.">
-  <meta property="og:url" content="https://genesisoslabs.com/GStudentOS.html">
+  <meta name="description" content="About GenesisOS Labs — we build operating systems, tokenization frameworks, and multi-agent automation that modernize enterprises across every industry.">
+  <meta property="og:title" content="About Us | GenesisOS Labs">
+  <meta property="og:description" content="We build operating systems, tokenization frameworks, and multi-agent automation that modernize enterprises across every industry.">
+  <meta property="og:url" content="https://genesisoslabs.com/About.html">
   <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
   <meta property="og:site_name" content="GenesisOS Labs">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="GStudentOS | GenesisOS Labs">
-  <meta name="twitter:description" content="A private, Student Learning OS that helps students &amp; parents plan classes, master exams, and learn with Agentic automations that support the User's goals.">
-  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
-  <link rel="canonical" href="https://genesisoslabs.com/GStudentOS.html">
+  <meta name="twitter:title" content="About Us | GenesisOS Labs">
+  <meta name="twitter:description" content="We build operating systems, tokenization frameworks, and multi-agent automation that modernize enterprises across every industry.">
+  <link rel="canonical" href="https://genesisoslabs.com/About.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
   <link rel="stylesheet" href="assets/css/style.css?v=brand8">
+  <style>
+    .genesis-os-suite .os-tile {
+      background: var(--brand-black);
+      color: var(--brand-white);
+    }
+
+    .genesis-os-suite .os-tile h3,
+    .genesis-os-suite .os-tile .os-header h3,
+    .genesis-os-suite .os-tile .tile-title {
+      color: var(--brand-white);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .genesis-os-suite .os-underline {
+      background: var(--brand-blue);
+    }
+
+    .genesis-os-suite .os-tile:hover,
+    .genesis-os-suite .os-tile:focus-within {
+      background: var(--brand-blue);
+    }
+
+    .genesis-os-suite .os-tile:hover h3,
+    .genesis-os-suite .os-tile:focus-within h3,
+    .genesis-os-suite .os-tile:hover .tile-title,
+    .genesis-os-suite .os-tile:focus-within .tile-title {
+      color: var(--brand-white);
+    }
+
+    .genesis-os-suite .os-tile:hover .os-underline,
+    .genesis-os-suite .os-tile:focus-within .os-underline {
+      background: var(--brand-white);
+    }
+
+    .genesis-os-suite .os-tile p {
+      margin: var(--space-3) 0 0;
+    }
+  </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
   <script>
@@ -60,12 +99,14 @@
       }
     },
     {
-      "@type": "SoftwareApplication",
-      "name": "GStudentOS",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Windows, macOS, Linux",
-      "url": "https://genesisoslabs.com/GStudentOS.html",
-      "publisher": {
+      "@type": "AboutPage",
+      "@id": "https://genesisoslabs.com/About.html",
+      "url": "https://genesisoslabs.com/About.html",
+      "name": "About GenesisOS Labs",
+      "isPartOf": {
+        "@id": "https://genesisoslabs.com/#website"
+      },
+      "about": {
         "@id": "https://genesisoslabs.com/#organization"
       }
     }
@@ -73,7 +114,7 @@
 }
 </script>
 </head>
-<body class="gstudentos-page">
+<body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -105,108 +146,87 @@
 
 <main id="main">
 
-  <!-- Hero: balanced copy + constrained media -->
   <section class="hero" aria-labelledby="hero-brand">
     <div class="hero-left">
-      <h1 id="hero-brand" class="hero-brand-h1">GStudentOS</h1>
-      <p class="hero-brand-by">By GenesisOS Labs</p>
-      <p class="hero__headline">Your entire academic life. One OS.</p>
-      <p class="hero__support">
-        GStudentOS: The study help you need all semester. Study smarter with your own custom student Learning OS that helps students & parents plan classes, master exams, & learn with Agentic automations. Powered by our Aerys Desktop App.
-      </p>
+      <h1 id="hero-brand" class="hero-brand-h1">About GenesisOS Labs</h1>
+      <p class="hero__headline">We build operating systems, tokenization frameworks, & multi‑agent automation that modernize enterprises across every industry.</p>
       <div class="btn-group">
-        <a class="btn btn--primary" href="#demo-request">Book a Demo</a>
+        <a class="btn btn--primary" href="#contact">Contact Us</a>
       </div>
     </div>
     <div class="hero-right">
       <picture>
-        <source type="image/webp" srcset="assets/img/art-back-to-school-720.webp 720w, assets/img/art-back-to-school-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 28rem">
-        <img src="assets/img/art-back-to-school-720.jpg" srcset="assets/img/art-back-to-school-720.jpg 720w, assets/img/art-back-to-school-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="720" alt="GStudentOS student learning workspace — GenesisOS Labs" decoding="async" fetchpriority="high">
+        <source type="image/webp" srcset="assets/img/hero-pc-720.webp 720w, assets/img/hero-pc-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 28rem">
+        <img src="assets/img/hero-pc-720.jpg" srcset="assets/img/hero-pc-720.jpg 720w, assets/img/hero-pc-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="480" alt="GenesisOS Labs workspace — operating systems, tokenization, and automation" decoding="async" fetchpriority="high">
       </picture>
     </div>
   </section>
 
-  <!-- Demo funnel -->
-  <section class="section section--white" id="demo-request" aria-labelledby="demo-title">
+  <section class="section section--white" aria-labelledby="mission-title">
+    <h2 id="mission-title" class="section__title">Our Mission</h2>
+    <p class="section__lead">
+      We unify fragmented enterprise systems, bring tokenization and automation into real operations, and build OS products that scale across industries. GenesisOS Labs replaces disconnected tools with governed operating systems where data, workflows, and agents work as one. GenesisOS Labs was founded to solve fragmentation — the cost and delay of running a modern enterprise across disconnected software. We built multi‑industry OS verticals so operations could share a common substrate, then created tokenization and automation rails that move work, assets, and audit trails together. Our mission is to modernize global operations with systems that are local-first, automation-ready, and built to last.
+    </p>
+  </section>
+
+  <section class="section section--black" aria-labelledby="values-title">
+    <h2 id="values-title" class="section__title">Leadership &amp; Values</h2>
+    <ul>
+      <li>Operations-first engineering</li>
+      <li>Automation-first design</li>
+      <li>Transparency + auditability</li>
+      <li>Enterprise tokenization & modernization</li>
+    </ul>
+  </section>
+
+  <section class="section section--white" id="contact" aria-labelledby="contact-title">
     <div class="container">
-      <div class="demo-layout">
-        <div>
-          <h2 id="demo-title" class="section__title">GStudentOS is Customizable</h2>
-          <p class="section__lead">
-            GStudentOS is a full student learning operating system — built with Agents to help you understand your material, organize your semester, & study smarter. And because your data is local-first, your academic life stays private & under your control.
-          </p>
-          <ul class="demo-points">
-            <li>
-              Personalized exam practice using your local notes, progress, and study history stay on your devices.
-            </li>
-            <li>
-              Agents review and check your work in real time, catching errors, and can provide regular feedback that keeps your work on track all semester.
-            </li>
-            <li>
-              Create quizzes, study guides, and flash cards based on your exact course materials.
-            </li>
-          </ul>
-          <div class="demo-visual">
-            <picture>
-              <source type="image/webp" srcset="assets/img/hero-aerys-720.webp 720w, assets/img/hero-aerys-1440.webp 1440w" sizes="(max-width: 960px) 100vw, 36rem">
-              <img src="assets/img/hero-aerys-720.jpg" srcset="assets/img/hero-aerys-720.jpg 720w, assets/img/hero-aerys-1440.jpg 1440w" sizes="(max-width: 960px) 100vw, 36rem" width="720" height="480" alt="GStudentOS product visual — GenesisOS Labs Student &amp; Learning OS interface" loading="lazy" decoding="async">
-            </picture>
+      <h2 id="contact-title" class="section__title">Contact Us</h2>
+      <p class="section__lead">
+        Tell us what you'd like to modernize. We will follow up with practical next steps for OS products, tokenization, and multi‑agent automation.
+      </p>
+      <div class="lead-container">
+        <form
+          class="lead-form"
+          action="https://formspree.io/f/mdayayqv"
+          method="POST"
+          data-lead-form
+          data-lead-event="about_contact">
+          <h3 class="lead-title">Start a conversation</h3>
+          <p class="lead-subtitle">Share your industry, current systems, and what you want to automate or tokenize.</p>
+          <input type="hidden" name="_subject" value="About inquiry — GenesisOS Labs">
+          <div class="form-group">
+            <label for="lead-name">Your name</label>
+            <input id="lead-name" type="text" name="name" autocomplete="name" minlength="2" maxlength="80" required>
           </div>
-        </div>
-
-        <div class="lead-container">
-          <form
-            class="lead-form"
-            action="https://formspree.io/f/mwleewbd"
-            method="POST"
-            data-lead-form
-            data-lead-event="demo_request">
-            <h3 class="lead-title">Book a Demo</h3>
-            <p class="lead-subtitle">
-              Your custom GBot Agent powered GStudentOS.
-            </p>
-
-            <input type="hidden" name="_subject" value="New Lead Submission - GStudentOS">
-
-            <div class="form-group">
-              <label for="lead-name">Your name</label>
-              <input id="lead-name" type="text" name="name" autocomplete="name" minlength="2" maxlength="80" required>
-            </div>
-
-            <div class="form-group">
-              <label for="lead-email">Your email</label>
-              <input id="lead-email" type="email" name="email" autocomplete="email" inputmode="email" required>
-            </div>
-
-            <div class="form-group">
-              <label for="lead-message">What is your school name and major?</label>
-              <textarea id="lead-message" name="message" rows="3" minlength="10" maxlength="2000" required></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="lead-referral">Who referred you? (optional)</label>
-              <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--block" data-submit-label="Book a Demo">Book a Demo</button>
-            <p class="form-status" aria-live="polite"></p>
-            <p class="form-note">Or email <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></p>
-          </form>
-        </div>
+          <div class="form-group">
+            <label for="lead-email">Your email</label>
+            <input id="lead-email" type="email" name="email" autocomplete="email" inputmode="email" required>
+          </div>
+          <div class="form-group">
+            <label for="lead-message">How can we help?</label>
+            <textarea id="lead-message" name="message" rows="3" minlength="10" maxlength="2000" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="lead-referral">Who referred you? (optional)</label>
+            <input id="lead-referral" type="text" name="referral" autocomplete="off" maxlength="120">
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" data-submit-label="Contact Us">Contact Us</button>
+          <p class="form-status" aria-live="polite"></p>
+          <p class="form-note">Or email <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></p>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
   <section class="section section--blue final-cta" id="final-cta" aria-labelledby="final-title">
     <div class="container">
-      <h2 id="final-title" class="section__title">GStudentOS — study smarter, stay in control.</h2>
+      <h2 id="final-title" class="section__title">Ready to modernize with GenesisOS Labs?</h2>
       <p class="section__lead">
-        A private, local-first Student Learning OS that helps you plan classes, master exams, and learn with Agentic automations that supports the User's understanding.
+        Talk with us about operating systems, tokenization frameworks, and multi‑agent automation.
       </p>
       <div class="btn-group">
-        <a class="btn btn--primary" href="#demo-request">Book a Demo</a>
-        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email support</a>
+        <a class="btn btn--primary" href="#contact">Contact Us</a>
       </div>
     </div>
   </section>
@@ -262,6 +282,5 @@
     <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
   </div>
 </footer>
-
 </body>
 </html>

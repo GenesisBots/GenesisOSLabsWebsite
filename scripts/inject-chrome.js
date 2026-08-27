@@ -18,6 +18,7 @@ const PAGES = [
   { file: "AerysDesktop.html", prefix: "", canonical: `${HOST}/AerysDesktop.html`, jsonld: "software" },
   { file: "CRM.html", prefix: "", canonical: `${HOST}/CRM.html`, jsonld: "software" },
   { file: "Education.html", prefix: "", canonical: `${HOST}/Education.html`, jsonld: "website" },
+  { file: "About.html", prefix: "", canonical: `${HOST}/About.html`, jsonld: "website" },
   { file: "EnterpriseTokenization.html", prefix: "", canonical: `${HOST}/EnterpriseTokenization.html`, jsonld: "service" },
   { file: "GCoin.html", prefix: "", canonical: `${HOST}/GCoin.html`, jsonld: "software" },
   { file: "GenesisOS.html", prefix: "", canonical: `${HOST}/GenesisOS.html`, jsonld: "software" },
