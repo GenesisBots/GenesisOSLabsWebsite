@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Ambassador Program | GenesisOS Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <meta name="description" content="Join the GenesisOS Labs Student Ambassador Program. Lead your campus in cryptography, tokenization, and digital asset engineering. Email your resume or LinkedIn profile to apply.">
+  <meta property="og:title" content="Student Ambassador Program | GenesisOS Labs">
+  <meta property="og:description" content="Lead your campus into the future of cryptography, tokenization, and digital asset engineering. Email your resume or LinkedIn profile to apply.">
+  <meta property="og:url" content="https://genesisoslabs.com/University.html">
+  <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta property="og:site_name" content="GenesisOS Labs">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Ambassador Program | GenesisOS Labs">
+  <meta name="twitter:description" content="Lead your campus into the future of cryptography, tokenization, and digital asset engineering. Email your resume or LinkedIn profile to apply.">
+  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <link rel="canonical" href="https://genesisoslabs.com/University.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand8">
+  <style>
+    /* Hero: readable title + byline on black, CTA spacing */
+    .hero .hero-brand-h1 {
+      max-width: 16ch;
+      color: var(--brand-white);
+    }
+
+    .hero .hero-brand-by {
+      color: var(--brand-blue-on-dark);
+    }
+
+    .hero .hero__headline {
+      color: var(--brand-white);
+    }
+
+    .hero .btn-group {
+      margin-top: var(--space-4);
+    }
+
+    /* Overview: restore brand list rhythm after the lead */
+    #overview ul {
+      margin: var(--space-5) 0 0;
+      padding-left: 1.25rem;
+      max-width: 42rem;
+    }
+
+    #overview li {
+      margin: 0 0 var(--space-3);
+      color: var(--brand-black);
+    }
+
+    #overview .section__title,
+    #responsibilities .section__title {
+      color: var(--brand-black);
+    }
+
+    #overview .section__lead,
+    #responsibilities .section__lead {
+      color: var(--brand-black);
+    }
+
+    #benefits .section__title,
+    #benefits .section__lead,
+    #apply .section__title,
+    #apply .section__lead {
+      color: var(--brand-white);
+    }
+
+    /* Tiles: white copy on black chrome; beat .section--white p */
+    .genesis-os-suite .os-grid {
+      grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+    }
+
+    .genesis-os-suite .os-tile {
+      background: var(--brand-black);
+      color: var(--brand-white);
+    }
+
+    .genesis-os-suite .os-tile h3,
+    .genesis-os-suite .os-tile .os-header h3,
+    .genesis-os-suite .os-tile .tile-title,
+    .genesis-os-suite .os-tile p {
+      color: var(--brand-white);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .genesis-os-suite .os-tile p {
+      margin: var(--space-3) 0 0;
+      max-width: none;
+    }
+
+    .genesis-os-suite .os-underline {
+      background: var(--brand-blue);
+    }
+
+    .genesis-os-suite .os-tile:hover,
+    .genesis-os-suite .os-tile:focus-within {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+    }
+
+    .genesis-os-suite .os-tile:hover h3,
+    .genesis-os-suite .os-tile:focus-within h3,
+    .genesis-os-suite .os-tile:hover .tile-title,
+    .genesis-os-suite .os-tile:focus-within .tile-title,
+    .genesis-os-suite .os-tile:hover p,
+    .genesis-os-suite .os-tile:focus-within p {
+      color: var(--brand-white);
+    }
+
+    .genesis-os-suite .os-tile:hover .os-underline,
+    .genesis-os-suite .os-tile:focus-within .os-underline {
+      background: var(--brand-white);
+    }
+
+    /* Blue band: hover to white so tiles do not vanish into the section */
+    #benefits.section--blue .os-tile:hover,
+    #benefits.section--blue .os-tile:focus-within {
+      background: var(--brand-white);
+      color: var(--brand-black);
+    }
+
+    #benefits.section--blue .os-tile:hover h3,
+    #benefits.section--blue .os-tile:focus-within h3,
+    #benefits.section--blue .os-tile:hover .tile-title,
+    #benefits.section--blue .os-tile:focus-within .tile-title,
+    #benefits.section--blue .os-tile:hover p,
+    #benefits.section--blue .os-tile:focus-within p {
+      color: var(--brand-black);
+    }
+
+    #benefits.section--blue .os-tile:hover .os-underline,
+    #benefits.section--blue .os-tile:focus-within .os-underline {
+      background: var(--brand-blue);
+    }
+
+    #apply.final-cta .btn-group {
+      justify-content: center;
+      gap: var(--space-3);
+    }
+  </style>
+  <script src="assets/js/main.js?v=brand8" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZNYFJFNM9');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genesisoslabs.com/#organization",
+      "name": "GenesisOS Labs LLC",
+      "url": "https://genesisoslabs.com/",
+      "logo": "https://genesisoslabs.com/assets/img/logo.png",
+      "email": "support@GenesisOSLabs.com",
+      "sameAs": [
+        "https://x.com/GenesisOSLabs",
+        "https://www.linkedin.com/company/104893537",
+        "https://www.instagram.com/genesisoslabs/",
+        "https://www.facebook.com/profile.php?id=61590064982617"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://genesisoslabs.com/#website",
+      "url": "https://genesisoslabs.com/",
+      "name": "GenesisOS Labs",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://genesisoslabs.com/University.html",
+      "url": "https://genesisoslabs.com/University.html",
+      "name": "GenesisOS Labs Student Ambassador Program",
+      "isPartOf": {
+        "@id": "https://genesisoslabs.com/#website"
+      },
+      "about": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="AerysDesktop.html" data-nav="aerys">Aerys Desktop</a>
+      <a href="GCoin.html" data-nav="gcoin">GCoin</a>
+      <div class="nav-dropdown" data-nav-dropdown>
+        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-controls="products-menu" data-nav="products">Products</button>
+        <div class="nav-dropdown__menu" id="products-menu">
+          <a href="CRM.html" data-nav="crm">CRM</a>
+          <a href="GGamingOS.html" data-nav="ggamingos">GGamingOS</a>
+          <a href="GStudentOS.html" data-nav="gstudentos">GStudentOS</a>
+          <a href="EnterpriseTokenization.html" data-nav="tokenization">Enterprise Tokenization</a>
+        </div>
+      </div>
+      <a href="Education.html" data-nav="education">Education</a>
+      <a href="About.html" data-nav="about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-brand">
+    <div class="hero-left">
+      <h1 id="hero-brand" class="hero-brand-h1">GenesisOS Labs Student Ambassador Program</h1>
+      <p class="hero-brand-by">By GenesisOS Labs</p>
+      <p class="hero__headline">Lead your campus into the future of cryptography, tokenization, and digital asset engineering.</p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Email Your Resume</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <picture>
+        <source type="image/webp" srcset="assets/img/art-back-to-school-720.webp 720w, assets/img/art-back-to-school-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 28rem">
+        <img src="assets/img/art-back-to-school-720.jpg" srcset="assets/img/art-back-to-school-720.jpg 720w, assets/img/art-back-to-school-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="720" alt="GenesisOS Labs Student Ambassador Program — campus and learning" decoding="async" fetchpriority="high">
+      </picture>
+    </div>
+  </section>
+
+  <section class="section section--white" id="overview" aria-labelledby="overview-title">
+    <div class="container">
+      <h2 id="overview-title" class="section__title">Program Overview</h2>
+      <p class="section__lead">
+        Student Ambassadors will bring cryptography, tokenization, and Genesis Coin use cases into real campus environments. You’ll help classmates learn through coding and hands-on building, represent GenesisOS Labs at your school, and create a pathway from classroom projects to real-world, production-grade digital asset development.
+      </p>
+      <ul>
+        <li>Learn then teach classmates how cryptography and tokenization show up in real products & use cases</li>
+        <li>Code & ship tokenized projects on GCoin rails with clear, auditable workflows.</li>
+        <li>Represent GenesisOS Labs on campus as the local operator for workshops, onboarding, and events.</li>
+        <li>Connect students to GStudentOS, GCoin, and the wider GenesisOS Labs community.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--blue genesis-os-suite" id="benefits" aria-labelledby="benefits-title">
+    <div class="container">
+      <h2 id="benefits-title" class="section__title">Benefits</h2>
+      <p class="section__lead">
+        Ambassadors get tools, training, and mentorship — and leave with work that belongs on a résumé.
+      </p>
+      <div class="os-grid">
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Early access</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Beta test GenesisOS Labs products before they are broadly released, including campus workflows on GStudentOS and Genesis Coin.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Cryptography + tokenization training</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Build fluency in cryptography, DLT, and tokenization so you can teach others with confidence.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Résumé-ready experience</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Lead workshops, ship tokenized projects, and document outcomes you can show employers.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Direct mentorship</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Work with GenesisOS Labs operators on real questions from campus builds and events.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Community + events</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Join a growing network of ambassadors, builders, and campus events across schools.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white genesis-os-suite" id="responsibilities" aria-labelledby="responsibilities-title">
+    <div class="container">
+      <h2 id="responsibilities-title" class="section__title">Responsibilities</h2>
+      <p class="section__lead">
+        Ambassadors operate on campus. You host, teach, onboard, & represent the brand.
+      </p>
+      <div class="os-grid">
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Host workshops</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Run sessions on cryptography, tokenization, and digital asset engineering for classmates.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Help students build tokenized projects</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Coach peers from idea to a working tokenized project on GCoin rails.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Support GStudentOS onboarding</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Help students start GStudentOS and use it for notes, coursework, exams, and campus builds.</p>
+        </article>
+        <article class="os-tile">
+          <div class="os-header">
+            <h3 class="tile-title">Represent GenesisOS Labs</h3>
+            <div class="os-underline"></div>
+          </div>
+          <p>Show up at campus events as the GenesisOS Labs Ambassador for your school.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--blue final-cta" id="apply" aria-labelledby="apply-title">
+    <div class="container">
+      <h2 id="apply-title" class="section__title">Apply by email</h2>
+      <p class="section__lead">
+        There is no form. Email GenesisOS Labs your résumé and/or a link to your LinkedIn profile. We’ll select up to four student ambassadors per campus.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Email Your Resume</a>
+        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Your LinkedIn Profile</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer" data-footer>
+  <div class="page-footer__inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo" loading="lazy">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </div>
+    <section aria-labelledby="footer-products">
+      <h2 id="footer-products">Products</h2>
+      <ul>
+        <li><a href="AerysDesktop.html">Aerys Desktop</a></li>
+        <li><a href="GCoin.html">GCoin</a></li>
+        <li><a href="CRM.html">CRM</a></li>
+        <li><a href="GGamingOS.html">GGamingOS</a></li>
+        <li><a href="GStudentOS.html">GStudentOS</a></li>
+        <li><a href="EnterpriseTokenization.html">Enterprise Tokenization</a></li>
+        <li><a href="Education.html">Education</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-company">
+      <h2 id="footer-company">Company</h2>
+      <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="terms/">Terms &amp; Conditions</a></li>
+        <li><a href="privacy/">Privacy Policy</a></li>
+        <li><a href="accessibility/">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="page-footer__legal">
+    <img class="brand-logo-legal" src="assets/img/logo.png" width="22" height="22" alt="" loading="lazy">
+    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
