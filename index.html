@@ -67,6 +67,62 @@
     .genesis-os-suite .os-tile:focus-within .os-underline {
       background: var(--brand-white);
     }
+
+    /* University Ambassador band: readable type + CTAs on white */
+    #university-ambassadors {
+      color: var(--brand-black);
+      border-bottom: 1px solid var(--brand-blue);
+    }
+
+    #university-ambassadors .section__title {
+      color: var(--brand-black);
+      max-width: 36ch;
+    }
+
+    #university-ambassadors .section__lead {
+      color: var(--brand-black);
+      margin: 0 0 var(--space-5);
+      max-width: 42rem;
+    }
+
+    #university-ambassadors .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    #university-ambassadors a.btn {
+      text-decoration: none;
+    }
+
+    #university-ambassadors a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+    }
+
+    #university-ambassadors a.btn--primary:hover,
+    #university-ambassadors a.btn--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+      text-decoration: none;
+    }
+
+    #university-ambassadors a.btn--secondary {
+      background: transparent;
+      color: var(--brand-blue);
+      border-color: var(--brand-black);
+    }
+
+    #university-ambassadors a.btn--secondary:hover,
+    #university-ambassadors a.btn--secondary:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+      text-decoration: none;
+    }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -262,6 +318,19 @@
         <p class="form-status" aria-live="polite"></p>
         <p class="form-note">Or email <strong><a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></strong></p>
       </form>
+    </div>
+  </section>
+
+  <section class="section section--white" id="university-ambassadors" aria-labelledby="university-title">
+    <div class="container">
+      <h2 id="university-title" class="section__title">GenesisOS Labs Student Ambassador Program</h2>
+      <p class="section__lead">
+        Lead your campus into the future of cryptography, tokenization, and digital asset engineering. Become a GenesisOS Labs Student Ambassador and help students build real tokenized projects using GCoin and GenesisOS tools.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="University.html">Learn More</a>
+        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+      </div>
     </div>
   </section>
 
