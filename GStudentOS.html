@@ -24,6 +24,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
   <link rel="stylesheet" href="assets/css/style.css?v=brand8">
+  <style>
+    /* Hero type scale — match index.html */
+    .hero .hero-brand-h1,
+    .genesis-hero .hero-brand-h1,
+    .genesis-hero-content h1 {
+      font-size: var(--text-h1);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--brand-white);
+    }
+
+    .hero .hero-brand-by,
+    .genesis-hero .hero-brand-by,
+    .genesis-hero-content .hero-brand-by {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue-on-dark);
+    }
+
+    .hero .hero__headline,
+    .hero .hero-official-line,
+    .genesis-hero-content .tagline {
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 36rem;
+      color: var(--brand-white);
+      margin: 0 0 var(--space-3);
+    }
+
+    .hero .hero__support,
+    .hero .hero-left > p:not(.hero-brand-by):not(.hero__headline):not(.hero-official-line),
+    .genesis-hero-content .subtext {
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--brand-white);
+    }
+
+    .hero .btn-group {
+      margin-top: var(--space-4);
+    }
+
+    .hero + .section .section__title,
+    .genesis-hero + .section .section__title {
+      font-size: var(--text-h2);
+      line-height: 1.2;
+    }
+
+    .hero + .section .section__lead,
+    .hero + .section > p,
+    .hero + .section > .container > .section__lead,
+    .hero + .section > .container > p,
+    .genesis-hero + .section .section__lead,
+    .genesis-hero + .section > p {
+      font-size: var(--text-body);
+      line-height: 1.6;
+    }
+  </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
   <script>
