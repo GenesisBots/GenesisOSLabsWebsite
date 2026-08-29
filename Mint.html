@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minting Service | GenesisOS Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <meta name="description" content="Launch your own digital asset ecosystem without blockchain experience. GenesisOS Labs mints custom coins and builds Layer-2 networks on Algorand — or almost any chain you prefer.">
+  <meta property="og:title" content="Minting Service | GenesisOS Labs">
+  <meta property="og:description" content="Custom coins and Layer-2 networks, built for beginners. Public mainnet or private ledger — we build the system end-to-end.">
+  <meta property="og:url" content="https://genesisoslabs.com/Mint.html">
+  <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta property="og:site_name" content="GenesisOS Labs">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Minting Service | GenesisOS Labs">
+  <meta name="twitter:description" content="Custom coins and Layer-2 networks, built for beginners. Public mainnet or private ledger — we build the system end-to-end.">
+  <link rel="canonical" href="https://genesisoslabs.com/Mint.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand8">
+  <style>
+    /* Hero type scale — match index.html */
+    .hero .hero-brand-h1,
+    .genesis-hero .hero-brand-h1,
+    .genesis-hero-content h1 {
+      font-size: var(--text-h1);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--brand-white);
+    }
+
+    .hero .hero-brand-by,
+    .genesis-hero .hero-brand-by,
+    .genesis-hero-content .hero-brand-by {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue-on-dark);
+    }
+
+    .hero .hero__headline,
+    .hero .hero-official-line,
+    .genesis-hero-content .tagline {
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 36rem;
+      color: var(--brand-white);
+      margin: 0 0 var(--space-3);
+    }
+
+    .hero .hero__support,
+    .hero .hero-left > p:not(.hero-brand-by):not(.hero__headline):not(.hero-official-line),
+    .genesis-hero-content .subtext {
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--brand-white);
+    }
+
+    .hero .btn-group {
+      margin-top: var(--space-4);
+    }
+
+    .hero + .section .section__title,
+    .genesis-hero + .section .section__title {
+      font-size: var(--text-h2);
+      line-height: 1.2;
+    }
+
+    .hero + .section .section__lead,
+    .hero + .section > p,
+    .hero + .section > .container > .section__lead,
+    .hero + .section > .container > p,
+    .genesis-hero + .section .section__lead,
+    .genesis-hero + .section > p {
+      font-size: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .hero .hero-brand-h1 {
+      font-family: "Manrope", sans-serif;
+      max-width: 18ch;
+      color: var(--brand-white);
+    }
+
+    .hero .hero-brand-by {
+      color: var(--brand-blue-on-dark);
+    }
+
+    .hero .hero__headline,
+    .hero .hero__support,
+    .hero .hero-left > p {
+      color: var(--brand-white);
+    }
+
+    .hero a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+      text-decoration: none;
+    }
+
+    .hero a.btn--primary:hover,
+    .hero a.btn--primary:focus-visible {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+      text-decoration: none;
+    }
+
+    #ecosystem .section__title {
+      color: var(--brand-black);
+      max-width: 36ch;
+    }
+
+    #ecosystem .section__lead {
+      color: var(--brand-black);
+      max-width: 42rem;
+    }
+
+    #ecosystem .section__lead + .section__lead {
+      margin-top: var(--space-4);
+    }
+
+    #deployment .section__title,
+    #deployment .section__lead,
+    #deployment .card h3,
+    #deployment .card p {
+      color: var(--brand-white);
+    }
+
+    #deployment .cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #get-started.final-cta .section__title,
+    #get-started.final-cta .section__lead {
+      color: var(--brand-white);
+    }
+
+    #get-started.final-cta .section__lead {
+      max-width: 42rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #get-started.final-cta .btn-group {
+      justify-content: center;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+
+    #get-started a.btn {
+      text-decoration: none;
+    }
+
+    #get-started a.btn--primary {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+    }
+
+    #get-started a.btn--primary:hover,
+    #get-started a.btn--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+      text-decoration: none;
+    }
+
+    #get-started a:not(.btn) {
+      color: var(--brand-white);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    #get-started a:not(.btn):hover,
+    #get-started a:not(.btn):focus-visible {
+      color: var(--brand-white);
+    }
+
+    @media (max-width: 720px) {
+      #deployment .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script src="assets/js/main.js?v=brand8" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZNYFJFNM9');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genesisoslabs.com/#organization",
+      "name": "GenesisOS Labs LLC",
+      "url": "https://genesisoslabs.com/",
+      "logo": "https://genesisoslabs.com/assets/img/logo.png",
+      "email": "support@GenesisOSLabs.com",
+      "sameAs": [
+        "https://x.com/GenesisOSLabs",
+        "https://www.linkedin.com/company/104893537",
+        "https://www.instagram.com/genesisoslabs/",
+        "https://www.facebook.com/profile.php?id=61590064982617"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://genesisoslabs.com/#website",
+      "url": "https://genesisoslabs.com/",
+      "name": "GenesisOS Labs",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://genesisoslabs.com/Mint.html",
+      "url": "https://genesisoslabs.com/Mint.html",
+      "name": "GenesisOS Labs Minting Service",
+      "isPartOf": {
+        "@id": "https://genesisoslabs.com/#website"
+      },
+      "about": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "GenesisOS Labs Minting Service",
+      "url": "https://genesisoslabs.com/Mint.html",
+      "provider": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="AerysDesktop.html" data-nav="aerys">Aerys Desktop</a>
+      <a href="GCoin.html" data-nav="gcoin">GCoin</a>
+      <div class="nav-dropdown" data-nav-dropdown>
+        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-controls="products-menu" data-nav="products">Products</button>
+        <div class="nav-dropdown__menu" id="products-menu">
+          <a href="CRM.html" data-nav="crm">CRM</a>
+          <a href="GGamingOS.html" data-nav="ggamingos">GGamingOS</a>
+          <a href="GStudentOS.html" data-nav="gstudentos">GStudentOS</a>
+          <a href="EnterpriseTokenization.html" data-nav="tokenization">Enterprise Tokenization</a>
+        </div>
+      </div>
+      <a href="Education.html" data-nav="education">Education</a>
+      <a href="About.html" data-nav="about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-brand">
+    <div class="hero-left">
+      <h1 id="hero-brand" class="hero-brand-h1">Custom Coins &amp; L2 Networks</h1>
+      <p class="hero-brand-by">By GenesisOS Labs</p>
+      <p class="hero__headline">Launch your own digital asset ecosystem without needing any blockchain experience.</p>
+      <p class="hero__support">
+        We mint custom coins and build full Layer‑2 networks on Algorand — or almost any chain your company prefers — so your project has real utility, real speed, and real cryptographic integrity.
+      </p>
+      <p class="hero__support">
+        Whether you want a public token with a live market price or a private ledger with zero outside visibility, we build the entire system end‑to‑end.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <picture>
+        <source type="image/webp" srcset="assets/img/art-gcoin-720.webp 720w, assets/img/art-gcoin-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 28rem">
+        <img src="assets/img/art-gcoin-720.jpg" srcset="assets/img/art-gcoin-720.jpg 720w, assets/img/art-gcoin-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="720" alt="GenesisOS Labs minting service — custom coins and Layer-2 networks" decoding="async" fetchpriority="high">
+      </picture>
+    </div>
+  </section>
+
+  <section class="section section--white" id="ecosystem" aria-labelledby="ecosystem-title">
+    <div class="container">
+      <h2 id="ecosystem-title" class="section__title">Your Coin. Your Chain. Your Ecosystem.</h2>
+      <p class="section__lead">
+        A custom coin gives your brand a digital identity — but a Layer‑2 network gives it a place to live, grow, and operate.
+      </p>
+      <p class="section__lead">
+        On Algorand (or any chain you choose), your L2 becomes a fast, secure environment where your coin can power rewards, access passes, automation, governance, internal tools, or community features.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--black" id="deployment" aria-labelledby="deployment-title">
+    <div class="container">
+      <h2 id="deployment-title" class="section__title">Public or Private Deployment</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Public Mainnet</h3>
+          <p>Your coin can have a live market price, liquidity, and full on‑chain transparency.</p>
+        </article>
+        <article class="card">
+          <h3>Private Ledger</h3>
+          <p>A sealed, offline L2 with no market cap, no public price, and no external access — perfect for internal company systems.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--blue final-cta" id="get-started" aria-labelledby="get-started-title">
+    <div class="container">
+      <h2 id="get-started-title" class="section__title">Ready to Build Your Coin &amp; L2?</h2>
+      <p class="section__lead">
+        We make the entire process simple — from minting your asset to launching your full ecosystem on the chain of your choice.
+      </p>
+      <p class="section__lead">
+        Email our team to get started: <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a>
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer" data-footer>
+  <div class="page-footer__inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo" loading="lazy">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </div>
+    <section aria-labelledby="footer-products">
+      <h2 id="footer-products">Products</h2>
+      <ul>
+        <li><a href="AerysDesktop.html">Aerys Desktop</a></li>
+        <li><a href="GCoin.html">GCoin</a></li>
+        <li><a href="CRM.html">CRM</a></li>
+        <li><a href="GGamingOS.html">GGamingOS</a></li>
+        <li><a href="GStudentOS.html">GStudentOS</a></li>
+        <li><a href="EnterpriseTokenization.html">Enterprise Tokenization</a></li>
+        <li><a href="Education.html">Education</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-company">
+      <h2 id="footer-company">Company</h2>
+      <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="terms/">Terms &amp; Conditions</a></li>
+        <li><a href="privacy/">Privacy Policy</a></li>
+        <li><a href="accessibility/">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="page-footer__legal">
+    <img class="brand-logo-legal" src="assets/img/logo.png" width="22" height="22" alt="" loading="lazy">
+    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
