@@ -123,6 +123,62 @@
       border-color: var(--brand-blue);
       text-decoration: none;
     }
+
+    /* Mint services band: readable type + CTAs on white */
+    #mint-services {
+      color: var(--brand-black);
+      border-bottom: 1px solid var(--brand-blue);
+    }
+
+    #mint-services .section__title {
+      color: var(--brand-black);
+      max-width: 36ch;
+    }
+
+    #mint-services .section__lead {
+      color: var(--brand-black);
+      margin: 0 0 var(--space-5);
+      max-width: 42rem;
+    }
+
+    #mint-services .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    #mint-services a.btn {
+      text-decoration: none;
+    }
+
+    #mint-services a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+    }
+
+    #mint-services a.btn--primary:hover,
+    #mint-services a.btn--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+      text-decoration: none;
+    }
+
+    #mint-services a.btn--secondary {
+      background: transparent;
+      color: var(--brand-blue);
+      border-color: var(--brand-black);
+    }
+
+    #mint-services a.btn--secondary:hover,
+    #mint-services a.btn--secondary:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+      text-decoration: none;
+    }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -329,6 +385,19 @@
       </p>
       <div class="btn-group">
         <a class="btn btn--primary" href="University.html">Learn More</a>
+        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="mint-services" aria-labelledby="mint-services-title">
+    <div class="container">
+      <h2 id="mint-services-title" class="section__title">Mint Custom Coins &amp; Build L2 Networks</h2>
+      <p class="section__lead">
+        Launch your own digital asset ecosystem. We mint custom coins and build full Layer‑2 networks on Algorand — or almost any chain your company prefers.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="Mint.html">Explore Minting Services</a>
         <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
       </div>
     </div>
