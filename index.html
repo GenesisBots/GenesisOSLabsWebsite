@@ -179,6 +179,93 @@
       border-color: var(--brand-blue);
       text-decoration: none;
     }
+
+    /* Intelligence Suite band: readable type + CTAs on black */
+    #intel-suite {
+      color: var(--brand-white);
+      border-bottom: 1px solid var(--brand-blue);
+    }
+
+    #intel-suite .section__title {
+      color: var(--brand-white);
+      max-width: 36ch;
+    }
+
+    #intel-suite .section__lead {
+      color: var(--brand-white);
+      margin: 0 0 var(--space-5);
+      max-width: 42rem;
+    }
+
+    #intel-suite .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    #intel-suite a.btn {
+      text-decoration: none;
+    }
+
+    #intel-suite a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+    }
+
+    #intel-suite a.btn--primary:hover,
+    #intel-suite a.btn--primary:focus-visible {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+      text-decoration: none;
+    }
+
+    #intel-suite a.btn--secondary {
+      background: transparent;
+      color: var(--brand-blue-on-dark);
+      border-color: var(--brand-white);
+    }
+
+    #intel-suite a.btn--secondary:hover,
+    #intel-suite a.btn--secondary:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+      text-decoration: none;
+    }
+
+    /* Neon-blue bridge: hero-style blue-to-black wash, white type */
+    #intel-bridge.section--blue {
+      background: linear-gradient(160deg, var(--brand-blue) 0%, color-mix(in srgb, var(--brand-blue) 58%, var(--brand-black)) 48%, var(--brand-black) 100%);
+      color: var(--brand-white);
+    }
+
+    #intel-bridge .section__title,
+    #intel-bridge .section__lead {
+      color: var(--brand-white);
+    }
+
+    #intel-bridge .section__title {
+      max-width: 36ch;
+    }
+
+    #intel-bridge .section__lead {
+      margin: 0 0 var(--space-5);
+      max-width: 42rem;
+    }
+
+    #intel-bridge .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    #intel-bridge a.btn {
+      text-decoration: none;
+    }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -243,6 +330,7 @@
           <a href="GGamingOS.html" data-nav="ggamingos">GGamingOS</a>
           <a href="GStudentOS.html" data-nav="gstudentos">GStudentOS</a>
           <a href="EnterpriseTokenization.html" data-nav="tokenization">Enterprise Tokenization</a>
+          <a href="Intel.html" data-nav="intel">Intelligence Suite</a>
         </div>
       </div>
       <a href="Education.html" data-nav="education">Education</a>
@@ -377,27 +465,41 @@
     </div>
   </section>
 
-  <section class="section section--white" id="university-ambassadors" aria-labelledby="university-title">
+  <section class="section section--white" id="intel-merged" aria-labelledby="university-title">
     <div class="container">
-      <h2 id="university-title" class="section__title">GenesisOS Labs Student Ambassador Program</h2>
-      <p class="section__lead">
-        Lead your campus into the future of cryptography, tokenization, and digital asset engineering. Become a GenesisOS Labs Student Ambassador and help students build real tokenized projects using GCoin and GenesisOS tools.
-      </p>
-      <div class="btn-group">
-        <a class="btn btn--primary" href="University.html">Learn More</a>
-        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+      <div class="demo-layout">
+        <div id="university-ambassadors">
+          <h2 id="university-title" class="section__title">GenesisOS Labs Student Ambassador Program</h2>
+          <p class="section__lead">
+            Become a GenesisOS Labs Student Ambassador and help students build real tokenized projects using GCoin and GenesisOS tools.
+          </p>
+          <div class="btn-group">
+            <a class="btn btn--primary" href="University.html">Learn More</a>
+            <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+          </div>
+        </div>
+        <div id="mint-services">
+          <h2 id="mint-services-title" class="section__title">Mint Custom Coins &amp; Build L2 Networks</h2>
+          <p class="section__lead">
+            Launch your own digital asset ecosystem. We mint custom coins and build full Layer‑2 networks on Algorand — or almost any chain your company prefers.
+          </p>
+          <div class="btn-group">
+            <a class="btn btn--primary" href="Mint.html">Explore Minting Services</a>
+            <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--white" id="mint-services" aria-labelledby="mint-services-title">
+  <section class="section section--blue" id="intel-bridge" aria-labelledby="intel-bridge-title">
     <div class="container">
-      <h2 id="mint-services-title" class="section__title">Mint Custom Coins &amp; Build L2 Networks</h2>
+      <h2 id="intel-bridge-title" class="section__title">Unified Intelligence Layer</h2>
       <p class="section__lead">
-        Launch your own digital asset ecosystem. We mint custom coins and build full Layer‑2 networks on Algorand — or almost any chain your company prefers.
+        MarketIntel GBot and HeadlineScraperPro GBot form a combined intelligence pipeline that powers automated decision systems, trading engines, and enterprise‑grade analytics.
       </p>
       <div class="btn-group">
-        <a class="btn btn--primary" href="Mint.html">Explore Minting Services</a>
+        <a class="btn btn--primary" href="Intel.html">Explore Intelligence Suite</a>
         <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
       </div>
     </div>

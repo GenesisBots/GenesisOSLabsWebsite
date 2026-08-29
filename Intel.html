@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GenesisOS Labs — Intelligence Suite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <meta name="description" content="Autonomous market intelligence and real-time news extraction from MarketIntel GBot and HeadlineScraperPro GBot. Daily snapshots, sentiment, clustering, and exportable reports.">
+  <meta property="og:title" content="GenesisOS Labs — Intelligence Suite">
+  <meta property="og:description" content="MarketIntel GBot + HeadlineScraperPro GBot — autonomous market snapshots and real-time global news extraction.">
+  <meta property="og:url" content="https://genesisoslabs.com/Intel.html">
+  <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta property="og:site_name" content="GenesisOS Labs">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GenesisOS Labs — Intelligence Suite">
+  <meta name="twitter:description" content="MarketIntel GBot + HeadlineScraperPro GBot — autonomous market snapshots and real-time global news extraction.">
+  <link rel="canonical" href="https://genesisoslabs.com/Intel.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
+  <link rel="stylesheet" href="assets/css/style.css?v=brand8">
+  <style>
+    .hero .hero-brand-h1,
+    .genesis-hero .hero-brand-h1,
+    .genesis-hero-content h1 {
+      font-size: var(--text-h1);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--brand-white);
+    }
+
+    .hero .hero-brand-by,
+    .genesis-hero .hero-brand-by,
+    .genesis-hero-content .hero-brand-by {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue-on-dark);
+    }
+
+    .hero .hero__headline,
+    .hero .hero-official-line,
+    .genesis-hero-content .tagline {
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 36rem;
+      color: var(--brand-white);
+      margin: 0 0 var(--space-3);
+    }
+
+    .hero .hero__support,
+    .hero .hero-left > p:not(.hero-brand-by):not(.hero__headline):not(.hero-official-line),
+    .genesis-hero-content .subtext {
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--brand-white);
+    }
+
+    .hero .btn-group {
+      margin-top: var(--space-4);
+    }
+
+    .hero .hero-brand-h1 {
+      font-family: "Manrope", sans-serif;
+      max-width: 22ch;
+      color: var(--brand-white);
+    }
+
+    .hero .hero-brand-by {
+      color: var(--brand-blue-on-dark);
+    }
+
+    .hero .hero__headline,
+    .hero .hero__support,
+    .hero .hero-left > p {
+      color: var(--brand-white);
+    }
+
+    .hero a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+      text-decoration: none;
+    }
+
+    .hero a.btn--primary:hover,
+    .hero a.btn--primary:focus-visible {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+      text-decoration: none;
+    }
+
+    #marketintel .section__title,
+    #pipeline .section__title {
+      color: var(--brand-black);
+      max-width: 36ch;
+    }
+
+    #marketintel .section__lead,
+    #pipeline .section__lead {
+      color: var(--brand-black);
+      max-width: 42rem;
+    }
+
+    #headlinescraper .section__title,
+    #headlinescraper .section__lead,
+    #headlinescraper li,
+    #pipeline .card h3,
+    #pipeline .card p {
+      color: inherit;
+    }
+
+    #headlinescraper .section__title {
+      color: var(--brand-white);
+      max-width: 36ch;
+    }
+
+    #headlinescraper .section__lead {
+      color: var(--brand-white);
+      max-width: 42rem;
+    }
+
+    .intel-copy ul {
+      margin: var(--space-4) 0 0;
+      padding-left: 1.25rem;
+      max-width: 42rem;
+    }
+
+    .intel-copy li {
+      margin: 0 0 var(--space-2);
+    }
+
+    #marketintel .intel-copy li {
+      color: var(--brand-black);
+    }
+
+    #headlinescraper .intel-copy li {
+      color: var(--brand-white);
+    }
+
+    .intel-output {
+      margin: 0;
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border: 1px solid var(--brand-blue);
+      padding: var(--space-4);
+      max-height: 36rem;
+      overflow: auto;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    }
+
+    .intel-output h3 {
+      margin: 0 0 var(--space-3);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue-on-dark);
+    }
+
+    #intel-cta.final-cta .section__title,
+    #intel-cta.final-cta .section__lead {
+      color: var(--brand-white);
+    }
+
+    #intel-cta.final-cta .section__lead {
+      max-width: 42rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #intel-cta.final-cta .btn-group {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+
+    #intel-cta a.btn {
+      text-decoration: none;
+    }
+
+    #intel-cta a.btn--primary {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+    }
+
+    #intel-cta a.btn--primary:hover,
+    #intel-cta a.btn--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+      text-decoration: none;
+    }
+
+    @media (max-width: 720px) {
+      .hero .hero-brand-h1 {
+        max-width: none;
+      }
+    }
+  </style>
+  <script src="assets/js/main.js?v=brand8" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZNYFJFNM9');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genesisoslabs.com/#organization",
+      "name": "GenesisOS Labs LLC",
+      "url": "https://genesisoslabs.com/",
+      "logo": "https://genesisoslabs.com/assets/img/logo.png",
+      "email": "support@GenesisOSLabs.com",
+      "sameAs": [
+        "https://x.com/GenesisOSLabs",
+        "https://www.linkedin.com/company/104893537",
+        "https://www.instagram.com/genesisoslabs/",
+        "https://www.facebook.com/profile.php?id=61590064982617"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://genesisoslabs.com/#website",
+      "url": "https://genesisoslabs.com/",
+      "name": "GenesisOS Labs",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://genesisoslabs.com/Intel.html",
+      "url": "https://genesisoslabs.com/Intel.html",
+      "name": "GenesisOS Labs — Intelligence Suite",
+      "isPartOf": {
+        "@id": "https://genesisoslabs.com/#website"
+      },
+      "about": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "GenesisOS Intelligence Suite",
+      "url": "https://genesisoslabs.com/Intel.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand-lockup" href="index.html">
+      <img class="brand-lockup__logo brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="nav-links links" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="AerysDesktop.html" data-nav="aerys">Aerys Desktop</a>
+      <a href="GCoin.html" data-nav="gcoin">GCoin</a>
+      <div class="nav-dropdown" data-nav-dropdown>
+        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-controls="products-menu" data-nav="products">Products</button>
+        <div class="nav-dropdown__menu" id="products-menu">
+          <a href="CRM.html" data-nav="crm">CRM</a>
+          <a href="GGamingOS.html" data-nav="ggamingos">GGamingOS</a>
+          <a href="GStudentOS.html" data-nav="gstudentos">GStudentOS</a>
+          <a href="EnterpriseTokenization.html" data-nav="tokenization">Enterprise Tokenization</a>
+          <a href="Intel.html" data-nav="intel">Intelligence Suite</a>
+        </div>
+      </div>
+      <a href="Education.html" data-nav="education">Education</a>
+      <a href="About.html" data-nav="about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-brand">
+    <div class="hero-left">
+      <h1 id="hero-brand" class="hero-brand-h1">Autonomous Market Intelligence &amp; Real‑Time News Extraction</h1>
+      <p class="hero-brand-by">By GenesisOS Labs</p>
+      <p class="hero__headline">MarketIntel GBot + HeadlineScraperPro GBot</p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Contact Our Team</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <picture>
+        <img src="./assets/img/NewsMedia2.jpg" width="720" height="720" alt="GenesisOS Labs Intelligence Suite — MarketIntel GBot and HeadlineScraperPro GBot" decoding="async" fetchpriority="high">
+      </picture>
+    </div>
+  </section>
+
+  <section class="section section--white" id="marketintel" aria-labelledby="marketintel-title">
+    <div class="container">
+      <h2 id="marketintel-title" class="section__title">MarketIntel GBot — Daily Market Intelligence Snapshot</h2>
+      <p class="section__lead">Structured market data, sentiment, and top stories — generated autonomously.</p>
+      <div class="demo-layout">
+        <div class="intel-copy">
+          <ul>
+            <li>Autonomous daily/weekly/monthly market snapshots</li>
+            <li>Indices, crypto, commodities, FX</li>
+            <li>Sector heatmaps</li>
+            <li>Volatility tracking</li>
+            <li>Unusual moves detection</li>
+            <li>Sentiment scoring</li>
+            <li>Top stories with metadata</li>
+            <li>Exportable reports</li>
+          </ul>
+        </div>
+        <div class="intel-output" role="region" aria-label="MarketIntel GBot example output">
+          <h3>Example Output</h3>
+          <pre>🤖 MarketIntel GBot — Daily MarketIntel Snapshot
+Generated: `07/15/26`
+Period: **Daily** (07/14/26 - 07/15/26)
+Headlines in Window: **12**
+
+## Indices
+- 🔴 **S&amp;P 500 (SPX)**: 7,543.59 · -0.42%
+- 🔴 **NASDAQ (IXIC)**: 26,107.01 · -0.66%
+- 🔴 **Dow Jones (DJI)**: 52,508.27 · -0.24%
+
+## Crypto
+- 🟢 **Bitcoin (BTC)**: 64,775.0 · +3.40%
+- 🟢 **Ethereum (ETH)**: 1,883.48 · +5.35%
+- 🟢 **Solana (SOL)**: 77.6 · +3.29%
+- 🟢 **XRP (XRP)**: 1.11 · +3.83%
+- 🟢 **Cardano (ADA)**: 0.1646 · +3.77%
+
+## Commodities
+- 🟢 **WTI Crude Oil (WTI)**: 80.0 · +0.83%
+- 🟢 **Natural Gas (NG)**: 2.919 · +0.52%
+- 🔴 **Gold (XAU)**: 4,037.0 · -0.59%
+- 🔴 **Silver (XAG)**: 58.6 · -0.29%
+- 🟢 **Copper (HG)**: 6.373 · +0.68%
+- 🟢 **Platinum (PL)**: 1,640.6 · +0.56%
+- 🔴 **Uranium (URA)**: 41.55 · -3.30%
+- 🟢 **Steel (SLX)**: 101.25 · +2.15%
+- 🟢 **Lumber (LBR)**: 632.5 · +2.10% ⚠️ **unusual**
+- 🟢 **Corn (ZC)**: 466.25 · +7.49% ⚠️ **unusual**
+- 🔴 **Soybeans (ZS)**: 1,197.5 · -0.81%
+
+## FX
+- 🟢 **EUR/USD (EURUSD)**: 1.1418 · +0.30%
+- 🔴 **USD/JPY (USDJPY)**: 162.37 · -0.04%
+- 🟢 **GBP/USD (GBPUSD)**: 1.3387 · +0.29%
+- 🔴 **USD/CNY (USDCNY)**: 6.7629 · -0.24% ⚠️ **unusual**
+
+## Sector Heatmap
+- 🔴 **Tech (XLK)**: 183.62 · -1.16%
+- 🟢 **Financials (XLF)**: 56.18 · +0.84%
+- 🔴 **Industrials (XLI)**: 180.45 · -0.81%
+- 🟢 **Energy (XLE)**: 56.95 · +3.40% ⚠️ **unusual**
+- 🔴 **Consumer (XLY)**: 115.9 · -1.14%
+- 🔴 **Healthcare (XLV)**: 158.29 · -1.59%
+
+## Macro Microstructure
+- 🔴 **DXY (DXY)**: 100.97 · -0.30%
+- 🔴 **2Y Treasury (US2Y)**: 102.93 · -0.05%
+- 🔴 **5Y Breakevens (T5YIE)**: 2.2497 · -0.01% _(modeled)_
+- 🔴 **HY OAS (HYOAS)**: 340.93 · -2.59% _(modeled)_
+- 🟢 **IG OAS (IGOAS)**: 104.28 · +4.28% ⚠️ **unusual** _(modeled)_
+
+## Factor Signals
+- 🟢 **Momentum (MTUM)**: 319.76 · +1.63%
+- 🟢 **Value (VLUE)**: 195.3 · +0.78%
+- 🔴 **Growth (IWF)**: 123.23 · -0.58%
+- 🟢 **Quality (QUAL)**: 219.24 · +0.27%
+- 🔴 **Small vs Large (SMLG)**: 0.3917 · -0.09%
+
+## Volatility
+- 🔴 **CBOE Volatility Index (VIX)**: 16.31 · -4.95%
+
+## Macro Signals
+- ▲ **CPI Inflation (YoY)**: 3.17% (+0.07) — Hotter than prior — pressures rate-cut timing.
+- ▼ **Core PCE (YoY)**: 2.61% (-0.09) — Cooling — supports disinflation narrative.
+- ▼ **Fed Funds Rate**: 5.22% (-0.03) — Easing bias; risk-positive.
+- ▲ **10Y Treasury Yield**: 4.33% (+0.03) — Higher discount rate weighs on duration.
+- ▲ **Unemployment Rate**: 4.03% (+0.13) — Labour market resilient.
+- ▲ **Nonfarm Payrolls (MoM)**: 185.19K (+0.19) — Labour market resilient.
+
+## Unusual Moves (&gt;2σ)
+- **Lumber (LBR)**: +2.10% · +2.96σ
+- **Corn (ZC)**: +7.49% · +3.62σ
+- **USD/CNY (USDCNY)**: -0.24% · -2.2σ
+- **Energy (XLE)**: +3.40% · +2.23σ
+- **IG OAS (IGOAS)**: +4.28% · +2.85σ
+
+**12** stories · **5** sources · **6** themes · **5** unusual moves · sentiment **-0.07** (neutral)
+
+## Story Clusters
+- **Crypto** — 5 stories · sentiment -0.04
+  Altcoins diverge as liquidity rotates within crypto
+- **Energy** — 3 stories · sentiment +0.17
+  Natural-gas volatility persists ahead of seasonal demand shift
+- **AI** — 1 stories · sentiment -0.14
+  Enterprises accelerate generative-AI rollouts despite cost scrutiny
+- **Geopolitics** — 1 stories · sentiment -0.56
+  Markets watch geopolitical risk premium in commodities
+- **Regulation** — 1 stories · sentiment -0.19
+  Regulators sharpen scrutiny of large platform mergers
+- **Macro** — 1 stories · sentiment -0.22
+  Investors recalibrate rate-cut odds after data surprise
+
+## Sentiment Heatmap
+- **Bloomberg**: 🟢 0 · ⚪ 2 · 🔴 1 (score -0.18)
+- **WSJ**: 🟢 2 · ⚪ 0 · 🔴 1 (score +0.15)
+- **Reuters**: 🟢 0 · ⚪ 2 · 🔴 0 (score -0.03)
+- **Financial Times**: 🟢 0 · ⚪ 1 · 🔴 1 (score -0.21)
+- **CoinDesk**: 🟢 1 · ⚪ 0 · 🔴 1 (score -0.14)
+
+## Top Stories
+- **Enterprises accelerate generative-AI rollouts despite cost scrutiny** _(Reuters · AI · -0.14)_
+- **Altcoins diverge as liquidity rotates within crypto** _(Reuters · Crypto · +0.09)_
+- **Bitcoin holds key level as spot-ETF flows stay positive** _(Bloomberg · Crypto · -0.70)_
+- **Natural-gas volatility persists ahead of seasonal demand shift** _(Bloomberg · Energy · +0.11)_
+- **Natural-gas volatility persists ahead of seasonal demand shift** _(Bloomberg · Energy · +0.06)_
+- **Natural-gas volatility persists ahead of seasonal demand shift** _(WSJ · Energy · +0.33)_
+- **Altcoins diverge as liquidity rotates within crypto** _(WSJ · Crypto · +0.69)_
+- **Markets watch geopolitical risk premium in commodities** _(WSJ · Geopolitics · -0.56)_
+- **Regulators sharpen scrutiny of large platform mergers** _(Financial Times · Regulation · -0.19)_
+- **Investors recalibrate rate-cut odds after data surprise** _(Financial Times · Macro · -0.22)_
+
+© 2026 — GenesisOSLabs.com</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--black" id="headlinescraper" aria-labelledby="headlinescraper-title">
+    <div class="container">
+      <h2 id="headlinescraper-title" class="section__title">HeadlineScraperPro GBot — Daily Global News Digest</h2>
+      <p class="section__lead">Real‑time news extraction, topic clustering, sentiment scoring, and canonical story merging.</p>
+      <div class="demo-layout">
+        <div class="intel-copy">
+          <ul>
+            <li>Scrapes global news sources</li>
+            <li>Canonical story merging</li>
+            <li>Topic clustering</li>
+            <li>Sentiment scoring</li>
+            <li>Metadata tagging</li>
+            <li>Daily digest generation</li>
+            <li>Exportable reports</li>
+          </ul>
+        </div>
+        <div class="intel-output" role="region" aria-label="HeadlineScraperPro GBot example output">
+          <h3>Example Output</h3>
+          <pre>🤖 HeadlineScraperPro GBot — Daily Digest
+
+Generated: `08/28/26`
+Period: **Daily** (08/27/26 - 08/28/26)
+Canonical Stories: **115** (from 117 raw · merged 2 dups · updated 2)
+
+## Sentiment
+- positive: **5**
+- neutral:  **86**
+- negative: **24**
+
+## Top Topics
+- flood (**16**)
+- war (**8**)
+- ai (**6**)
+- china (**4**)
+- anthropic (**4**)
+- trial (**3**)
+- iran (**3**)
+- climate (**3**)
+- model (**3**)
+- ukraine (**2**)
+- russia (**2**)
+- artificial intelligence (**2**)
+- google (**2**)
+- ceasefire (**1**)
+- epidemic (**1**)
+- sanctions (**1**)
+- openai (**1**)
+- missile (**1**)
+- nato (**1**)
+- emission (**1**)
+
+## Top Sources
+- NYTimes World: **40**
+- Guardian World: **26**
+- BBC World: **21**
+- Hacker News: **20**
+- NYTimes Technology: **10**
+
+## Headlines
+- **&#x27;High risk&#x27; of lake breaching and causing second flood, warns China** _(BBC World)_ [topic: china] [negative]
+- **&#x27;The flood took everything&#x27;: Nepal survivors describe horror of loved ones being swept away** _(BBC World)_ [topic: flood] [neutral]
+- **A Venezuelan Colonel Turned Actor Is Deported From Florida** _(NYTimes World)_ [neutral]
+- **AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab** _(Hacker News)_ [topic: ai] [neutral]
+- **After Whiskey With His Captors, Cuban Dissident Lands in a Miami Maelstrom** _(NYTimes World)_ [neutral]
+- **Allan Little: I met dangerously fanatical Mladić early in Bosnian war** _(BBC World)_ [topic: war] [negative]
+- **Bootstrappable Builds: How and Why** _(Hacker News)_ [neutral]
+- **Burnham announces crackdown on rogue bailiffs and &#x27;cowboy builders&#x27;** _(Guardian World)_ [neutral]
+- **California Lawmakers Pass Plug-In Solar Bill** _(NYTimes Technology)_ [neutral]
+- **Canada Hires U.S. Scholars From Harvard and Other Top Universities** _(NYTimes World)_ [neutral]
+- **Climate change is strengthening El Niño, coral records suggest** _(Hacker News)_ [topic: climate] [neutral]
+- **Climate crisis could be destabilising mountain areas like Nepal, experts warn** _(Guardian World)_ [topic: climate] [negative]
+- **Dolphin dies from H5 bird flu in SA as researchers withdrawn from sub-Antarctic island over &#x27;psychosocial risk&#x27;** _(Guardian World)_ [negative]
+- **Mark Zuckerberg Wants to Make Sure YouTube and TikTok Share His Pain** _(NYTimes Technology)_ [neutral]
+- **Meta Projected It Could Spend $10 Billion on Anthropic&#x27;s A.I.** _(NYTimes Technology)_ [topic: anthropic] [neutral]
+- **Board of Peace&#x27;s Gaza envoy criticises Israeli strikes and Hamas actions** _(BBC World)_ [topic: ceasefire] [neutral]
+- **Climate Change Raises Risk of Disasters Like Nepal Floods** _(NYTimes World)_ [topic: climate] [neutral]
+- **Doctors are finally learning to manage antidepressant withdrawal** _(Hacker News)_ [neutral]
+- **Fear Over Malaysia&#x27;s Plan to Send Back Rohingya Migrants to Myanmar** _(NYTimes World)_ [negative]
+- **Fire Outside Home of Canadian Parliament Member Is Under Investigation** _(NYTimes World)_ [neutral]
+
+© 2026 — GenesisOSLabs.com</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="pipeline" aria-labelledby="pipeline-title">
+    <div class="container">
+      <h2 id="pipeline-title" class="section__title">Unified Intelligence → Execution Pipeline</h2>
+      <p class="section__lead">
+        HeadlineScraperPro GBot extracts and clusters global news, while MarketIntel GBot turns those signals—combined with live market data—into structured market snapshots. Together, they power GTradeOS and Aerys Desktop with automated intelligence pipelines, giving operators a direct path from raw headlines to actionable execution without rebuilding the research stack.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <div class="badge">1</div>
+          <h3>HeadlineScraperPro GBot</h3>
+          <p>Scrapes sources, merges canonical stories, scores sentiment, and publishes a daily digest.</p>
+        </article>
+        <article class="card">
+          <div class="badge">2</div>
+          <h3>MarketIntel GBot</h3>
+          <p>Builds daily, weekly, and monthly snapshots — indices, crypto, FX, sectors, volatility, and unusual moves.</p>
+        </article>
+        <article class="card">
+          <div class="badge">3</div>
+          <h3>GTradeOS · Aerys Desktop for Enterprise</h3>
+          <p>Routes structured intelligence into trading, agent workflows, and internal automation pipelines.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--blue final-cta" id="intel-cta" aria-labelledby="intel-cta-title">
+    <div class="container">
+      <h2 id="intel-cta-title" class="section__title">Deploy the Intelligence Suite</h2>
+      <p class="section__lead">
+        Run MarketIntel GBot and HeadlineScraperPro GBot inside Aerys Desktop, or talk to GenesisOS Labs about an enterprise deployment.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer" data-footer>
+  <div class="page-footer__inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs Logo" loading="lazy">
+      <span class="brand-lockup__title">GenesisOS Labs</span>
+    </div>
+    <section aria-labelledby="footer-products">
+      <h2 id="footer-products">Products</h2>
+      <ul>
+        <li><a href="AerysDesktop.html">Aerys Desktop</a></li>
+        <li><a href="GCoin.html">GCoin</a></li>
+        <li><a href="CRM.html">CRM</a></li>
+        <li><a href="GGamingOS.html">GGamingOS</a></li>
+        <li><a href="GStudentOS.html">GStudentOS</a></li>
+        <li><a href="EnterpriseTokenization.html">Enterprise Tokenization</a></li>
+        <li><a href="Education.html">Education</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-company">
+      <h2 id="footer-company">Company</h2>
+      <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-legal">
+      <h2 id="footer-legal">Legal</h2>
+      <ul>
+        <li><a href="terms/">Terms &amp; Conditions</a></li>
+        <li><a href="privacy/">Privacy Policy</a></li>
+        <li><a href="accessibility/">Accessibility</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Follow us</h2>
+      <ul>
+        <li><a href="https://x.com/GenesisOSLabs" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.linkedin.com/company/104893537" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/genesisoslabs/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590064982617" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="page-footer__legal">
+    <img class="brand-logo-legal" src="assets/img/logo.png" width="22" height="22" alt="" loading="lazy">
+    <span>© 2026 GenesisOS Labs LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
