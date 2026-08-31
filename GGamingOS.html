@@ -105,16 +105,40 @@
       margin: 0 0 var(--space-5);
     }
 
+    #vhrog-showcase .vhrog-block {
+      margin-top: var(--space-4);
+      margin-bottom: 0;
+    }
+
     #vhrog-showcase .vhrog-image {
       display: block;
       width: 100%;
-      max-width: 100%;
+      max-width: 80%;
       height: auto;
-      margin: 0 0 var(--space-2);
+      margin: 0 auto var(--space-4);
       vertical-align: top;
       background: var(--brand-black);
       border: 1px solid var(--brand-blue);
       object-fit: contain;
+    }
+
+    #vhrog-showcase .vhrog-tweet {
+      max-width: 550px;
+      margin-inline: auto;
+    }
+
+    .vhrog-tweet .tweet-frame {
+      height: 320px;
+      overflow: hidden;
+      transform: scale(0.90);
+      transform-origin: top left;
+      width: 120% !important;
+      margin-top: 0;
+    }
+
+    .vhrog-tweet .tweet-tile {
+      padding: 1rem;
+      min-height: auto;
     }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
@@ -240,7 +264,19 @@
     <div class="container">
       <h2 id="vhrog-title" class="section__title">Build Custom Tokenized Games</h2>
       <p class="section__lead">Our team is working on original tokenized games such as Vampire Hunter: Rise of Gilgamesh & Frontier Trail: Brave New World.</p>
-      <img class="vhrog-image" src="assets/img/VH RoG Title Screen v1 08312026 BB.jpg" width="1567" height="893" alt="Vampire Hunter: Rise of Gilgamesh title screen">
+      <div class="vhrog-block">
+        <img class="vhrog-image" src="assets/img/VH RoG Title Screen v1 08312026 BB.jpg" width="1567" height="893" alt="Vampire Hunter: Rise of Gilgamesh title screen">
+        <div class="education-kb vhrog-tweet">
+          <div class="tweet-tile">
+            <div class="tweet-frame">
+              <blockquote class="twitter-tweet">
+                <a href="https://x.com/GenesisOSLabs/status/2094406787290087678?s=20"></a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </section>
 
