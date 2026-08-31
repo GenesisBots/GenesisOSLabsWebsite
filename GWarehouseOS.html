@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Minting Service | GenesisOS Labs</title>
+  <title>GWarehouseOS — The Cryptographically‑Verified Warehouse Operating System | GenesisOS Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-  <meta name="description" content="Launch your own digital asset ecosystem without blockchain experience. GenesisOS Labs mints custom coins and builds Layer-2 networks on Algorand — or almost any chain you prefer.">
-  <meta property="og:title" content="Minting Service | GenesisOS Labs">
-  <meta property="og:description" content="Custom coins and Layer-2 networks, built for beginners. Public mainnet or private ledger — we build the system end-to-end.">
-  <meta property="og:url" content="https://genesisoslabs.com/Mint.html">
+  <meta name="description" content="GWarehouseOS turns every parcel, pallet, robot, workflow, and location into cryptographically-verified tokens on-chain — true inventory visibility within 3–5 seconds, not days.">
+  <meta property="og:title" content="GWarehouseOS — The Cryptographically‑Verified Warehouse Operating System | GenesisOS Labs">
+  <meta property="og:description" content="Your warehouse can’t afford to run 1–3 days behind reality. Get true inventory visibility within 3–5 seconds.">
+  <meta property="og:url" content="https://genesisoslabs.com/GWarehouseOS.html">
   <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
   <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
   <meta property="og:site_name" content="GenesisOS Labs">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Minting Service | GenesisOS Labs">
-  <meta name="twitter:description" content="Custom coins and Layer-2 networks, built for beginners. Public mainnet or private ledger — we build the system end-to-end.">
-  <link rel="canonical" href="https://genesisoslabs.com/Mint.html">
+  <meta name="twitter:title" content="GWarehouseOS — The Cryptographically‑Verified Warehouse Operating System | GenesisOS Labs">
+  <meta name="twitter:description" content="Your warehouse can’t afford to run 1–3 days behind reality. Get true inventory visibility within 3–5 seconds.">
+  <link rel="canonical" href="https://genesisoslabs.com/GWarehouseOS.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -117,28 +117,62 @@
       text-decoration: none;
     }
 
-    #ecosystem .section__title {
+    #what-is .section__title,
+    #who .section__title,
+    #solution .section__title {
       color: var(--brand-black);
       max-width: 36ch;
     }
 
-    #ecosystem .section__lead {
+    #what-is .section__lead,
+    #who .section__lead,
+    #solution .section__lead {
       color: var(--brand-black);
       max-width: 42rem;
     }
 
-    #ecosystem .section__lead + .section__lead {
+    #what-is .section__lead + .section__lead,
+    #who .section__lead + .section__lead,
+    #solution .section__lead + .section__lead {
       margin-top: var(--space-4);
     }
 
-    #deployment .section__title,
-    #deployment .section__lead,
-    #deployment .card h3,
-    #deployment .card p {
+    #problem .section__title,
+    #problem .section__lead,
+    #problem .card h3,
+    #problem .card p,
+    #additional .section__title,
+    #additional .section__lead,
+    #additional .card h3,
+    #additional .card p,
+    #pitch .section__title,
+    #pitch .section__lead,
+    #pitch .card h3,
+    #pitch .card p,
+    #solution .card h3,
+    #solution .card p,
+    #who .card h3,
+    #who .card p {
+      color: inherit;
+    }
+
+    #problem .section__title,
+    #problem .section__lead,
+    #problem .card h3,
+    #problem .card p,
+    #additional .section__title,
+    #additional .section__lead,
+    #additional .card h3,
+    #additional .card p,
+    #pitch .section__title,
+    #pitch .section__lead {
       color: var(--brand-white);
     }
 
-    #deployment .cards {
+    #problem .cards,
+    #solution .cards,
+    #additional .cards,
+    #who .cards {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -189,9 +223,23 @@
     }
 
     @media (max-width: 720px) {
-      #deployment .cards {
+      #problem .cards,
+      #solution .cards,
+      #additional .cards,
+      #who .cards {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* Hero QR still — keep native 3:2, do not crop the code */
+    .hero .hero-right img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: none;
+      aspect-ratio: 1536 / 1024;
+      object-fit: contain;
+      object-position: center;
     }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
@@ -231,9 +279,9 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://genesisoslabs.com/Mint.html",
-      "url": "https://genesisoslabs.com/Mint.html",
-      "name": "GenesisOS Labs Minting Service",
+      "@id": "https://genesisoslabs.com/GWarehouseOS.html",
+      "url": "https://genesisoslabs.com/GWarehouseOS.html",
+      "name": "GWarehouseOS — The Cryptographically‑Verified Warehouse Operating System",
       "isPartOf": {
         "@id": "https://genesisoslabs.com/#website"
       },
@@ -242,9 +290,11 @@
       }
     },
     {
-      "@type": "Service",
-      "name": "GenesisOS Labs Minting Service",
-      "url": "https://genesisoslabs.com/Mint.html",
+      "@type": "SoftwareApplication",
+      "name": "GWarehouseOS",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "url": "https://genesisoslabs.com/GWarehouseOS.html",
       "provider": {
         "@id": "https://genesisoslabs.com/#organization"
       }
@@ -289,14 +339,11 @@
 
   <section class="hero" aria-labelledby="hero-brand">
     <div class="hero-left">
-      <h1 id="hero-brand" class="hero-brand-h1">Custom Coins &amp; L2 Networks</h1>
+      <h1 id="hero-brand" class="hero-brand-h1">GWarehouseOS</h1>
       <p class="hero-brand-by">By GenesisOS Labs</p>
-      <p class="hero__headline">Launch your own digital asset ecosystem without needing any blockchain experience.</p>
+      <p class="hero__headline">The Cryptographically‑Verified Warehouse Operating System.</p>
       <p class="hero__support">
-        We mint custom coins and build full Layer‑2 networks on Algorand — or almost any chain your company prefers — so your project has real utility, real speed, and real cryptographic integrity.
-      </p>
-      <p class="hero__support">
-        Whether you want a public token with a live market price or a private ledger with zero outside visibility, we build the entire system end‑to‑end.
+        Your warehouse can’t afford to run 1–3 days behind reality. GWarehouseOS turns every parcel, pallet, robot, workflow, and location into cryptographically‑verified tokens on-chain — giving you true inventory visibility within 3–5 seconds, not days.
       </p>
       <div class="btn-group">
         <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
@@ -304,35 +351,114 @@
     </div>
     <div class="hero-right">
       <picture>
-        <source type="image/webp" srcset="assets/img/art-gcoin-720.webp 720w, assets/img/art-gcoin-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 28rem">
-        <img src="assets/img/art-gcoin-720.jpg" srcset="assets/img/art-gcoin-720.jpg 720w, assets/img/art-gcoin-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="720" alt="GenesisOS Labs minting service — custom coins and Layer-2 networks" decoding="async" fetchpriority="high">
+        <img src="assets/img/QR Code Warehouse v1 08312026 BB.png" width="1536" height="1024" alt="GWarehouseOS — cryptographically-verified warehouse operating system from GenesisOS Labs" decoding="async" fetchpriority="high">
       </picture>
     </div>
   </section>
 
-  <section class="section section--white" id="ecosystem" aria-labelledby="ecosystem-title">
+  <section class="section section--black" id="problem" aria-labelledby="problem-title">
     <div class="container">
-      <h2 id="ecosystem-title" class="section__title">Your Coin. Your Chain. Your Ecosystem.</h2>
+      <h2 id="problem-title" class="section__title">The Problem: Warehouses Are Flying Blind</h2>
       <p class="section__lead">
-        A custom coin gives your brand a digital identity — but a Layer‑2 network gives it a place to live, grow, and operate.
+        Most warehouses run 1–3 days behind reality. WMS records lag physical movement. Cycle counts disagree with the floor. Robots, pallets, and people operate on different clocks — and leadership makes decisions on data that is already obsolete.
       </p>
-      <p class="section__lead">
-        On Algorand (or any chain you choose), your L2 becomes a fast, secure environment where your coin can power rewards, access passes, automation, governance, internal tools, or community features.
-      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>Late system of record</h3>
+          <p>When inventory truth arrives a day late, you are already shipping, receiving, and reallocating against a picture that no longer exists.</p>
+        </article>
+        <article class="card">
+          <h3>No cryptographic proof</h3>
+          <p>Ghost inventory, missed SLAs, unprovable shrinkage, and audits that take weeks — because location, custody, and movement were never verified as they happened.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="section section--black" id="deployment" aria-labelledby="deployment-title">
+  <section class="section section--white" id="solution" aria-labelledby="solution-title">
     <div class="container">
-      <h2 id="deployment-title" class="section__title">Public or Private Deployment</h2>
+      <h2 id="solution-title" class="section__title">The GWarehouseOS Solution: Tokenization + Robotics + Crypto Verification</h2>
+      <p class="section__lead">
+        GWarehouseOS binds physical operations to on-chain verification. Every asset and action becomes a cryptographically‑verified token — then robotics and workflows execute against that same live record.
+      </p>
       <div class="cards">
         <article class="card">
-          <h3>Public Mainnet</h3>
-          <p>Your coin can have a live market price, liquidity, and full on‑chain transparency.</p>
+          <h3>Tokenization</h3>
+          <p>Every parcel, pallet, workflow, and location is issued as a token so inventory identity cannot drift from what is actually on the floor.</p>
         </article>
         <article class="card">
-          <h3>Private Ledger</h3>
-          <p>A sealed, offline L2 with no market cap, no public price, and no external access — perfect for internal company systems.</p>
+          <h3>Robotics</h3>
+          <p>Robot fleets, human workflows, and movement events share one operating picture — so execution is tied to verified inventory, not a stale WMS snapshot.</p>
+        </article>
+        <article class="card">
+          <h3>Crypto verification</h3>
+          <p>On-chain cryptographic proof of custody and movement in 3–5 seconds — auditable, tamper-evident, and available the moment the floor changes.</p>
+        </article>
+        <article class="card">
+          <h3>Live visibility</h3>
+          <p>True inventory visibility within 3–5 seconds, not days. The warehouse stops flying blind because the ledger and the floor stay in lockstep.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--black" id="additional" aria-labelledby="additional-title">
+    <div class="container">
+      <h2 id="additional-title" class="section__title">Additional Problems Warehouses Face (that crypto + robotics solve)</h2>
+      <p class="section__lead">
+        Tokenization, robotics, and cryptographic verification close the gaps that conventional WMS, barcode scans, and end-of-day reconciliation leave open.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>Shrinkage without a chain of custody</h3>
+          <p>Crypto-verified tokens record who held what, where, and when — so loss is traceable instead of written off.</p>
+        </article>
+        <article class="card">
+          <h3>Cycle counts that never match</h3>
+          <p>When every pallet and location is tokenized, counts reconcile against cryptographic state instead of a lagged spreadsheet.</p>
+        </article>
+        <article class="card">
+          <h3>Robot and human workflow collisions</h3>
+          <p>Fleet and workflow tokens share one live map, so robotics and people execute against the same verified locations.</p>
+        </article>
+        <article class="card">
+          <h3>Audit and compliance lag</h3>
+          <p>On-chain movement history is the audit trail. Proof is available in seconds, not after a week of reconstructing scans.</p>
+        </article>
+        <article class="card">
+          <h3>Multi-site inventory that cannot reconcile</h3>
+          <p>Tokenized parcels and pallets stay uniquely identified across buildings, so transfers are verified instead of hoped for.</p>
+        </article>
+        <article class="card">
+          <h3>Receiving and shipping truth that arrives too late</h3>
+          <p>Inbound and outbound events create or update tokens as they happen — so dock reality is visible in 3–5 seconds, not 1–3 days.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="who" aria-labelledby="who-title">
+    <div class="container">
+      <h2 id="who-title" class="section__title">Who This Is For</h2>
+      <p class="section__lead">
+        GWarehouseOS is built for operators who cannot afford a warehouse that runs 1–3 days behind reality — and who need cryptographic proof, not another dashboard.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>3PLs and fulfillment centers</h3>
+          <p>High-velocity parcel and pallet flow where inventory truth has to keep up with the dock, not the overnight batch.</p>
+        </article>
+        <article class="card">
+          <h3>Enterprise distribution</h3>
+          <p>Multi-site networks that need a single, verifiable picture of inventory, location, and custody across the operation.</p>
+        </article>
+        <article class="card">
+          <h3>Robotics-enabled warehouses</h3>
+          <p>Facilities where robot fleets, workflows, and people must share one cryptographically‑verified operating record.</p>
+        </article>
+        <article class="card">
+          <h3>Audit, compliance, and loss-prevention teams</h3>
+          <p>Leaders who need on-chain proof of movement and custody in seconds — not a reconstructed trail after the fact.</p>
         </article>
       </div>
     </div>
@@ -340,9 +466,9 @@
 
   <section class="section section--blue final-cta" id="get-started" aria-labelledby="get-started-title">
     <div class="container">
-      <h2 id="get-started-title" class="section__title">Ready to Build Your Coin &amp; L2?</h2>
+      <h2 id="get-started-title" class="section__title">See inventory in 3–5 seconds — not days.</h2>
       <p class="section__lead">
-        We make the entire process simple — from minting your asset to launching your full ecosystem on the chain of your choice.
+        GWarehouseOS is the cryptographically‑verified warehouse operating system. We will map tokenization, robotics, and on-chain verification to how your floor already runs.
       </p>
       <p class="section__lead">
         Email our team to get started: <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a>
