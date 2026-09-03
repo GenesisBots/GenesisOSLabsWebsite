@@ -86,59 +86,77 @@
       line-height: 1.6;
     }
 
-    /* Vampire Hunter: Rise of Gilgamesh showcase — this page only */
-    #vhrog-showcase .section__title {
+    /* GenesisOS Multiverse Games Showcase — this page only */
+    #games-showcase .section__title {
       font-size: var(--text-h2);
       font-weight: 700;
       line-height: 1.2;
       letter-spacing: -0.01em;
       color: var(--brand-white);
-      max-width: 28ch;
     }
 
-    #vhrog-showcase .section__lead {
+    #games-showcase .section__lead {
       font-size: var(--text-body);
       font-weight: 400;
       line-height: 1.6;
-      max-width: 36rem;
+      max-width: 42rem;
       color: var(--brand-white);
       margin: 0 0 var(--space-5);
     }
 
-    #vhrog-showcase .vhrog-block {
-      margin-top: var(--space-4);
+    /* 2-column grid */
+    .games-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+      margin-top: var(--space-6);
+    }
+
+    /* Individual game tile — dark card on dark section bg */
+    .game-tile {
+      background: var(--surface-1);
+      padding: 1rem;
+      border-radius: var(--radius-2);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    /* Clip box: fixed height, hides tweet overflow — Education.html pattern */
+    .tile-frame {
+      height: 320px;
+      overflow: hidden;
+      margin-top: 0;
       margin-bottom: 0;
     }
 
-    #vhrog-showcase .vhrog-image {
-      display: block;
-      width: 100%;
-      max-width: 80%;
-      height: auto;
-      margin: 0 auto var(--space-4);
-      vertical-align: top;
-      background: var(--brand-black);
-      border: 1px solid var(--brand-blue);
-      object-fit: contain;
-    }
-
-    #vhrog-showcase .vhrog-tweet {
-      max-width: 550px;
-      margin-inline: auto;
-    }
-
-    .vhrog-tweet .tweet-frame {
-      height: 320px;
-      overflow: hidden;
+    /* Scale the rendered tweet widget inside the frame, not the frame itself */
+    .tile-frame iframe,
+    .tile-frame .twitter-tweet-rendered {
       transform: scale(0.90);
       transform-origin: top left;
       width: 120% !important;
-      margin-top: 0;
+      max-width: none !important;
     }
 
-    .vhrog-tweet .tweet-tile {
-      padding: 1rem;
+    /* tweet-tile wrapper padding — mirrors Education.html .os-tile */
+    .game-tile .tweet-tile {
+      padding: 0;
       min-height: auto;
+    }
+
+    /* Description copy under each tile */
+    .tile-copy {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--brand-white);
+      margin-top: var(--space-3);
+      margin-bottom: 0;
+    }
+
+    /* Responsive: stack to 1 column below 900px */
+    @media (max-width: 900px) {
+      .games-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
@@ -260,21 +278,87 @@
     </div>
   </section>
 
-  <section class="section section--black" id="vhrog-showcase" aria-labelledby="vhrog-title">
+  <section class="section section--black" id="games-showcase" aria-labelledby="games-showcase-title">
     <div class="container">
-      <h2 id="vhrog-title" class="section__title">Build Custom Tokenized Games</h2>
-      <p class="section__lead">Our team is working on original tokenized games such as Vampire Hunter: Rise of Gilgamesh & Frontier Trail: Brave New World.</p>
-      <div class="vhrog-block">
-        <img class="vhrog-image" src="assets/img/VH RoG Title Screen v1 08312026 BB.jpg" width="1567" height="893" alt="Vampire Hunter: Rise of Gilgamesh title screen">
-        <div class="education-kb vhrog-tweet">
+      <h2 id="games-showcase-title" class="section__title">GenesisOS Multiverse Games</h2>
+      <p class="section__lead">
+        Explore our interconnected multiverse of tokenized prototype games. Every character, item, relic, and world is teleportable across chains using GenesisOS blockchain systems. Stay tuned for release dates!
+      </p>
+
+      <div class="games-grid">
+
+        <!-- Row 1 — Tile 1 -->
+        <div class="game-tile">
           <div class="tweet-tile">
-            <div class="tweet-frame">
+            <div class="tile-frame">
               <blockquote class="twitter-tweet">
                 <a href="https://x.com/GenesisOSLabs/status/2094406787290087678?s=20"></a>
               </blockquote>
             </div>
           </div>
+          <p class="tile-copy">Vampire Hunter: Rise of Gilgamesh</p>
         </div>
+
+        <!-- Row 1 — Tile 2 -->
+        <div class="game-tile">
+          <div class="tweet-tile">
+            <div class="tile-frame">
+              <blockquote class="twitter-tweet">
+                <a href="https://x.com/GenesisOSLabs/status/2094754020367773889?s=20"></a>
+              </blockquote>
+            </div>
+          </div>
+          <p class="tile-copy">Starwing Patrol</p>
+        </div>
+
+        <!-- Row 2 — Tile 3 -->
+        <div class="game-tile">
+          <div class="tweet-tile">
+            <div class="tile-frame">
+              <blockquote class="twitter-tweet">
+                <a href="https://x.com/GenesisOSLabs/status/2094754020367773889?s=20"></a>
+              </blockquote>
+            </div>
+          </div>
+          <p class="tile-copy">Genesis Brawl</p>
+        </div>
+
+        <!-- Row 2 — Tile 4 -->
+        <div class="game-tile">
+          <div class="tweet-tile">
+            <div class="tile-frame">
+              <blockquote class="twitter-tweet">
+                <a href="https://x.com/GenesisOSLabs/status/2094218883913687477?s=20"></a>
+              </blockquote>
+            </div>
+          </div>
+          <p class="tile-copy">Frontier Trail: Brave New World</p>
+        </div>
+
+        <!-- Row 3 — Tile 5 -->
+        <div class="game-tile">
+          <div class="tweet-tile">
+            <div class="tile-frame">
+              <blockquote class="twitter-tweet">
+                <a href="https://x.com/GenesisOSLabs/status/2094176400659861597?s=20"></a>
+              </blockquote>
+            </div>
+          </div>
+          <p class="tile-copy">Shadow Protocol</p>
+        </div>
+
+        <!-- Row 3 — Tile 6 -->
+        <div class="game-tile">
+          <div class="tweet-tile">
+            <div class="tile-frame">
+              <blockquote class="twitter-tweet">
+                <a href="https://x.com/GenesisOSLabs/status/2094873277651193982?s=20"></a>
+              </blockquote>
+            </div>
+          </div>
+          <p class="tile-copy">GSports</p>
+        </div>
+
       </div>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
