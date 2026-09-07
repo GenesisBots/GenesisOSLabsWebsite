@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GenesisOS Labs Web Arcade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <meta name="description" content="GenesisOS Labs Web Arcade — old-school vibes, new-school blockchain teleportation. Instant-play multiverse games.">
+  <meta property="og:title" content="GenesisOS Labs Web Arcade">
+  <meta property="og:description" content="Old-school vibes. New-school blockchain teleportation. Play GenesisOS Labs games in the Web Arcade.">
+  <meta property="og:url" content="https://genesisoslabs.com/Arcade.html">
+  <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta property="og:site_name" content="GenesisOS Labs">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GenesisOS Labs Web Arcade">
+  <meta name="twitter:description" content="Old-school vibes. New-school blockchain teleportation.">
+  <link rel="canonical" href="https://genesisoslabs.com/Arcade.html">
+  <style>
+    :root {
+      --gos-blue: #0953b5;
+      --gos-neon: #5aa0ff;
+      --gos-white: #ffffff;
+      --gos-black: #000000;
+      --gos-panel: #05070c;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #05070c;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(9, 83, 181, 0.08) 0px,
+          rgba(9, 83, 181, 0.08) 1px,
+          transparent 1px,
+          transparent 3px
+        ),
+        radial-gradient(ellipse at top, rgba(9, 83, 181, 0.28), transparent 55%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+      background-attachment: fixed;
+      color: var(--gos-neon);
+      font-family: Tahoma, Verdana, Geneva, sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    body::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 8;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.18) 0px,
+        rgba(0, 0, 0, 0.18) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 20;
+      background: var(--gos-blue);
+      color: var(--gos-white);
+      padding: 0.5rem 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 0.75rem;
+    }
+
+    .arcade-shell {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 1.5rem, 980px);
+      margin: 1rem auto 2rem;
+      background: var(--gos-black);
+      border: 4px solid var(--gos-blue);
+      box-shadow:
+        0 0 0 2px var(--gos-black),
+        0 0 24px rgba(90, 160, 255, 0.35),
+        inset 0 0 40px rgba(9, 83, 181, 0.18);
+    }
+
+    .retro-header {
+      text-align: center;
+      padding: 1.5rem 1.25rem 1.25rem;
+      border-bottom: 4px solid var(--gos-neon);
+      background:
+        linear-gradient(180deg, #000 0%, #041022 100%);
+    }
+
+    .retro-header .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .retro-header img {
+      width: 28px;
+      height: 28px;
+      image-rendering: pixelated;
+    }
+
+    .retro-header h1 {
+      margin: 0;
+      color: var(--gos-white);
+      font-family: Impact, "Arial Black", Tahoma, sans-serif;
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-shadow:
+        0 0 8px rgba(90, 160, 255, 0.85),
+        3px 3px 0 var(--gos-blue);
+    }
+
+    .retro-header .tagline {
+      margin: 0.35rem 0 0;
+      color: var(--gos-neon);
+      font-weight: 700;
+    }
+
+    .kicker {
+      margin: 0 0 0.35rem;
+      color: var(--gos-white);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .retro-nav {
+      background: var(--gos-black);
+      padding: 0.45rem 0.5rem;
+      border-bottom: 2px solid var(--gos-neon);
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .retro-nav a {
+      color: var(--gos-neon);
+      margin: 0 0.65rem;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0.35rem 0.55rem;
+      border: 2px solid transparent;
+    }
+
+    .retro-nav a:hover,
+    .retro-nav a:focus-visible {
+      color: var(--gos-white);
+      background: var(--gos-blue);
+      border-color: var(--gos-white);
+      outline: none;
+    }
+
+    .retro-nav a.active {
+      color: var(--gos-black);
+      background: var(--gos-neon);
+      border-color: var(--gos-white);
+    }
+
+    .retro-arcade {
+      padding: 1.25rem 1.25rem 2rem;
+    }
+
+    .retro-arcade h2 {
+      margin: 0 0 0.4rem;
+      color: var(--gos-white);
+      font-family: Impact, "Arial Black", Tahoma, sans-serif;
+      font-size: 1.65rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 0 var(--gos-blue);
+    }
+
+    .retro-lead {
+      margin: 0 0 0.35rem;
+      color: var(--gos-neon);
+      font-weight: 700;
+    }
+
+    .cabinet-note {
+      margin: 0 0 0.25rem;
+      color: var(--gos-white);
+      font-size: 0.85rem;
+    }
+
+    .cabinet-note code {
+      font-family: "Courier New", Courier, monospace;
+      color: var(--gos-neon);
+    }
+
+    .game-count {
+      margin: 0 0 0.5rem;
+      font-family: "Courier New", Courier, monospace;
+      color: var(--gos-white);
+      font-size: 0.9rem;
+    }
+
+    .retro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      padding: 1rem 0 0;
+    }
+
+    .retro-tile {
+      background: var(--gos-panel);
+      border: 3px solid var(--gos-neon);
+      padding: 0.85rem;
+      text-align: center;
+      min-width: 0;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .retro-tile:hover,
+    .retro-tile:focus-within {
+      border-color: var(--gos-white);
+      box-shadow: 0 0 18px rgba(90, 160, 255, 0.45);
+      transform: translateY(-3px);
+    }
+
+    .retro-thumb {
+      height: 132px;
+      margin-bottom: 0.75rem;
+      border: 3px inset var(--gos-blue);
+      background-color: #000;
+      background-image:
+        linear-gradient(180deg, transparent 62%, rgba(0, 0, 0, 0.55)),
+        repeating-linear-gradient(
+          90deg,
+          rgba(9, 83, 181, 0.35) 0 8px,
+          rgba(0, 0, 0, 0.5) 8px 16px
+        );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .retro-thumb::after {
+      content: attr(data-label);
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gos-white);
+      font-family: Impact, "Arial Black", Tahoma, sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      text-shadow: 0 0 10px var(--gos-neon), 2px 2px 0 #000;
+    }
+
+    .retro-tile[data-game="frontiertrail"] .retro-thumb {
+      background-image:
+        linear-gradient(180deg, rgba(9, 83, 181, 0.15), rgba(0, 0, 0, 0.7)),
+        repeating-linear-gradient(45deg, #062044 0 10px, #000 10px 20px);
+    }
+
+    .retro-tile[data-game="genesisbrawl"] .retro-thumb {
+      background-image:
+        linear-gradient(180deg, rgba(90, 160, 255, 0.2), rgba(0, 0, 0, 0.75)),
+        repeating-linear-gradient(135deg, #0953b5 0 12px, #000 12px 24px);
+    }
+
+    .retro-tile[data-game="gsports"] .retro-thumb {
+      background-image:
+        radial-gradient(circle at 50% 40%, rgba(90, 160, 255, 0.45), transparent 45%),
+        repeating-linear-gradient(0deg, #03101f 0 8px, #000 8px 16px);
+    }
+
+    .retro-tile[data-game="gunsmokeoutriders"] .retro-thumb {
+      background-image:
+        linear-gradient(160deg, rgba(9, 83, 181, 0.45), #000 70%),
+        repeating-linear-gradient(90deg, #000 0 6px, #0a2a5c 6px 12px);
+    }
+
+    .retro-tile[data-game="roadrage"] .retro-thumb {
+      background-image:
+        linear-gradient(90deg, transparent 46%, rgba(255, 255, 255, 0.35) 50%, transparent 54%),
+        repeating-linear-gradient(90deg, #000 0 18px, #0953b5 18px 20px);
+    }
+
+    .retro-tile[data-game="shadowprotocol"] .retro-thumb {
+      background-image:
+        radial-gradient(circle at 30% 30%, rgba(90, 160, 255, 0.35), transparent 40%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 8px);
+    }
+
+    .retro-tile[data-game="starwing"] .retro-thumb {
+      background-image:
+        radial-gradient(circle at 70% 20%, #5aa0ff, transparent 28%),
+        radial-gradient(circle at 20% 80%, #0953b5, #000 55%);
+    }
+
+    .retro-tile[data-game="vampirehunter"] .retro-thumb {
+      background-image:
+        linear-gradient(180deg, #1a0510 0%, #000 55%),
+        repeating-linear-gradient(90deg, #0953b5 0 4px, #000 4px 28px);
+    }
+
+    .retro-title {
+      margin: 0;
+      color: var(--gos-white);
+      font-size: 1rem;
+      line-height: 1.3;
+      min-height: 2.6em;
+    }
+
+    .retro-button {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1rem;
+      background: var(--gos-neon);
+      color: var(--gos-black);
+      font-family: Tahoma, Verdana, sans-serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      border-top: 3px solid #cfe4ff;
+      border-left: 3px solid #cfe4ff;
+      border-right: 3px solid #063472;
+      border-bottom: 3px solid #063472;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .retro-button:hover,
+    .retro-button:focus-visible {
+      background: var(--gos-white);
+      color: var(--gos-blue);
+      outline: 2px solid var(--gos-neon);
+      outline-offset: 2px;
+    }
+
+    .retro-button:active {
+      border-top: 3px solid #063472;
+      border-left: 3px solid #063472;
+      border-right: 3px solid #cfe4ff;
+      border-bottom: 3px solid #cfe4ff;
+      transform: translate(1px, 1px);
+    }
+
+    .retro-footer {
+      border-top: 4px solid var(--gos-blue);
+      background: #000;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .retro-footer p {
+      margin: 0.2rem 0;
+      color: var(--gos-neon);
+      font-size: 0.85rem;
+    }
+
+    .retro-footer .best-viewed {
+      color: #9ab8e6;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .retro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .retro-nav a {
+        margin: 0.15rem;
+      }
+
+      .arcade-shell {
+        margin-top: 0.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .retro-tile,
+      .retro-button {
+        transition: none;
+      }
+
+      .retro-tile:hover,
+      .retro-tile:focus-within {
+        transform: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#game-directory">Skip to games</a>
+
+<div class="arcade-shell">
+  <div class="retro-header">
+    <p class="kicker">GenesisOS Labs</p>
+    <div class="brand-row">
+      <img src="assets/img/logo.png" width="28" height="28" alt="GenesisOS Labs logo">
+      <h1>Web Arcade</h1>
+    </div>
+    <p class="tagline">Old-school vibes. New-school Web3 games.</p>
+  </div>
+
+  <div class="retro-nav">
+    <a href="index.html">Home</a>
+    <a href="GGamingOS.html">GGamingOS</a>
+    <a href="Arcade.html" class="active" aria-current="page">Arcade</a>
+  </div>
+
+  <section class="retro-arcade" id="game-directory">
+    <h2>Game Directory</h2>
+    <p class="retro-lead">Choose a game below to launch it instantly.</p>
+    <p class="cabinet-note">Cabinet host: <code>http://127.0.0.1:4177/games/&lt;gamefolder&gt;/</code></p>
+    <p class="game-count">Games found: 8</p>
+
+    <div class="retro-grid">
+
+      <div class="retro-tile" data-game="frontiertrail">
+        <div class="retro-thumb" data-label="FT"></div>
+        <h3 class="retro-title">Frontier Trail: Brave New World</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/frontiertrail/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="genesisbrawl">
+        <div class="retro-thumb" data-label="GB"></div>
+        <h3 class="retro-title">Genesis Brawl: Streets of the Multiverse</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/genesisbrawl/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="gsports">
+        <div class="retro-thumb" data-label="GS"></div>
+        <h3 class="retro-title">GSports</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/gsports/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="gunsmokeoutriders">
+        <div class="retro-thumb" data-label="GO"></div>
+        <h3 class="retro-title">Gunsmoke Outriders</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/gunsmokeoutriders/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="roadrage">
+        <div class="retro-thumb" data-label="RR"></div>
+        <h3 class="retro-title">Road Rage: Steel and Asphalt</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/roadrage/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="shadowprotocol">
+        <div class="retro-thumb" data-label="SP"></div>
+        <h3 class="retro-title">Shadow Protocol: Tier One Strike</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/shadowprotocol/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="starwing">
+        <div class="retro-thumb" data-label="SW"></div>
+        <h3 class="retro-title">Starwing Patrol</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/starwing/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+      <div class="retro-tile" data-game="vampirehunter">
+        <div class="retro-thumb" data-label="VH"></div>
+        <h3 class="retro-title">Vampire Hunter: Rise of Gilgamesh</h3>
+        <a class="retro-button"
+           href="http://127.0.0.1:4177/games/vampirehunter/"
+           target="_blank"
+           rel="noopener noreferrer">Play Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="retro-footer">
+    <p>© GenesisOS Labs — Web Arcade v1.0</p>
+  </footer>
+</div>
+
+</body>
+</html>
