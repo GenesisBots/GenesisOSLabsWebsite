@@ -213,6 +213,41 @@
       }
     }
   </style>
+  <style>
+    #intel-audit {
+      margin-top: var(--space-8);
+    }
+    #intel-audit p { line-height: 1.6; }
+    #intel-audit ul, #intel-audit ol {
+      margin-top: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .intel-block h3 {
+      margin-top: var(--space-6);
+      margin-bottom: var(--space-3);
+    }
+    .intel-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+      margin: var(--space-4) 0;
+    }
+    .intel-stats li {
+      background: var(--surface-1);
+      padding: 1rem;
+      border-radius: var(--radius-2);
+    }
+    .intel-note {
+      margin-top: var(--space-6);
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    @media (max-width: 900px) {
+      .intel-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
   <script>
@@ -321,6 +356,52 @@
       <picture>
         <img src="./assets/img/NewsMedia2.jpg" width="720" height="720" alt="GenesisOS Labs Intelligence Suite — MarketIntel GBot and HeadlineScraperPro GBot" decoding="async" fetchpriority="high">
       </picture>
+    </div>
+  </section>
+
+  <section class="section section--white" id="intel-audit" aria-labelledby="intel-audit-title">
+    <div class="container">
+      <h2 id="intel-audit-title" class="section__title">White Paper Stats</h2>
+      <p class="section__lead">
+        HeadlineScraperPro & MarketIntel inside Aerys Desktop deliver unified world and technology coverage, a cross‑asset market tape, and publication‑grade intelligence reports after every run — based on continuous telemetry from 24 May 2026 through 8 September 2026.
+      </p>
+
+      <div class="intel-block">
+
+        <h3>Executive Summary</h3>
+        <p>
+          Since June 2026, HeadlineScraperPro and MarketIntel have run as a paired morning stack inside Aerys Desktop. HeadlineScraperPro draws thousands of headlines from BBC, The New York Times, The Guardian, and Hacker News. MarketIntel publishes equities, commodities, crypto, and rates with instant anomaly detection. Source reliability, weekly sentiment, and topic drift are tracked automatically. After each run, existing telemetry is compiled into a single report — news, tech signals, market tape, and anomalies — with no code changes required.
+        </p>
+
+        <ul class="intel-stats">
+          <li><strong>34,191</strong> headline telemetry events</li>
+          <li><strong>230</strong> HeadlineScraperPro scrape runs</li>
+          <li><strong>174</strong> MarketIntel snapshots</li>
+          <li><strong>10,516</strong> unique headline URLs</li>
+          <li><strong>39 of 42</strong> assets live-priced</li>
+        </ul>
+
+        <h3>Headline Conclusions</h3>
+        <ul>
+          <li><strong>Geopolitics-heavy corpus:</strong> Iran, AI, war, Ukraine, China, and Israel dominate the window.</li>
+          <li><strong>Directional engagement:</strong> 21 clicks recorded; 20 were technology and AI.</li>
+          <li><strong>Sentiment drift:</strong> Negative through July and August, then neutralizing in early September.</li>
+          <li><strong>Risk-off tape:</strong> SPX −0.38%, NASDAQ −0.29%, BTC −1.33%, VIX +3.27%.</li>
+          <li><strong>Commodities bid:</strong> WTI +3.15%, Copper +2.61%, Corn +5.22% — sigma-level moves in energy, metals, and grains.</li>
+        </ul>
+
+        <h3>Recommended Targeting</h3>
+        <ol>
+          <li>Canada–US trade-war and tariff complex — Copper, WTI, and industrials.</li>
+          <li>Platform AI and semiconductor demand — XLK and related technology.</li>
+          <li>Grains complex — Corn and soybeans remain unusual on both the daily and monthly tapes.</li>
+        </ol>
+
+        <p class="intel-note">
+          Not investment advice. MarketIntel’s story layer is modeled; pricing is live or fallback. This snapshot is provided for product evaluation and supports the GenesisOS Labs intelligence white paper.
+        </p>
+
+      </div>
     </div>
   </section>
 
