@@ -267,6 +267,74 @@
       text-decoration: none;
     }
   </style>
+  <style>
+    :root {
+      --surface-1: var(--brand-white);
+      --surface-2: var(--brand-black);
+      --accent-1: var(--brand-blue);
+      --radius-2: var(--radius);
+    }
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-6);
+    }
+    .research-tile {
+      background: var(--surface-1);
+      padding: 1.5rem;
+      border-radius: var(--radius-2);
+    }
+    .research-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--accent-1);
+      color: #fff;
+      text-decoration: none;
+      border-radius: var(--radius-2);
+    }
+    .research-button.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    #research-showcase {
+      background: var(--surface-2);
+      padding: var(--space-8) 0;
+    }
+    .research-highlight {
+      background: var(--surface-1);
+      padding: var(--space-6);
+      border-radius: var(--radius-2);
+      margin-top: var(--space-6);
+      color: var(--brand-black);
+      border: 1px solid var(--brand-blue);
+    }
+    #research-showcase .research-highlight h3,
+    #research-showcase .research-highlight p {
+      color: var(--brand-black);
+    }
+    #research-showcase .button--primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: var(--space-4);
+      min-height: 3rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border: 2px solid var(--brand-blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    #research-showcase .button--primary:hover,
+    #research-showcase .button--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+      text-decoration: none;
+    }
+  </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -332,6 +400,7 @@
           <a href="EnterpriseTokenization.html" data-nav="tokenization">Enterprise Tokenization</a>
           <a href="Intel.html" data-nav="intel">Intelligence Suite</a>
           <a href="GWarehouseOS.html" data-nav="gwarehouseos">GWarehouseOS</a>
+          <a href="Research.html" data-nav="research">Research</a>
         </div>
       </div>
       <a href="Education.html" data-nav="education">Education</a>
@@ -498,6 +567,26 @@
       <div class="btn-group">
         <a class="btn btn--primary" href="Intel.html">Explore Intelligence Suite</a>
         <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--blue" id="research-showcase" aria-labelledby="research-showcase-title">
+    <div class="container">
+      <h2 id="research-showcase-title" class="section__title">GenesisOS Labs Research</h2>
+      <p class="section__lead">
+        Publication-grade intelligence powered by HeadlinescraperPro and MarketIntel.
+        Explore white papers, audits, and market insights generated from continuous telemetry.
+      </p>
+
+      <div class="research-highlight">
+        <h3>AerysDesktop Intelligence Audit</h3>
+        <p>
+          34,191 headlines, 230 scrapes, 174 market snapshots, and unified world + tech coverage.
+          Geopolitics, AI, sentiment drift, anomaly detection, and market targeting — all in one
+          morning ritual.
+        </p>
+        <a href="Research.html" class="button button--primary">View Research</a>
       </div>
     </div>
   </section>
