@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Modernize Your Enterprise | GenesisOS Labs</title>
+  <title>Run your company from one local-first command center | GenesisOS Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-  <meta name="description" content="GenesisOS Labs builds Aerys Desktop, GBot Agents, GCoin, CRM, and GGamingOS — local-first automation and workflows for founders and operators.">
-  <meta property="og:title" content="Modernize Your Enterprise | GenesisOS Labs">
-  <meta property="og:description" content="Local-first automation with Aerys Desktop, GBot Agents, GCoin, CRM, and GGamingOS from GenesisOS Labs.">
+  <meta name="description" content="GenesisOS Labs builds Aerys Desktop, the local-first OS where founders and operators run GBot Agents, workflows, CRM, GCoin, Mint, Marketplace, and intelligence from one command center.">
+  <meta property="og:title" content="Run your company from one local-first command center | GenesisOS Labs">
+  <meta property="og:description" content="Aerys Desktop is the private OS for automations, GBot Agents, workflows, and digital-asset operations from GenesisOS Labs.">
   <meta property="og:url" content="https://genesisoslabs.com/">
   <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
   <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
   <meta property="og:site_name" content="GenesisOS Labs">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Modernize Your Enterprise | GenesisOS Labs">
-  <meta name="twitter:description" content="Local-first automation with Aerys Desktop, GBot Agents, GCoin, CRM, and GGamingOS from GenesisOS Labs.">
+  <meta name="twitter:title" content="Run your company from one local-first command center | GenesisOS Labs">
+  <meta name="twitter:description" content="Aerys Desktop is the private OS for automations, GBot Agents, workflows, and digital-asset operations from GenesisOS Labs.">
   <link rel="canonical" href="https://genesisoslabs.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,122 +25,245 @@
   <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
   <link rel="stylesheet" href="assets/css/style.css?v=brand8">
   <style>
-    /* Home hero headline readability (this page only) */
-    #home-hero-title.hero-brand-h1 {
-      font-family: "Manrope", sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      color: var(--brand-white);
-    }
-
-    /* OS portfolio names always visible on index */
-    .genesis-os-suite .os-tile {
+    /* Homepage-only layout (this page only) */
+    .hero.hero--black:not(:has(> .hero__media)) {
+      display: block;
       background: var(--brand-black);
       color: var(--brand-white);
-    }
-
-    .genesis-os-suite .os-tile h3,
-    .genesis-os-suite .os-tile .os-header h3,
-    .genesis-os-suite .os-tile .tile-title {
-      color: var(--brand-white);
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .genesis-os-suite .os-underline {
-      background: var(--brand-blue);
-    }
-
-    .genesis-os-suite .os-tile:hover,
-    .genesis-os-suite .os-tile:focus-within {
-      background: var(--brand-blue);
-    }
-
-    .genesis-os-suite .os-tile:hover h3,
-    .genesis-os-suite .os-tile:focus-within h3,
-    .genesis-os-suite .os-tile:hover .tile-title,
-    .genesis-os-suite .os-tile:focus-within .tile-title {
-      color: var(--brand-white);
-    }
-
-    .genesis-os-suite .os-tile:hover .os-underline,
-    .genesis-os-suite .os-tile:focus-within .os-underline {
-      background: var(--brand-white);
-    }
-
-    /* University Ambassador band: readable type + CTAs on white */
-    #university-ambassadors {
-      color: var(--brand-black);
       border-bottom: 1px solid var(--brand-blue);
+      margin: 0;
+      padding: var(--space-6) 0;
     }
 
-    #university-ambassadors .section__title {
-      color: var(--brand-black);
-      max-width: 36ch;
+    .hero.hero--black .container {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+      grid-template-areas:
+        "title image"
+        "lead image"
+        "byline image"
+        "ctas image";
+      gap: var(--space-4) var(--space-5);
+      align-items: center;
     }
 
-    #university-ambassadors .section__lead {
-      color: var(--brand-black);
-      margin: 0 0 var(--space-5);
-      max-width: 42rem;
+    .hero.hero--black .hero__title {
+      grid-area: title;
+      margin: 0;
+      max-width: 16ch;
+      color: var(--brand-white);
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
-    #university-ambassadors .btn-group {
+    .hero.hero--black .hero__lead {
+      grid-area: lead;
+      margin: 0;
+      max-width: 38rem;
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--brand-white);
+    }
+
+    .hero.hero--black .hero__byline {
+      grid-area: byline;
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue);
+    }
+
+    .hero.hero--black .hero__ctas {
+      grid-area: ctas;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: var(--space-3);
     }
 
-    #university-ambassadors a.btn {
-      text-decoration: none;
+    .hero.hero--black .hero__image {
+      grid-area: image;
+      min-width: 0;
+      max-width: 26rem;
+      justify-self: end;
+      width: 100%;
     }
 
-    #university-ambassadors a.btn--primary {
-      background: var(--brand-blue);
-      color: var(--brand-white);
-      border-color: var(--brand-blue);
+    .hero.hero--black .hero__image picture,
+    .hero.hero--black .hero__image img {
+      display: block;
+      width: 100%;
     }
 
-    #university-ambassadors a.btn--primary:hover,
-    #university-ambassadors a.btn--primary:focus-visible {
+    .hero.hero--black .hero__image img {
+      max-height: var(--hero-media-max);
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid var(--brand-blue);
+      border-radius: var(--radius);
       background: var(--brand-black);
-      color: var(--brand-white);
-      border-color: var(--brand-black);
-      text-decoration: none;
     }
 
-    #university-ambassadors a.btn--secondary {
-      background: transparent;
-      color: var(--brand-blue);
-      border-color: var(--brand-black);
-    }
-
-    #university-ambassadors a.btn--secondary:hover,
-    #university-ambassadors a.btn--secondary:focus-visible {
-      background: var(--brand-blue);
-      color: var(--brand-white);
-      border-color: var(--brand-blue);
-      text-decoration: none;
-    }
-
-    /* Mint services band: readable type + CTAs on white */
-    #mint-services {
+    .trust-strip {
+      background: var(--brand-white);
       color: var(--brand-black);
       border-bottom: 1px solid var(--brand-blue);
+      padding: var(--space-4) 0;
     }
 
-    #mint-services .section__title {
-      color: var(--brand-black);
-      max-width: 36ch;
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-4);
+      text-align: center;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
     }
 
+    .trust-items > div + div {
+      border-left: 1px solid var(--brand-blue);
+    }
+
+    #intelligence-layer .section__lead,
+    #product-suite .section__lead,
+    #audience .section__lead,
+    #research .section__lead,
+    #university-ambassadors .section__lead,
     #mint-services .section__lead {
-      color: var(--brand-black);
-      margin: 0 0 var(--space-5);
+      margin: 0 0 var(--space-4);
       max-width: 42rem;
     }
 
+    #intelligence-layer .section__title,
+    #research .section__title {
+      max-width: 36ch;
+    }
+
+    #intelligence-layer .btn,
+    #research .btn,
+    #university-ambassadors .btn-group,
+    #mint-services .btn-group {
+      margin-top: var(--space-4);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-5);
+    }
+
+    .product-tile {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border: 1px solid var(--brand-blue);
+      border-radius: var(--radius);
+      padding: var(--space-4);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .product-tile h3 {
+      margin: 0 0 var(--space-2);
+      color: var(--brand-white);
+    }
+
+    .product-tile p {
+      margin: 0 0 var(--space-4);
+      color: var(--brand-white);
+      max-width: none;
+    }
+
+    .product-tile a {
+      margin-top: auto;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-decoration: none;
+    }
+
+    .product-tile:hover,
+    .product-tile:focus-within {
+      background: var(--brand-blue);
+    }
+
+    .product-tile:hover a,
+    .product-tile:focus-within a,
+    .section--white .product-tile a:hover,
+    .section--white .product-tile a:focus-visible {
+      color: var(--brand-white);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-5);
+    }
+
+    .audience-grid > div {
+      border: 1px solid var(--brand-blue);
+      border-radius: var(--radius);
+      padding: var(--space-4);
+      background: var(--brand-black);
+    }
+
+    .audience-grid h3 {
+      margin: 0 0 var(--space-2);
+      color: var(--brand-white);
+    }
+
+    .audience-grid p {
+      margin: 0;
+      color: var(--brand-white);
+      max-width: none;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4);
+      list-style: none;
+      counter-reset: how;
+      margin: var(--space-5) 0 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    .how-steps li {
+      counter-increment: how;
+      border: 1px solid var(--brand-blue);
+      border-radius: var(--radius);
+      padding: var(--space-4);
+      background: var(--brand-white);
+      color: var(--brand-black);
+    }
+
+    .how-steps li::before {
+      content: counter(how);
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: var(--text-h2);
+      color: var(--brand-blue);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+
+    #university-ambassadors,
+    #mint-services {
+      border-bottom: 1px solid var(--brand-blue);
+    }
+
+    #university-ambassadors .btn-group,
     #mint-services .btn-group {
       display: flex;
       flex-wrap: wrap;
@@ -148,191 +271,94 @@
       gap: var(--space-3);
     }
 
-    #mint-services a.btn {
+    #university-ambassadors a.btn,
+    #mint-services a.btn,
+    .section--white a.btn {
       text-decoration: none;
     }
 
-    #mint-services a.btn--primary {
+    .section--white a.btn--primary {
       background: var(--brand-blue);
       color: var(--brand-white);
       border-color: var(--brand-blue);
     }
 
-    #mint-services a.btn--primary:hover,
-    #mint-services a.btn--primary:focus-visible {
+    .section--white a.btn--primary:hover,
+    .section--white a.btn--primary:focus-visible {
       background: var(--brand-black);
       color: var(--brand-white);
       border-color: var(--brand-black);
-      text-decoration: none;
     }
 
-    #mint-services a.btn--secondary {
-      background: transparent;
-      color: var(--brand-blue);
-      border-color: var(--brand-black);
+    .hero,
+    .section,
+    #demo-request {
+      scroll-margin-top: calc(var(--header-height, 4rem) + 0.75rem);
     }
 
-    #mint-services a.btn--secondary:hover,
-    #mint-services a.btn--secondary:focus-visible {
-      background: var(--brand-blue);
-      color: var(--brand-white);
-      border-color: var(--brand-blue);
-      text-decoration: none;
-    }
-
-    /* Intelligence Suite band: readable type + CTAs on black */
-    #intel-suite {
-      color: var(--brand-white);
-      border-bottom: 1px solid var(--brand-blue);
-    }
-
-    #intel-suite .section__title {
-      color: var(--brand-white);
-      max-width: 36ch;
-    }
-
-    #intel-suite .section__lead {
-      color: var(--brand-white);
-      margin: 0 0 var(--space-5);
-      max-width: 42rem;
-    }
-
-    #intel-suite .btn-group {
-      display: flex;
-      flex-wrap: wrap;
+    main .genesis-info-section .genesis-inline-image {
+      min-height: 0;
+      align-self: start;
       align-items: center;
-      gap: var(--space-3);
     }
 
-    #intel-suite a.btn {
-      text-decoration: none;
+    main .genesis-info-section .genesis-inline-image img {
+      object-fit: cover;
+      object-position: center;
+      max-height: 22rem;
     }
 
-    #intel-suite a.btn--primary {
-      background: var(--brand-blue);
-      color: var(--brand-white);
-      border-color: var(--brand-blue);
+    @media (max-width: 960px) {
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .audience-grid,
+      .how-steps,
+      .trust-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .trust-items > div {
+        border-left: none;
+      }
     }
 
-    #intel-suite a.btn--primary:hover,
-    #intel-suite a.btn--primary:focus-visible {
-      background: var(--brand-white);
-      color: var(--brand-blue);
-      border-color: var(--brand-white);
-      text-decoration: none;
-    }
+    @media (max-width: 720px) {
+      .hero.hero--black:not(:has(> .hero__media)) {
+        padding-block: var(--space-5);
+      }
 
-    #intel-suite a.btn--secondary {
-      background: transparent;
-      color: var(--brand-blue-on-dark);
-      border-color: var(--brand-white);
-    }
+      .hero.hero--black .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "image"
+          "title"
+          "lead"
+          "byline"
+          "ctas";
+      }
 
-    #intel-suite a.btn--secondary:hover,
-    #intel-suite a.btn--secondary:focus-visible {
-      background: var(--brand-blue);
-      color: var(--brand-white);
-      border-color: var(--brand-blue);
-      text-decoration: none;
-    }
+      .hero.hero--black .hero__title {
+        max-width: none;
+      }
 
-    /* Neon-blue bridge: hero-style blue-to-black wash, white type */
-    #intel-bridge.section--blue {
-      background: linear-gradient(160deg, var(--brand-blue) 0%, color-mix(in srgb, var(--brand-blue) 58%, var(--brand-black)) 48%, var(--brand-black) 100%);
-      color: var(--brand-white);
-    }
+      .hero.hero--black .hero__image {
+        max-width: none;
+        justify-self: stretch;
+      }
 
-    #intel-bridge .section__title,
-    #intel-bridge .section__lead {
-      color: var(--brand-white);
-    }
+      .hero.hero--black .hero__image img {
+        max-height: var(--hero-media-max-sm);
+        aspect-ratio: 16 / 9;
+      }
 
-    #intel-bridge .section__title {
-      max-width: 36ch;
-    }
-
-    #intel-bridge .section__lead {
-      margin: 0 0 var(--space-5);
-      max-width: 42rem;
-    }
-
-    #intel-bridge .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: var(--space-3);
-    }
-
-    #intel-bridge a.btn {
-      text-decoration: none;
-    }
-  </style>
-  <style>
-    :root {
-      --surface-1: var(--brand-white);
-      --surface-2: var(--brand-black);
-      --accent-1: var(--brand-blue);
-      --radius-2: var(--radius);
-    }
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-6);
-      margin-top: var(--space-6);
-    }
-    .research-tile {
-      background: var(--surface-1);
-      padding: 1.5rem;
-      border-radius: var(--radius-2);
-    }
-    .research-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.25rem;
-      background: var(--accent-1);
-      color: #fff;
-      text-decoration: none;
-      border-radius: var(--radius-2);
-    }
-    .research-button.disabled {
-      opacity: 0.4;
-      pointer-events: none;
-    }
-    #research-showcase {
-      background: var(--surface-2);
-      padding: var(--space-8) 0;
-    }
-    .research-highlight {
-      background: var(--surface-1);
-      padding: var(--space-6);
-      border-radius: var(--radius-2);
-      margin-top: var(--space-6);
-      color: var(--brand-black);
-      border: 1px solid var(--brand-blue);
-    }
-    #research-showcase .research-highlight h3,
-    #research-showcase .research-highlight p {
-      color: var(--brand-black);
-    }
-    #research-showcase .button--primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: var(--space-4);
-      min-height: 3rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--brand-blue);
-      color: var(--brand-white);
-      border: 2px solid var(--brand-blue);
-      font-weight: 700;
-      text-decoration: none;
-    }
-    #research-showcase .button--primary:hover,
-    #research-showcase .button--primary:focus-visible {
-      background: var(--brand-black);
-      color: var(--brand-white);
-      border-color: var(--brand-black);
-      text-decoration: none;
+      .product-grid,
+      .audience-grid,
+      .how-steps,
+      .trust-items {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
@@ -412,88 +438,199 @@
 
 <main id="main">
 
-<section class="hero" aria-labelledby="home-hero-title">
-    <div class="hero-left">
-      <h1 id="home-hero-title" class="hero-brand-h1">Modernize Your Enterprise</h1>
-      <p class="hero-brand-by">Agents, Automations, &amp; Tokenization </p>
-      <p>
-        <strong>GenesisOS Labs &amp; <a href="AerysDesktop.html">Aerys Desktop</a></strong> give businesses &amp; personal users one place to run GBot Agents, automations, workflows, and AI-powered task systems — without juggling dozens of disconnected tools.
+  <section class="hero hero--black" aria-labelledby="home-hero-title">
+    <div class="container">
+      <h1 id="home-hero-title" class="hero__title">Run your company from one local‑first command center.</h1>
+      <p class="hero__lead">
+        Aerys Desktop is the private OS where founders and operators run automations,
+        GBot Agents, workflows, and Web3 operations without stitching together
+        a dozen disconnected tools.
       </p>
 
-      <a href="#demo-request" class="btn btn--primary">Book a Demo</a>
-    </div>
-    <div class="hero-right">
-      <picture>
-        <source type="image/webp" srcset="assets/img/hero-pc-720.webp 720w, assets/img/hero-pc-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 28rem">
-        <img src="assets/img/hero-pc-720.jpg" srcset="assets/img/hero-pc-720.jpg 720w, assets/img/hero-pc-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="480" alt="GenesisOS desktop workspace showing The Genesis System interface" decoding="async" fetchpriority="high">
-      </picture>
+      <p class="hero__byline">LOCAL-FIRST OS · AGENTS · TOKENIZATION</p>
+
+      <div class="hero__ctas">
+        <a href="#demo-request" class="btn btn--primary">Book a Demo</a>
+        <a href="AerysDesktop.html" class="btn btn--secondary">Explore Aerys Desktop</a>
+      </div>
+
+      <div class="hero__image">
+        <picture>
+          <source type="image/webp" srcset="assets/img/hero-pc-720.webp 720w, assets/img/hero-pc-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 28rem">
+          <img src="assets/img/hero-pc-720.jpg" srcset="assets/img/hero-pc-720.jpg 720w, assets/img/hero-pc-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="480" alt="Aerys Desktop workspace showing the GenesisOS Labs command center" decoding="async" fetchpriority="high">
+        </picture>
+      </div>
     </div>
   </section>
 
-  <section class="section section--white" aria-labelledby="what-you-get">
-    <h2 id="what-you-get" class="section__title">A clear path to optimization.</h2>
-    <p> Most teams are overwhelmed by broken processes, repetitive work, and too many apps that don’t connect your data. Aerys Desktop centralizes workflows, automates busywork, improves visibility, and creates a scalable system that grows with your operations over time. Aerys uses <strong>GBot Agents</strong>, lightweight automation workers that handle repetitive tasks, monitor workflows, organize operations, and keep processes moving automatically.</p>
-      <p>
-        Built for founders, operators, and teams looking for simpler business automation, cleaner workflow management, and better audit visibility without needing a full engineering team.
+  <section class="trust-strip" aria-label="Product credentials">
+    <div class="container trust-items">
+      <div>Local‑first</div>
+      <div>HIPAA compliant options</div>
+      <div>On‑device or cloud</div>
+      <div>333 Specialist GBot Agents</div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="product-suite" aria-labelledby="product-suite-title">
+    <div class="container">
+      <h2 id="product-suite-title" class="section__title">The GenesisOS Suite</h2>
+      <p class="section__lead">One OS. Multiple modules. Each built for a clear job.</p>
+
+      <div class="product-grid">
+        <div class="product-tile">
+          <h3>Aerys Desktop</h3>
+          <p>Run agents, workflows, and automations from one local‑first command center.</p>
+          <a href="AerysDesktop.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>CRM</h3>
+          <p>Customer records and tasks that agents can actually use.</p>
+          <a href="CRM.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>GCoin</h3>
+          <p>The asset layer for GenesisOS networks.</p>
+          <a href="GCoin.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>Mint</h3>
+          <p>Launch a branded coin or L2 network without assembling a chain team.</p>
+          <a href="Mint.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>Marketplace</h3>
+          <p>Install agents, swarms, and digital assets the way you install apps.</p>
+          <a href="Marketplace.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>GGamingOS</h3>
+          <p>Operate a game economy without bolting five vendors together.</p>
+          <a href="GGamingOS.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>GStudentOS</h3>
+          <p>Student workflows, campus automations, and education tools on one OS.</p>
+          <a href="GStudentOS.html">Learn More</a>
+        </div>
+
+        <div class="product-tile">
+          <h3>Research</h3>
+          <p>Publication‑grade intelligence from continuous telemetry.</p>
+          <a href="Research.html">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--black" id="audience" aria-labelledby="audience-title">
+    <div class="container">
+      <h2 id="audience-title" class="section__title">Built for operators who need Agentic automations.</h2>
+      <p class="section__lead">
+        Aerys Desktop gives founders and operators one place to run the business.
       </p>
-    <div class="cards">
-      <div class="card">
-        <h3>One control center</h3>
-        <p>GenesisOS &amp; <a href="AerysDesktop.html">Aerys Desktop</a> are where companies run automations, connect GBot Agents, and see what is happening—on-device or in the cloud.</p>
-      </div>
-      <div class="card">
-        <h3>GBot Agents</h3>
-        <p>GBot Agents add capabilities as you need them: research, operations, customer workflows without rebuilding everything from scratch.</p>
-      </div>
-      <div class="card">
-        <h3>Flexible deployment</h3>
-        <p>Start local for privacy, move online when you are ready, and add optional GDX (Genesis Data Exchange) digital-economy features only if they fit your roadmap.</p>
+
+      <div class="audience-grid">
+        <div>
+          <h3>Founders &amp; Operators</h3>
+          <p>Centralize workflows, agents, and automations.</p>
+        </div>
+        <div>
+          <h3>Teams &amp; Small Businesses</h3>
+          <p>Replace scattered SaaS tools with one command center.</p>
+        </div>
+        <div>
+          <h3>Education &amp; Students</h3>
+          <p>Run campus workflows and student automations on GStudentOS.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--black" aria-labelledby="who-for">
-    <h2 id="who-for" class="section__title">Who this is for</h2>
-    <p>Businesses, Students, personal Users, and technical teams who want practical automation.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>Small Businesses</h3>
-        <p>Do you have too many tools in the stack? Starting to research automations? You need simple & unified operations.</p>
-      </div>
-      <div class="card">
-        <h3>Personal Users & Students</h3>
-        <p>You want an OS-shaped foundation you can extend with bots, integrations, and custom workflows.</p>
-      </div>
-      <div class="card">
-        <h3>Healthcare and Regulated Contexts</h3>
-        <p>We offer HIPAA compliant local-first options, audit-friendly workflows, and a partner who can scope responsibly.</p>
+  <section class="section section--white" id="how-it-works" aria-labelledby="how-it-works-title">
+    <div class="container">
+      <h2 id="how-it-works-title" class="section__title">How it works</h2>
+
+      <ol class="how-steps">
+        <li><strong>Install Aerys Desktop.</strong> Your local‑first command center.</li>
+        <li><strong>Add GBot Agents.</strong> Automate tasks, workflows, and intelligence.</li>
+        <li><strong>Expand with modules.</strong> CRM, Mint, Marketplace, Intelligence, and more.</li>
+      </ol>
+    </div>
+  </section>
+
+    <section class="section section--blue" id="intelligence-layer" aria-labelledby="intelligence-layer-title">
+    <div class="container">
+      <h2 id="intelligence-layer-title" class="section__title">Unified Intelligence Layer</h2>
+      <p class="section__lead">
+        One intelligence pipeline powering your morning briefing, automations,
+        research, and decision-making — built from HeadlinescraperPro and MarketIntel.
+      </p>
+      <p>
+        Instead of 40 tabs, you start the day with one briefing: world news,
+        technology signals, market tape, anomalies, and targeting guidance.
+      </p>
+      <a href="Intel.html" class="btn btn--primary">Explore Intelligence</a>
+    </div>
+  </section>
+
+    <section class="section section--black" id="mint-services" aria-labelledby="mint-services-title">
+    <div class="container">
+      <h2 id="mint-services-title" class="section__title">Mint Custom Coins &amp; Build L2 Networks</h2>
+      <p class="section__lead">
+        Launch your own digital asset ecosystem. GenesisOS Labs mints custom coins and builds full Layer‑2 networks on Algorand — or almost any chain your company prefers.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="Mint.html">Explore Minting Services</a>
+        <a class="btn btn--secondary" href="GCoin.html">Explore GCoin</a>
       </div>
     </div>
   </section>
 
-  <section class="section section--white" aria-labelledby="how-works">
-    <h2 id="how-works" class="section__title">How it works</h2>
-    <ol>
-      <li><strong>Pick your starting mode</strong> — local, cloud, or hybrid.</li>
-      <li><strong>Install <a href="AerysDesktop.html">Aerys Desktop</a> &amp; GenesisOS</strong> as your command center.</li>
-      <li><strong>Add GBot Agents</strong> for the jobs you want off your plate.</li>
-      <li><strong>Add GSwarms</strong> for Agent support & accuracy.</li>
-      <li><strong>Expand when you are ready</strong> — pricing & custom builds can all be extended by our engineering team or yours..</li>
-    </ol>
+  <section class="section section--blue" id="research" aria-labelledby="research-title">
+    <div class="container">
+      <h2 id="research-title" class="section__title">Research</h2>
+      <p class="section__lead">
+        White papers, technical reasearch, intelligence audits, & market analysis produced across the GenesisOS Labs ecosystem.
+      </p>
+      <p>
+        Explore our publication-grade White Papers.
+      </p>
+      <a href="Research.html" class="btn btn--primary">View Research</a>
+    </div>
   </section>
 
-  <section class="section section--black genesis-info-section">
+  <section class="section section--white" id="university-ambassadors" aria-labelledby="university-title">
+    <div class="container">
+      <h2 id="university-title" class="section__title">GenesisOS Labs Student Ambassador Program</h2>
+      <p class="section__lead">
+        Become a GenesisOS Labs Student Ambassador and help students build real tokenized projects using GCoin and GStudentOS.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="University.html">Learn More</a>
+        <a class="btn btn--secondary" href="GStudentOS.html">Explore GStudentOS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--black genesis-info-section" aria-labelledby="demo-title">
     <div class="genesis-inline-image">
       <picture>
         <source type="image/webp" srcset="assets/img/hero-aerys-720.webp 720w, assets/img/hero-aerys-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 22rem">
-        <img src="assets/img/hero-aerys-720.jpg" srcset="assets/img/hero-aerys-720.jpg 720w, assets/img/hero-aerys-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 22rem" width="720" height="480" alt="GenesisOS interface preview on a workstation display" loading="lazy" decoding="async">
+        <img src="assets/img/hero-aerys-720.jpg" srcset="assets/img/hero-aerys-720.jpg 720w, assets/img/hero-aerys-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 22rem" width="720" height="480" alt="Aerys Desktop interface preview on a workstation display" loading="lazy" decoding="async">
       </picture>
     </div>
 
     <div class="genesis-info-copy">
-      <h2 class="section__title">Book a Demo</h2>
+      <h2 id="demo-title" class="section__title">Book a Demo</h2>
       <p>
-        Start by picking one task to automate in your business. We design custom builds and we can propose coordinated automation groups when that fits your goals.
+        Start by picking one task to automate. GenesisOS Labs designs custom Aerys Desktop builds and can propose coordinated GBot Agent groups when that fits your goals.
       </p>
       <p>
         Pricing depends on scope. If you are unsure where to start, send a short description and we will reply with next steps.
@@ -501,7 +638,6 @@
     </div>
 
     <div id="demo-request" class="lead-container genesis-inline-form">
-
       <form action="https://formspree.io/f/mdayayqv" method="POST" class="lead-form" data-lead-form data-lead-event="demo_request">
         <input type="hidden" name="_subject" value="Custom GenesisOS or GBot Agent request — GenesisOS Labs (Home)">
 
@@ -532,154 +668,7 @@
     </div>
   </section>
 
-  <section class="section section--white" id="intel-merged" aria-labelledby="university-title">
-    <div class="container">
-      <div class="demo-layout">
-        <div id="university-ambassadors">
-          <h2 id="university-title" class="section__title">GenesisOS Labs Student Ambassador Program</h2>
-          <p class="section__lead">
-            Become a GenesisOS Labs Student Ambassador and help students build real tokenized projects using GCoin and GenesisOS tools.
-          </p>
-          <div class="btn-group">
-            <a class="btn btn--primary" href="University.html">Learn More</a>
-            <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
-          </div>
-        </div>
-        <div id="mint-services">
-          <h2 id="mint-services-title" class="section__title">Mint Custom Coins &amp; Build L2 Networks</h2>
-          <p class="section__lead">
-            Launch your own digital asset ecosystem. We mint custom coins and build full Layer‑2 networks on Algorand — or almost any chain your company prefers.
-          </p>
-          <div class="btn-group">
-            <a class="btn btn--primary" href="Mint.html">Explore Minting Services</a>
-            <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--blue" id="intel-bridge" aria-labelledby="intel-bridge-title">
-    <div class="container">
-      <h2 id="intel-bridge-title" class="section__title">Unified Intelligence Layer</h2>
-      <p class="section__lead">
-        MarketIntel GBot and HeadlineScraperPro GBot form a combined intelligence pipeline that powers automated decision systems, trading engines, and enterprise‑grade analytics.
-      </p>
-      <div class="btn-group">
-        <a class="btn btn--primary" href="Intel.html">Explore Intelligence Suite</a>
-        <a class="btn btn--secondary" href="mailto:support@GenesisOSLabs.com">Email Our Team</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--blue" id="research-showcase" aria-labelledby="research-showcase-title">
-    <div class="container">
-      <h2 id="research-showcase-title" class="section__title">GenesisOS Labs Research</h2>
-      <p class="section__lead">
-        Explore white papers, audits, and market insights generated from continuous telemetry.
-      </p>
-
-      <div class="research-highlight">
-        <h3>AerysDesktop Intelligence Audit</h3>
-        <p>
-          34,191 headlines, 230 scrapes, 174 market snapshots, and unified world + tech coverage.
-          Geopolitics, AI, sentiment drift, anomaly detection, and market targeting — all in one
-          morning ritual.
-        </p>
-        <a href="Research.html" class="button button--primary">View Research</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--white genesis-os-suite" aria-labelledby="genesis-portfolio-title">
-    <h2 id="genesis-portfolio-title" class="section__title">Custom Products & Education</h2>
-
-    <div class="os-grid">
-
-      <!-- GJobsOS -->
-      <div class="os-tile">
-        <div class="os-header">
-          <h3 class="tile-title">Colleges & Universities</h3>
-          <div class="os-underline"></div>
-        </div>
-        <div class="tweet-frame">
-          <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2095844571007611293?s=20"></a>
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- GGamingOS -->
-      <div class="os-tile">
-        <div class="os-header">
-          <h3 class="tile-title"><a href="GGamingOS.html">GGamingOS</a></h3>
-          <div class="os-underline"></div>
-        </div>
-        <div class="tweet-frame">
-          <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2083870629481079276?s=20"></a>
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- GCreatorOS -->
-      <div class="os-tile">
-        <div class="os-header">
-          <h3 class="tile-title">GCreatorOS</h3>
-          <div class="os-underline"></div>
-        </div>
-        <div class="tweet-frame">
-          <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2057511571325423860?s=20"></a>
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- GSportManager -->
-      <div class="os-tile">
-        <div class="os-header">
-          <h3 class="tile-title">GSportManager</h3>
-          <div class="os-underline"></div>
-        </div>
-        <div class="tweet-frame">
-          <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2059358026310816074?s=20"></a>
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- GFinanceOS -->
-      <div class="os-tile">
-        <div class="os-header">
-          <h3 class="tile-title"><a href="GStudentOS.html">GStudentOS</a></h3>
-          <div class="os-underline"></div>
-        </div>
-        <div class="tweet-frame">
-          <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2057527346245025867"></a>
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- GMarketingOS -->
-      <div class="os-tile">
-        <div class="os-header">
-          <h3 class="tile-title">GMarketingOS</h3>
-          <div class="os-underline"></div>
-        </div>
-        <div class="tweet-frame">
-          <blockquote class="twitter-tweet">
-            <a href="https://x.com/GenesisOSLabs/status/2057444616786346484?s=20"></a>
-          </blockquote>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
 </main>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <footer class="page-footer" data-footer>
   <div class="page-footer__inner">
@@ -691,18 +680,21 @@
       <h2 id="footer-products">Products</h2>
       <ul>
         <li><a href="AerysDesktop.html">Aerys Desktop</a></li>
-        <li><a href="GCoin.html">GCoin</a></li>
         <li><a href="CRM.html">CRM</a></li>
+        <li><a href="GCoin.html">GCoin</a></li>
+        <li><a href="Mint.html">Mint</a></li>
         <li><a href="GGamingOS.html">GGamingOS</a></li>
         <li><a href="GStudentOS.html">GStudentOS</a></li>
+        <li><a href="Intel.html">Intelligence</a></li>
+        <li><a href="Research.html">Research</a></li>
         <li><a href="EnterpriseTokenization.html">Enterprise Tokenization</a></li>
-        <li><a href="Education.html">Education</a></li>
       </ul>
     </section>
     <section aria-labelledby="footer-company">
       <h2 id="footer-company">Company</h2>
       <ul>
         <li><a href="About.html">About</a></li>
+        <li><a href="Education.html">Education</a></li>
         <li><a href="mailto:support@GenesisOSLabs.com">Contact</a></li>
         <li><a href="index.html">Home</a></li>
       </ul>
