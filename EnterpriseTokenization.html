@@ -154,22 +154,35 @@
       position: relative;
       min-width: 0;
       min-height: 0;
-      aspect-ratio: 3 / 2;
+      height: auto;
+      aspect-ratio: auto;
       padding: 0;
       background: var(--brand-black);
       border: 2px solid var(--brand-blue);
-      overflow: hidden;
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    .tokenization-form-visual picture,
     .tokenization-form-visual img {
-      position: absolute;
-      inset: 0;
+      position: static;
+      inset: auto;
       display: block;
       width: 100%;
-      max-width: none;
-      height: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
       object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .tokenization-form-visual {
+        max-width: 100%;
+        margin-bottom: var(--space-6);
+      }
     }
 
     @media (max-width: 1024px) {
@@ -440,8 +453,8 @@
     <div class="tokenization-form-layout">
       <div class="tokenization-form-visual">
         <picture>
-          <source type="image/webp" srcset="assets/img/form-audit-computers-900.webp 900w, assets/img/form-audit-computers-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 28rem">
-          <img src="assets/img/form-audit-computers-900.jpg" srcset="assets/img/form-audit-computers-900.jpg 900w, assets/img/form-audit-computers-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 28rem" width="900" height="601" alt="Operators reviewing computer systems during an enterprise tokenization audit" loading="lazy" decoding="async">
+          <source type="image/jpeg" srcset="assets/img/Aerys 1 0920226 BB.jpg">
+          <img src="assets/img/Aerys 1 0920226 BB.jpg" width="900" height="601" alt="Operators reviewing computer systems during an enterprise tokenization audit" loading="lazy" decoding="async">
         </picture>
       </div>
       <div class="lead-container">

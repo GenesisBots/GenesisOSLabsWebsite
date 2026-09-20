@@ -85,6 +85,31 @@
       font-size: var(--text-body);
       line-height: 1.6;
     }
+
+    #gcrm-lead .genesis-inline-image {
+      min-height: 100%;
+      height: auto;
+      align-self: stretch;
+      align-items: center;
+      overflow: visible;
+    }
+
+    #gcrm-lead .genesis-inline-image picture,
+    #gcrm-lead .genesis-inline-image img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      #gcrm-lead .genesis-inline-image {
+        max-width: 100%;
+        margin-bottom: var(--space-6);
+      }
+    }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -264,8 +289,8 @@
   <section id="gcrm-lead" class="section genesis-info-section">
     <div class="genesis-inline-image">
       <picture>
-        <source type="image/webp" srcset="assets/img/art-gbot-swarm-720.webp 720w, assets/img/art-gbot-swarm-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 22rem">
-        <img src="assets/img/art-gbot-swarm-720.jpg" srcset="assets/img/art-gbot-swarm-720.jpg 720w, assets/img/art-gbot-swarm-1200.jpg 1200w" sizes="(max-width: 720px) 100vw, 22rem" width="720" height="480" alt="GenesisOS and GenesisCRM integration overview on a laptop" loading="lazy" decoding="async">
+        <source type="image/jpeg" srcset="assets/img/Aerys 1 0920226 BB.jpg">
+        <img src="assets/img/Aerys 1 0920226 BB.jpg" width="720" height="480" alt="GenesisOS and GenesisCRM integration overview on a laptop" loading="lazy" decoding="async">
       </picture>
     </div>
     <div class="genesis-info-copy">

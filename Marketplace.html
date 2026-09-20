@@ -81,6 +81,32 @@
       font-size: var(--text-body);
       line-height: 1.6;
     }
+
+    #marketplace-contact .genesis-inline-image {
+      min-height: 100%;
+      height: auto;
+      align-self: stretch;
+      align-items: center;
+      overflow: visible;
+    }
+
+    #marketplace-contact .genesis-inline-image img,
+    #marketplace-contact .genesis-inline-image .form-image {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      #marketplace-contact .genesis-inline-image {
+        max-width: 100%;
+        margin-bottom: var(--space-6);
+      }
+    }
   </style>
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -197,7 +223,7 @@
   <section class="section section--black genesis-info-section" id="marketplace-contact">
     <div class="genesis-inline-image">
       <img
-        src="assets/img/Gbot and Swarm v1 05182026.PNG"
+        src="assets/img/Aerys 1 0920226 BB.jpg"
         onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';"
         alt="GenesisOS bots and swarms marketplace preview"
         class="form-image"

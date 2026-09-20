@@ -86,6 +86,29 @@
       font-size: var(--text-body);
       line-height: 1.6;
     }
+
+    #demo-request .demo-visual {
+      height: auto;
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    #demo-request .demo-visual picture,
+    #demo-request .demo-visual img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      #demo-request .demo-visual {
+        max-width: 100%;
+        margin-bottom: var(--space-6);
+      }
+    }
   </style>
   <script src="assets/js/main.js?v=brand8" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
@@ -187,8 +210,8 @@
     </div>
     <div class="hero-right">
       <picture>
-        <source type="image/webp" srcset="assets/img/hero-aerys-720.webp 720w, assets/img/hero-aerys-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 28rem">
-        <img src="assets/img/hero-aerys-720.jpg" srcset="assets/img/hero-aerys-720.jpg 720w, assets/img/hero-aerys-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 28rem" width="720" height="480" alt="Aerys Desktop product visual — GenesisOS Labs Company OS" decoding="async" fetchpriority="high">
+        <source type="image/jpeg" srcset="assets/img/Aerys 1 0920226 BB Landscape.jpg">
+        <img src="assets/img/Aerys 1 0920226 BB Landscape.jpg" width="720" height="480" alt="Aerys Desktop product visual — GenesisOS Labs Company OS" decoding="async" fetchpriority="high">
       </picture>
     </div>
   </section>
@@ -216,8 +239,8 @@
           </ul>
           <div class="demo-visual">
             <picture>
-              <source type="image/webp" srcset="assets/img/hero-aerys-720.webp 720w, assets/img/hero-aerys-1440.webp 1440w" sizes="(max-width: 960px) 100vw, 36rem">
-              <img src="assets/img/hero-aerys-720.jpg" srcset="assets/img/hero-aerys-720.jpg 720w, assets/img/hero-aerys-1440.jpg 1440w" sizes="(max-width: 960px) 100vw, 36rem" width="720" height="480" alt="Aerys Desktop product visual — GenesisOS Labs Company OS interface" loading="lazy" decoding="async">
+              <source type="image/jpeg" srcset="assets/img/Aerys 1 0920226 BB.jpg">
+              <img src="assets/img/Aerys 1 0920226 BB.jpg" width="720" height="480" alt="Aerys Desktop product visual — GenesisOS Labs Company OS interface" loading="lazy" decoding="async">
             </picture>
           </div>
         </div>

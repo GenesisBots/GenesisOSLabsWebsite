@@ -81,6 +81,30 @@
       font-size: var(--text-body);
       line-height: 1.6;
     }
+
+    #genesis-lead .genesis-inline-image {
+      min-height: 100%;
+      height: auto;
+      align-self: stretch;
+      align-items: center;
+      overflow: visible;
+    }
+
+    #genesis-lead .genesis-inline-image img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      #genesis-lead .genesis-inline-image {
+        max-width: 100%;
+        margin-bottom: var(--space-6);
+      }
+    }
   </style>
   <script src="assets/js/main.js" defer></script>
   <!-- Google tag (gtag.js) -->
@@ -165,7 +189,7 @@
   </div>
 
   <div class="genesis-inline-image">
-    <img src="assets/img/Gbot and Swarm v1 05182026.PNG" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS software preview showing panels and workspace layout">
+    <img src="assets/img/Aerys 1 0920226 BB.jpg" onerror="this.onerror=null;this.src='assets/img/site-placeholder.svg';" alt="GenesisOS software preview showing panels and workspace layout">
   </div>
 
   <div class="lead-container genesis-inline-form">

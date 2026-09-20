@@ -297,15 +297,28 @@
     }
 
     main .genesis-info-section .genesis-inline-image {
-      min-height: 0;
-      align-self: start;
+      min-height: 100%;
+      height: auto;
+      align-self: stretch;
       align-items: center;
+      overflow: visible;
     }
 
+    main .genesis-info-section .genesis-inline-image picture,
     main .genesis-info-section .genesis-inline-image img {
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      max-height: none;
+      aspect-ratio: auto;
+      object-fit: contain;
       object-position: center;
-      max-height: 22rem;
+    }
+
+    @media (max-width: 768px) {
+      main .genesis-info-section .genesis-inline-image {
+        max-width: 100%;
+        margin-bottom: var(--space-6);
+      }
     }
 
     @media (max-width: 960px) {
@@ -616,8 +629,8 @@
   <section class="section section--black genesis-info-section" aria-labelledby="demo-title">
     <div class="genesis-inline-image">
       <picture>
-        <source type="image/webp" srcset="assets/img/hero-aerys-720.webp 720w, assets/img/hero-aerys-1440.webp 1440w" sizes="(max-width: 720px) 100vw, 22rem">
-        <img src="assets/img/hero-aerys-720.jpg" srcset="assets/img/hero-aerys-720.jpg 720w, assets/img/hero-aerys-1440.jpg 1440w" sizes="(max-width: 720px) 100vw, 22rem" width="720" height="480" alt="Aerys Desktop interface preview on a workstation display" loading="lazy" decoding="async">
+        <source type="image/jpeg" srcset="assets/img/Aerys 1 0920226 BB.jpg">
+        <img src="assets/img/Aerys 1 0920226 BB.jpg" width="720" height="480" alt="Aerys Desktop interface preview on a workstation display" loading="lazy" decoding="async">
       </picture>
     </div>
 
