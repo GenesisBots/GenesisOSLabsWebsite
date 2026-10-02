@@ -314,6 +314,57 @@
       object-position: center;
     }
 
+    .research-launch__panel {
+      border: 1px solid var(--brand-blue);
+      padding: clamp(1.5rem, 3vw, 2.75rem);
+      background: var(--brand-black);
+    }
+
+    .research-launch .section__title {
+      max-width: 18ch;
+    }
+
+    .research-launch__subtitle {
+      margin: 0 0 var(--space-4);
+      max-width: 44rem;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--brand-white);
+    }
+
+    .research-launch__desc {
+      margin: 0;
+      max-width: 46rem;
+      line-height: 1.6;
+      color: var(--brand-white);
+    }
+
+    .research-launch .btn-group {
+      margin-top: var(--space-4);
+    }
+
+    .research-launch__meta {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: var(--space-5) 0 0;
+      padding: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue-on-dark);
+    }
+
+    .research-launch__meta li + li {
+      margin-left: 0.75rem;
+      padding-left: 0.75rem;
+      border-left: 1px solid var(--brand-blue);
+    }
+
     @media (max-width: 768px) {
       main .genesis-info-section .genesis-inline-image {
         max-width: 100%;
@@ -371,6 +422,26 @@
       .how-steps,
       .trust-items {
         grid-template-columns: 1fr;
+      }
+
+      .research-launch .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .research-launch .btn-group .btn {
+        width: 100%;
+      }
+
+      .research-launch__meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .research-launch__meta li + li {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
       }
     }
   </style>
@@ -576,6 +647,28 @@
         <li><strong>Add GBot Agents.</strong> Automate tasks, workflows, and intelligence.</li>
         <li><strong>Expand with modules.</strong> CRM, Mint, Marketplace, Intelligence, and more.</li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section section--black research-launch" id="matrix-research" aria-labelledby="matrix-research-title">
+    <div class="container">
+      <div class="research-launch__panel">
+        <p class="section__eyebrow">GenesisOS Labs Research</p>
+        <h2 id="matrix-research-title" class="section__title">Anatomy of a Matrix</h2>
+        <p class="research-launch__subtitle">A Four-Dimensional Agentic Tesseract Architecture for GenesisOS and the GenesisOS Labs Ecosystem</p>
+        <p class="research-launch__desc">
+          GenesisOS Labs has published its first formal research paper introducing the GenesisOS Matrix, a four-dimensional architecture for organizing information, identity, intelligence, and governance in agentic computing environments.
+        </p>
+        <div class="btn-group">
+          <a class="btn btn--primary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" target="_blank" rel="noopener noreferrer">Read White Paper</a>
+          <a class="btn btn--secondary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" download>Download PDF</a>
+        </div>
+        <ul class="research-launch__meta" aria-label="Publication details">
+          <li>GOS-RD-WP-001</li>
+          <li>Version 1.0</li>
+          <li>October 2026</li>
+        </ul>
+      </div>
     </div>
   </section>
 

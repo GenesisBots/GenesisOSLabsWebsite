@@ -48,9 +48,42 @@
     }
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: var(--space-6);
       margin-top: var(--space-6);
+    }
+    .research-tile--matrix {
+      grid-column: 1 / -1;
+      order: -1;
+    }
+    .research-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .research-actions a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+    }
+    .research-actions a.btn--primary:hover,
+    .research-actions a.btn--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+    }
+    .research-actions a.btn--secondary {
+      background: transparent;
+      color: var(--brand-blue);
+      border-color: var(--brand-black);
+    }
+    .research-actions a.btn--secondary:hover,
+    .research-actions a.btn--secondary:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
     }
     .research-tile {
       background: var(--surface-1);
@@ -84,6 +117,12 @@
     @media (max-width: 900px) {
       .research-grid {
         grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 720px) {
+      .research-actions {
+        flex-direction: column;
+        align-items: stretch;
       }
     }
   </style>
@@ -207,12 +246,15 @@
       </div>
 
       <!-- Placeholder tiles for future research -->
-      <div class="research-tile">
+      <div class="research-tile research-tile--matrix">
         <h3 class="research-title">The Anatomy of a Matrix</h3>
         <p class="research-desc">
-          This paper introduces the GenesisOSLabs Matrix Infrastructure, a four‑dimensional computational construct.
+          This paper introduces the GenesisOS Labs Matrix Infrastructure, a four‑dimensional computational construct.
         </p>
-        <a class="research-button disabled">Read White Paper</a>
+        <div class="research-actions">
+          <a class="btn btn--primary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" target="_blank" rel="noopener noreferrer">Read Research Paper</a>
+          <a class="btn btn--secondary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" download>Download PDF</a>
+        </div>
       </div>
 
       <div class="research-tile">
