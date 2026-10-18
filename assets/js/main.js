@@ -150,6 +150,7 @@ function navKeyFromLocation() {
     "LMS.html": "lms",
     "EnterpriseTokenization.html": "tokenization",
     "GenesisOS.html": "genesisos",
+    "Research.html": "research",
   };
   return map[file] || "";
 }
@@ -157,7 +158,7 @@ function navKeyFromLocation() {
 function markCurrentNav() {
   const key = navKeyFromLocation();
   if (!key) return;
-  const productKeys = new Set(["crm", "ggamingos", "gstudentos", "lms", "tokenization", "genesisos"]);
+  const productKeys = new Set(["crm", "ggamingos", "gstudentos", "lms", "tokenization", "genesisos", "research"]);
 
   qsa("[data-nav]").forEach((el) => {
     const match = el.getAttribute("data-nav") === key;
