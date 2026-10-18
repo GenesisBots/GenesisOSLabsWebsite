@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Research | GenesisOS Labs</title>
+  <title>GResearch | Scientific Intelligence Operating System | GenesisOS Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-  <meta name="description" content="White papers, intelligence audits, market analysis, and technical research produced across the GenesisOS Labs ecosystem.">
-  <meta property="og:title" content="Research | GenesisOS Labs">
-  <meta property="og:description" content="White papers, intelligence audits, market analysis, and technical research produced across the GenesisOS Labs ecosystem.">
+  <meta name="description" content="GResearch is the GenesisOS Labs scientific intelligence operating system. Acquire knowledge, preserve evidence, trace provenance, and run research from one command center.">
+  <meta property="og:title" content="GResearch | Scientific Intelligence Operating System">
+  <meta property="og:description" content="Acquire scientific knowledge. Preserve evidence. Trace provenance. Understand relationships. Identify research gaps. Operate research from one command center.">
   <meta property="og:url" content="https://genesisoslabs.com/Research.html">
-  <meta property="og:image" content="https://genesisoslabs.com/images/og-default.jpg">
-  <meta name="twitter:image" content="https://genesisoslabs.com/images/og-default.jpg">
+  <meta property="og:image" content="https://genesisoslabs.com/assets/img/gresearch-icon.jpg">
+  <meta property="og:image:width" content="1296">
+  <meta property="og:image:height" content="1536">
+  <meta property="og:image:alt" content="GResearch mark">
+  <meta name="twitter:image" content="https://genesisoslabs.com/assets/img/gresearch-icon.jpg">
+  <meta name="twitter:image:alt" content="GResearch mark">
   <meta property="og:site_name" content="GenesisOS Labs">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Research | GenesisOS Labs">
-  <meta name="twitter:description" content="White papers, intelligence audits, market analysis, and technical research produced across the GenesisOS Labs ecosystem.">
+  <meta name="twitter:title" content="GResearch | Scientific Intelligence Operating System">
+  <meta name="twitter:description" content="Acquire scientific knowledge. Preserve evidence. Trace provenance. Understand relationships. Identify research gaps. Operate research from one command center.">
   <link rel="canonical" href="https://genesisoslabs.com/Research.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,108 +29,394 @@
   <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
   <link rel="stylesheet" href="assets/css/style.css?v=brand8">
   <style>
-    :root {
-      --surface-1: var(--brand-white);
-      --surface-2: var(--brand-black);
-      --accent-1: var(--brand-blue);
-      --radius-2: var(--radius);
+    .gr-sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    .hero.hero--black {
-      display: block;
-      background: var(--brand-black);
-      color: var(--brand-white);
-      border-bottom: 1px solid var(--brand-blue);
-      padding: var(--space-6) 0;
+
+    .gr-page :focus-visible {
+      outline: 2px solid var(--brand-blue-on-dark);
+      outline-offset: 3px;
     }
-    .hero.hero--black .hero__title,
-    .hero.hero--black .hero__lead {
-      color: var(--brand-white);
+
+    .gr-page .section--white :focus-visible {
+      outline-color: var(--brand-blue);
     }
-    .hero.hero--black .hero__lead {
-      max-width: 42rem;
-      margin: 0;
+
+    .gr-page .hero .hero-brand-by {
+      color: var(--brand-blue-on-dark);
     }
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-6);
-      margin-top: var(--space-6);
+
+    .gr-page .hero .hero-brand-h1 {
+      max-width: 12ch;
     }
-    .research-tile--matrix {
-      grid-column: 1 / -1;
-      order: -1;
+
+    .gr-page .hero .hero__headline {
+      max-width: 18ch;
     }
-    .research-actions {
+
+    .gr-page .hero .hero__support {
+      max-width: 38rem;
+    }
+
+    .gr-page .hero-right {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 1rem;
+      justify-content: flex-end;
     }
-    .research-actions a.btn--primary {
+
+    .gr-page .hero-right img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 26rem;
+      aspect-ratio: 1296 / 1536;
+      object-fit: contain;
+      object-position: center;
+      background: var(--brand-black);
+      border: 1px solid var(--brand-blue);
+    }
+
+    .gr-page .hero a.btn {
+      text-decoration: none;
+    }
+
+    .gr-page .hero a.btn--primary {
       background: var(--brand-blue);
       color: var(--brand-white);
       border-color: var(--brand-blue);
     }
-    .research-actions a.btn--primary:hover,
-    .research-actions a.btn--primary:focus-visible {
+
+    .gr-page .hero a.btn--primary:hover,
+    .gr-page .hero a.btn--primary:focus-visible {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+    }
+
+    .gr-page .hero a.btn--secondary {
+      background: transparent;
+      color: var(--brand-blue-on-dark);
+      border-color: var(--brand-blue-on-dark);
+    }
+
+    .gr-page .hero a.btn--secondary:hover,
+    .gr-page .hero a.btn--secondary:focus-visible {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+    }
+
+    .gr-page .section--white a.btn--primary {
+      background: var(--brand-blue);
+      color: var(--brand-white);
+      border-color: var(--brand-blue);
+      text-decoration: none;
+    }
+
+    .gr-page .section--white a.btn--primary:hover,
+    .gr-page .section--white a.btn--primary:focus-visible {
       background: var(--brand-black);
       color: var(--brand-white);
       border-color: var(--brand-black);
     }
-    .research-actions a.btn--secondary {
+
+    .gr-page .section--white a.btn--secondary {
       background: transparent;
       color: var(--brand-blue);
       border-color: var(--brand-black);
+      text-decoration: none;
     }
-    .research-actions a.btn--secondary:hover,
-    .research-actions a.btn--secondary:focus-visible {
+
+    .gr-page .section--white a.btn--secondary:hover,
+    .gr-page .section--white a.btn--secondary:focus-visible {
       background: var(--brand-blue);
       color: var(--brand-white);
       border-color: var(--brand-blue);
     }
-    .research-tile {
-      background: var(--surface-1);
-      padding: 1.5rem;
-      border-radius: var(--radius-2);
-      border: 1px solid var(--brand-blue);
-    }
-    .research-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.25rem;
-      background: var(--accent-1);
-      color: #fff;
+
+    .gr-page .section--blue a.btn--primary {
       text-decoration: none;
-      border-radius: var(--radius-2);
     }
-    .research-button.disabled {
-      opacity: 0.4;
-      pointer-events: none;
+
+    .gr-mark {
+      display: block;
+      width: 4.75rem;
+      height: auto;
+      aspect-ratio: 1296 / 1536;
+      object-fit: contain;
+      background: var(--brand-black);
+      border: 1px solid var(--brand-blue);
+      margin-bottom: var(--space-3);
     }
-    #research-showcase {
-      background: var(--surface-2);
-      padding: var(--space-8) 0;
+
+    .gr-page #capabilities {
+      border-top: 1px solid var(--brand-blue);
     }
-    .research-highlight {
-      background: var(--surface-1);
-      padding: var(--space-6);
-      border-radius: var(--radius-2);
-      margin-top: var(--space-6);
+
+    .gr-page section[id] {
+      scroll-margin-top: calc(var(--header-height) + var(--space-3));
     }
+
+    .gr-page .final-cta .section__eyebrow {
+      color: var(--brand-white);
+    }
+
+    .gr-page .final-cta a.btn--primary {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-white);
+      text-decoration: none;
+    }
+
+    .gr-page .final-cta a.btn--primary:hover,
+    .gr-page .final-cta a.btn--primary:focus-visible {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      border-color: var(--brand-black);
+    }
+
+    .gr-steps {
+      list-style: none;
+      margin: var(--space-6) 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .gr-steps li {
+      grid-column: span 2;
+    }
+
+    .gr-steps li:nth-child(4),
+    .gr-steps li:nth-child(5) {
+      grid-column: span 3;
+    }
+
+    .gr-steps li {
+      min-width: 0;
+      border-top: 2px solid var(--brand-blue);
+      padding-top: var(--space-3);
+    }
+
+    .gr-steps__index {
+      display: block;
+      margin-bottom: var(--space-2);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--brand-blue);
+    }
+
+    .gr-steps h3 {
+      margin: 0 0 var(--space-2);
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    .gr-steps p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .gr-why {
+      margin: var(--space-6) 0 0;
+      max-width: 42rem;
+    }
+
+    .gr-caps {
+      list-style: none;
+      margin: var(--space-5) 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .gr-group {
+      min-width: 0;
+      border: 1px solid var(--brand-blue);
+      padding: var(--space-4);
+      background: var(--brand-white);
+      color: var(--brand-black);
+    }
+
+    .gr-group h3 {
+      margin: 0 0 var(--space-3);
+      font-size: var(--text-h3);
+      line-height: 1.2;
+    }
+
+    .gr-group ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .gr-group li {
+      display: grid;
+      gap: 0.25rem;
+      padding-top: var(--space-3);
+      margin-top: var(--space-3);
+      border-top: 1px solid var(--brand-blue);
+    }
+
+    .gr-group strong {
+      font-weight: 700;
+    }
+
+    .gr-group li span {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .gr-proof {
+      list-style: none;
+      margin: var(--space-5) 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .gr-proof li {
+      min-width: 0;
+      border: 1px solid var(--brand-blue);
+      padding: var(--space-4);
+    }
+
+    .gr-proof__value {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--brand-white);
+    }
+
+    .gr-proof__label {
+      margin: var(--space-2) 0 0;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--brand-blue-on-dark);
+    }
+
+    .gr-note {
+      margin: var(--space-5) 0 0;
+      max-width: 42rem;
+    }
+
+    .gr-cite {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin: var(--space-5) 0;
+    }
+
+    .gr-cite div {
+      min-width: 0;
+      border-top: 2px solid var(--brand-blue);
+      padding-top: var(--space-2);
+    }
+
+    .gr-cite dt {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--brand-blue);
+    }
+
+    .gr-cite dd {
+      margin: var(--space-1) 0 0;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .gr-summary,
+    .gr-citation {
+      max-width: 42rem;
+    }
+
+    .gr-citation {
+      margin-top: var(--space-4);
+    }
+
+    .gr-artifact .btn-group {
+      margin-top: var(--space-5);
+    }
+
     @media (max-width: 900px) {
-      .research-grid {
-        grid-template-columns: 1fr;
+      .gr-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gr-steps li,
+      .gr-steps li:nth-child(4),
+      .gr-steps li:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .gr-steps li:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .gr-caps,
+      .gr-proof,
+      .gr-cite {
+        grid-template-columns: 1fr 1fr;
       }
     }
+
     @media (max-width: 720px) {
-      .research-actions {
+      .gr-page .hero-right {
+        justify-content: center;
+      }
+
+      .gr-page .hero-right img {
+        max-height: 14rem;
+      }
+
+      .gr-page .hero .hero-brand-h1,
+      .gr-page .hero .hero__headline {
+        max-width: none;
+      }
+
+      .gr-page .hero .btn-group,
+      .gr-page .gr-artifact .btn-group,
+      .gr-page .final-cta .btn-group {
         flex-direction: column;
         align-items: stretch;
       }
+
+      .gr-steps,
+      .gr-caps,
+      .gr-proof,
+      .gr-cite {
+        grid-template-columns: 1fr;
+      }
+
+      .gr-steps li,
+      .gr-steps li:nth-child(4),
+      .gr-steps li:nth-child(5),
+      .gr-steps li:last-child {
+        grid-column: auto;
+      }
     }
   </style>
-  <script src="assets/js/main.js?v=brand8" defer></script>
+  <script src="assets/js/main.js?v=brand9" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNYFJFNM9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -162,14 +452,87 @@
       }
     },
     {
+      "@type": ["SoftwareApplication", "Product"],
+      "@id": "https://genesisoslabs.com/Research.html#gresearch",
+      "name": "GResearch",
+      "url": "https://genesisoslabs.com/Research.html",
+      "image": "https://genesisoslabs.com/assets/img/gresearch-icon.jpg",
+      "softwareVersion": "0.19.0",
+      "applicationCategory": "ScienceApplication",
+      "applicationSubCategory": "Scientific Intelligence Operating System",
+      "operatingSystem": "Web",
+      "description": "GResearch is the GenesisOS Labs scientific intelligence operating system. It acquires scientific knowledge, preserves evidence, traces provenance, understands relationships, identifies research gaps, and operates research from a unified command center.",
+      "brand": {
+        "@type": "Brand",
+        "name": "GResearch"
+      },
+      "manufacturer": {
+        "@id": "https://genesisoslabs.com/#organization"
+      },
+      "provider": {
+        "@id": "https://genesisoslabs.com/#organization"
+      },
+      "featureList": [
+        "Scientific Acquisition",
+        "Research Collection",
+        "Source Monitoring",
+        "Knowledge Ingestion",
+        "Scientific Memory",
+        "Knowledge Intelligence",
+        "Discovery Platform",
+        "Research Candidates",
+        "Research Gap Intelligence",
+        "Evidence Integrity",
+        "Funding Intelligence",
+        "Author Intelligence",
+        "Identity Resolution",
+        "Research Provenance",
+        "Executive Dashboard",
+        "Mission Control",
+        "Research Operations",
+        "Command Center"
+      ],
+      "documentation": {
+        "@id": "https://genesisoslabs.com/Research.html#anatomy"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://genesisoslabs.com/Research.html#anatomy",
+      "name": "The Anatomy of a Matrix",
+      "headline": "A Four-Dimensional Agentic Tesseract Architecture for GenesisOS and the GenesisOS Labs Ecosystem",
+      "identifier": "GOS-RD-WP-001",
+      "version": "1.0",
+      "datePublished": "2026-10",
+      "publisher": {
+        "@id": "https://genesisoslabs.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://genesisoslabs.com/Research.html#gresearch"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://genesisoslabs.com/assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
       "@type": "WebPage",
       "@id": "https://genesisoslabs.com/Research.html",
       "url": "https://genesisoslabs.com/Research.html",
-      "name": "GenesisOS Labs Research",
+      "name": "GResearch | Scientific Intelligence Operating System",
+      "description": "GResearch is the GenesisOS Labs scientific intelligence operating system. Acquire knowledge, preserve evidence, trace provenance, and run research from one command center.",
       "isPartOf": {
         "@id": "https://genesisoslabs.com/#website"
       },
       "about": {
+        "@id": "https://genesisoslabs.com/Research.html#gresearch"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://genesisoslabs.com/assets/img/gresearch-icon.jpg"
+      },
+      "publisher": {
         "@id": "https://genesisoslabs.com/#organization"
       }
     }
@@ -177,7 +540,7 @@
 }
 </script>
 </head>
-<body>
+<body class="gr-page">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -214,57 +577,263 @@
 
 <main id="main">
 
-<section class="hero hero--black">
+<section class="hero" aria-labelledby="gresearch-title">
+  <div class="hero-left">
+    <p class="hero-brand-by">GenesisOS Labs · Version 0.19.0</p>
+    <h1 id="gresearch-title" class="hero-brand-h1">GResearch</h1>
+    <p class="hero__headline">Scientific Intelligence Operating System</p>
+    <p class="hero__support">
+      Acquire scientific knowledge. Preserve evidence. Trace provenance.
+      Understand relationships. Identify research gaps. Operate research
+      from a unified command center.
+    </p>
+    <div class="btn-group">
+      <a class="btn btn--primary" href="#platform">Explore GResearch</a>
+      <a class="btn btn--secondary" href="#anatomy">Read The Anatomy of a Matrix</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="assets/img/gresearch-icon.jpg" width="1296" height="1536" alt="">
+  </div>
+</section>
+
+<section class="section section--white" id="platform" aria-labelledby="story-title">
   <div class="container">
-    <h1 class="hero__title">GenesisOS Labs Research</h1>
-    <p class="hero__lead">
-      White papers, technical reasearch, intelligence audits, and market analysis produced
-      across the GenesisOS Labs ecosystem.
+    <p class="section__eyebrow">Product story</p>
+    <h2 id="story-title" class="section__title">How GResearch works</h2>
+    <p class="section__lead">
+      GResearch carries a scientific record from intake to command.
+      Knowledge stays attached to its evidence, its people, and the decision it supports.
+    </p>
+    <ol class="gr-steps">
+      <li>
+        <span class="gr-steps__index">01</span>
+        <h3>Acquire</h3>
+        <p>Collect the scientific record, monitor sources, and ingest knowledge into the platform.</p>
+      </li>
+      <li>
+        <span class="gr-steps__index">02</span>
+        <h3>Understand</h3>
+        <p>Keep scientific memory, read relationships, and surface candidates and research gaps.</p>
+      </li>
+      <li>
+        <span class="gr-steps__index">03</span>
+        <h3>Verify</h3>
+        <p>Test evidence integrity and trace provenance from a result back to its source.</p>
+      </li>
+      <li>
+        <span class="gr-steps__index">04</span>
+        <h3>Resolve</h3>
+        <p>Resolve authors, institutions, funding, and canonical research identities.</p>
+      </li>
+      <li>
+        <span class="gr-steps__index">05</span>
+        <h3>Operate</h3>
+        <p>Direct the work from the executive dashboard, Mission Control, and the command center.</p>
+      </li>
+    </ol>
+    <p class="gr-why">
+      GenesisOS Labs built GResearch so a research program could acquire knowledge,
+      preserve the evidence, and direct the work from one command center.
     </p>
   </div>
 </section>
 
-<section class="section section--white" id="research-content">
+<section class="section section--white" id="capabilities" aria-labelledby="capabilities-title">
   <div class="container">
-    <h2 class="section__title">Featured White Papers</h2>
+    <img class="gr-mark" src="assets/img/gresearch-icon.jpg" width="1296" height="1536" alt="">
+    <p class="section__eyebrow">GResearch v0.19.0</p>
+    <h2 id="capabilities-title" class="section__title">The GResearch system</h2>
     <p class="section__lead">
-      Explore our publication-grade intelligence reports generated from
-      HeadlinescraperPro, MarketIntel, and the broader GenesisOS Labs stack.
+      Acquisition, memory, discovery, integrity, identity, and command stay in one operating system.
+      The record remains connected to the authors, institutions, funding, and evidence that produced it.
     </p>
+    <div class="gr-caps">
+      <article class="gr-group" aria-labelledby="cap-acquire">
+        <h3 id="cap-acquire">Acquire</h3>
+        <ul>
+          <li>
+            <strong>Scientific Acquisition</strong>
+            <span>Bring papers, records, and source material into the system.</span>
+          </li>
+          <li>
+            <strong>Research Collection</strong>
+            <span>Hold the working collection as one research body.</span>
+          </li>
+          <li>
+            <strong>Source Monitoring</strong>
+            <span>Watch sources for what enters or changes the record.</span>
+          </li>
+          <li>
+            <strong>Knowledge Ingestion</strong>
+            <span>Turn incoming material into structured knowledge.</span>
+          </li>
+        </ul>
+      </article>
+      <article class="gr-group" aria-labelledby="cap-understand">
+        <h3 id="cap-understand">Understand</h3>
+        <ul>
+          <li>
+            <strong>Scientific Memory</strong>
+            <span>Retain the record so later work can use what was already established.</span>
+          </li>
+          <li>
+            <strong>Knowledge Intelligence</strong>
+            <span>Read the body of knowledge for relationships and meaning.</span>
+          </li>
+          <li>
+            <strong>Discovery Platform</strong>
+            <span>Move from what is known toward what is worth pursuing.</span>
+          </li>
+          <li>
+            <strong>Research Candidates</strong>
+            <span>Surface candidate findings and lines of inquiry.</span>
+          </li>
+          <li>
+            <strong>Research Gap Intelligence</strong>
+            <span>Identify what the record does not yet cover.</span>
+          </li>
+        </ul>
+      </article>
+      <article class="gr-group" aria-labelledby="cap-trust">
+        <h3 id="cap-trust">Trust</h3>
+        <ul>
+          <li>
+            <strong>Evidence Integrity</strong>
+            <span>Test whether the evidence still supports the claim attached to it.</span>
+          </li>
+          <li>
+            <strong>Funding Intelligence</strong>
+            <span>See how funding connects to authors, institutions, and lines of work.</span>
+          </li>
+          <li>
+            <strong>Author Intelligence</strong>
+            <span>See who produced the work and how the contributions relate.</span>
+          </li>
+          <li>
+            <strong>Identity Resolution</strong>
+            <span>Resolve people, institutions, and works to canonical identities.</span>
+          </li>
+          <li>
+            <strong>Research Provenance</strong>
+            <span>Trace a result back through the evidence that produced it.</span>
+          </li>
+        </ul>
+      </article>
+      <article class="gr-group" aria-labelledby="cap-operate">
+        <h3 id="cap-operate">Operate</h3>
+        <ul>
+          <li>
+            <strong>Executive Dashboard</strong>
+            <span>Give leadership one view of the research record.</span>
+          </li>
+          <li>
+            <strong>Mission Control</strong>
+            <span>Direct active research from one operating surface.</span>
+          </li>
+          <li>
+            <strong>Research Operations</strong>
+            <span>Run the day-to-day work of the research program.</span>
+          </li>
+          <li>
+            <strong>Command Center</strong>
+            <span>Hold acquisition, trust, and action in one command center.</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <div class="research-grid">
+<section class="section section--black" id="proof" aria-labelledby="proof-title">
+  <div class="container">
+    <p class="section__eyebrow">Platform proof</p>
+    <h2 id="proof-title" class="section__title">Platform record</h2>
+    <p class="section__lead">
+      Counts from the scientific record held in GResearch v0.19.0.
+    </p>
+    <ul class="gr-proof">
+      <li>
+        <span class="gr-proof__value">266</span>
+        <p class="gr-proof__label">Authors</p>
+      </li>
+      <li>
+        <span class="gr-proof__value">38</span>
+        <p class="gr-proof__label">Institutions</p>
+      </li>
+      <li>
+        <span class="gr-proof__value">544</span>
+        <p class="gr-proof__label">Evidence Trails</p>
+      </li>
+      <li>
+        <span class="gr-proof__value">321</span>
+        <p class="gr-proof__label">Canonical Research Identities</p>
+      </li>
+      <li>
+        <span class="gr-proof__value">75</span>
+        <p class="gr-proof__label">Evidence Chains</p>
+      </li>
+      <li>
+        <span class="gr-proof__value">19</span>
+        <p class="gr-proof__label">Development Phases</p>
+      </li>
+    </ul>
+    <p class="gr-note">
+      Authors, institutions, identities, and evidence trails are the working record
+      GResearch uses to connect a claim to its sources and its people.
+    </p>
+  </div>
+</section>
 
-      <!-- White Paper Tile 1 -->
-      <div class="research-tile">
-        <h3 class="research-title">Aerys Desktop Intelligence Audit</h3>
-        <p class="research-desc">
-          34,191 headline telemetry events, 230 scrapes, 174 market snapshots,
-          and unified world + tech intelligence. Geopolitics, AI, sentiment drift,
-          anomaly detection, and market targeting.
-        </p>
-        <a href="Intel.html" class="research-button">Read White Paper</a>
+<section class="section section--white gr-artifact" id="anatomy" aria-labelledby="anatomy-title">
+  <div class="container">
+    <p class="section__eyebrow">Research Artifact</p>
+    <h2 id="anatomy-title" class="section__title">The Anatomy of a Matrix</h2>
+    <p class="section__lead">
+      A Four-Dimensional Agentic Tesseract Architecture for GenesisOS and the GenesisOS Labs Ecosystem
+    </p>
+    <dl class="gr-cite">
+      <div>
+        <dt>Document</dt>
+        <dd>GOS-RD-WP-001</dd>
       </div>
-
-      <!-- Placeholder tiles for future research -->
-      <div class="research-tile research-tile--matrix">
-        <h3 class="research-title">The Anatomy of a Matrix</h3>
-        <p class="research-desc">
-          This paper introduces the GenesisOS Labs Matrix Infrastructure, a four‑dimensional computational construct.
-        </p>
-        <div class="research-actions">
-          <a class="btn btn--primary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" target="_blank" rel="noopener noreferrer">Read Research Paper</a>
-          <a class="btn btn--secondary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" download>Download PDF</a>
-        </div>
+      <div>
+        <dt>Version</dt>
+        <dd>1.0</dd>
       </div>
-
-      <div class="research-tile">
-        <h3 class="research-title">Coming Soon</h3>
-        <p class="research-desc">
-          Technical, market, and intelligence research from the GenesisOS Labs ecosystem.
-        </p>
-        <a class="research-button disabled">Pending</a>
+      <div>
+        <dt>Published</dt>
+        <dd><time datetime="2026-10">October 2026</time></dd>
       </div>
+      <div>
+        <dt>Publisher</dt>
+        <dd>GenesisOS Labs LLC</dd>
+      </div>
+    </dl>
+    <p class="gr-summary">
+      This paper introduces the GenesisOS Matrix, a four-dimensional architecture for organizing
+      information, identity, intelligence, and governance in agentic computing environments.
+    </p>
+    <p class="gr-citation">
+      <cite>GenesisOS Labs. “The Anatomy of a Matrix: A Four-Dimensional Agentic Tesseract Architecture for GenesisOS and the GenesisOS Labs Ecosystem.” GOS-RD-WP-001. Version 1.0. October 2026.</cite>
+    </p>
+    <div class="btn-group">
+      <a class="btn btn--primary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" target="_blank" rel="noopener noreferrer">Read The Anatomy of a Matrix<span class="gr-sr"> (opens in a new tab)</span></a>
+      <a class="btn btn--secondary" href="assets/GenesisOS%20Labs%20Anatomy%20of%20a%20Matrix%20v1%2001022026%20BB.pdf" download="GOS-RD-WP-001-Anatomy-of-a-Matrix.pdf">Download PDF</a>
+    </div>
+  </div>
+</section>
 
+<section class="section final-cta" id="access" aria-labelledby="access-title">
+  <div class="container">
+    <p class="section__eyebrow">Access</p>
+    <h2 id="access-title" class="section__title">Request access to GResearch</h2>
+    <p class="section__lead">
+      Review the scientific intelligence operating system with GenesisOS Labs.
+      See how acquisition, evidence, identity, and command run as one system.
+    </p>
+    <div class="btn-group">
+      <a class="btn btn--primary" href="mailto:support@GenesisOSLabs.com?subject=GResearch%20access">Request Access</a>
     </div>
   </div>
 </section>
