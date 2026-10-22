@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/neon.css?v=cro1">
   <link rel="stylesheet" href="assets/css/style.css?v=cro1">
-  <link rel="stylesheet" href="assets/css/aerys-desktop.css?v=hero-lock">
+  <link rel="stylesheet" href="assets/css/aerys-desktop.css?v=scenarios1">
   <style>
     #demo-request .demo-visual {
       height: auto;
@@ -291,14 +291,26 @@
         </div>
 
         <div class="lead-container">
+          <div class="who-books">
+            <h3 id="who-books-title">Who Books A Strategy Demo?</h3>
+            <div class="who-books__grid">
+              <article class="card who-card"><p>Founders</p></article>
+              <article class="card who-card"><p>Operations Leaders</p></article>
+              <article class="card who-card"><p>Business Owners</p></article>
+              <article class="card who-card"><p>COOs</p></article>
+              <article class="card who-card"><p>Department Leaders</p></article>
+              <article class="card who-card"><p>Teams Exploring AI Transformation</p></article>
+            </div>
+            <p>If your company is struggling with disconnected software, fragmented workflows, or AI tools that operate without context, this conversation is for you.</p>
+          </div>
           <form
             class="lead-form"
             action="https://formspree.io/f/xqevbgor"
             method="POST"
             data-lead-form
             data-lead-event="demo_request">
-            <h3 class="lead-title">Book Your Strategy Demo</h3>
-            <p class="lead-subtitle">Tell us which workflows are disconnected. We reply with a rollout path.</p>
+            <h3 class="lead-title">Let's Map Your First Workflow</h3>
+            <p class="lead-subtitle">Tell us a little about your organization. We'll identify opportunities where Aerys can reduce operational friction and connect your workflows.</p>
 
             <input type="hidden" name="_subject" value="Strategy demo request — Aerys Desktop Company OS">
 
@@ -313,8 +325,22 @@
             </div>
 
             <div class="form-group">
-              <label for="lead-message">Where does work break between your tools?</label>
-              <textarea id="lead-message" name="message" rows="4" minlength="10" maxlength="2000" required placeholder="Example: sales, finance, and support each use a different system, and our AI tools cannot see the full workflow."></textarea>
+              <label for="lead-company-type">Company Type</label>
+              <select id="lead-company-type" name="company_type" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Professional Services</option>
+                <option>Manufacturing</option>
+                <option>Real Estate</option>
+                <option>Healthcare</option>
+                <option>Education</option>
+                <option>Technology</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="lead-message">What is your biggest operational challenge?</label>
+              <textarea id="lead-message" name="message" rows="4" minlength="10" maxlength="2000" required placeholder="Example: disconnected software, scattered reporting, manual workflows, lack of visibility, AI integration, customer management, inventory tracking."></textarea>
             </div>
 
             <div class="form-group">
@@ -323,6 +349,12 @@
             </div>
 
             <button type="submit" class="btn btn--primary btn--block" data-submit-label="Book Your Strategy Demo">Book Your Strategy Demo</button>
+            <ul class="form-reassure">
+              <li>No obligation</li>
+              <li>Initial roadmap conversation</li>
+              <li>Virtual meeting</li>
+              <li>Typically 30–45 minutes</li>
+            </ul>
             <p class="form-status" aria-live="polite"></p>
             <p class="form-note">Or email <a href="mailto:support@GenesisOSLabs.com">support@GenesisOSLabs.com</a></p>
           </form>
@@ -507,6 +539,123 @@
       </div>
       <div class="mid-cta">
         <a class="btn btn--primary" href="#demo-request">Build My Company OS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="scenarios" aria-labelledby="scenarios-title">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Industries</p>
+        <h2 id="scenarios-title" class="section__title">Companies We Commonly Help</h2>
+        <p class="section__lead">Every organization has different software, workflows, and operational bottlenecks. Aerys is scoped around the workflows that matter most.</p>
+      </div>
+      <div class="scenario-grid">
+        <article class="card scenario-card">
+          <h3>Professional Services</h3>
+          <p class="scenario-label">Typical challenges:</p>
+          <ul>
+            <li>Client information lives everywhere</li>
+            <li>Proposal and project workflows are disconnected</li>
+            <li>Teams repeat the same information</li>
+          </ul>
+          <p class="scenario-label">Aerys can connect:</p>
+          <ul>
+            <li>CRM</li>
+            <li>Projects</li>
+            <li>Knowledge Management</li>
+            <li>AI Assistants</li>
+            <li>Reporting</li>
+          </ul>
+        </article>
+        <article class="card scenario-card">
+          <h3>Manufacturing</h3>
+          <p class="scenario-label">Typical challenges:</p>
+          <ul>
+            <li>Operations and inventory are disconnected</li>
+            <li>Reporting lags reality</li>
+            <li>Information is scattered across systems</li>
+          </ul>
+          <p class="scenario-label">Aerys can connect:</p>
+          <ul>
+            <li>Operations</li>
+            <li>Inventory</li>
+            <li>Reporting</li>
+            <li>Workflows</li>
+            <li>AI Agents</li>
+          </ul>
+        </article>
+        <article class="card scenario-card">
+          <h3>Real Estate</h3>
+          <p class="scenario-label">Typical challenges:</p>
+          <ul>
+            <li>Lead management is fragmented</li>
+            <li>Marketing and sales are disconnected</li>
+            <li>Teams manually transfer information</li>
+          </ul>
+          <p class="scenario-label">Aerys can connect:</p>
+          <ul>
+            <li>CRM</li>
+            <li>Lead Routing</li>
+            <li>Marketing</li>
+            <li>Documents</li>
+            <li>Reporting</li>
+          </ul>
+        </article>
+        <article class="card scenario-card">
+          <h3>Healthcare</h3>
+          <p class="scenario-label">Typical challenges:</p>
+          <ul>
+            <li>Administrative workflows are disconnected</li>
+            <li>Teams must navigate multiple systems</li>
+            <li>Information handoffs create delays</li>
+          </ul>
+          <p class="scenario-label">Aerys can connect:</p>
+          <ul>
+            <li>Scheduling</li>
+            <li>Operations</li>
+            <li>Knowledge Systems</li>
+            <li>Workflow Automation</li>
+            <li>Reporting</li>
+          </ul>
+        </article>
+        <article class="card scenario-card">
+          <h3>Education</h3>
+          <p class="scenario-label">Typical challenges:</p>
+          <ul>
+            <li>Student systems live in separate tools</li>
+            <li>Communication lacks context</li>
+            <li>Reporting is fragmented</li>
+          </ul>
+          <p class="scenario-label">Aerys can connect:</p>
+          <ul>
+            <li>Learning Systems</li>
+            <li>Student Operations</li>
+            <li>Communication</li>
+            <li>Knowledge Management</li>
+            <li>Reporting</li>
+          </ul>
+        </article>
+        <article class="card scenario-card">
+          <h3>Technology Companies</h3>
+          <p class="scenario-label">Typical challenges:</p>
+          <ul>
+            <li>Teams operate across disconnected platforms</li>
+            <li>Internal knowledge is difficult to access</li>
+            <li>Workflows depend on manual coordination</li>
+          </ul>
+          <p class="scenario-label">Aerys can connect:</p>
+          <ul>
+            <li>Projects</li>
+            <li>Knowledge Systems</li>
+            <li>AI Agents</li>
+            <li>Operations</li>
+            <li>Reporting</li>
+          </ul>
+        </article>
+      </div>
+      <div class="mid-cta">
+        <a class="btn btn--primary" href="#demo-request">Book Your Strategy Demo</a>
       </div>
     </div>
   </section>
