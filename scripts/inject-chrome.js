@@ -23,7 +23,6 @@ const PAGES = [
   { file: "GCoin.html", prefix: "", canonical: `${HOST}/GCoin.html`, jsonld: "software" },
   { file: "GenesisOS.html", prefix: "", canonical: `${HOST}/GenesisOS.html`, jsonld: "software" },
   { file: "GGamingOS.html", prefix: "", canonical: `${HOST}/GGamingOS.html`, jsonld: "software" },
-  { file: "GStudentOS.html", prefix: "", canonical: `${HOST}/GStudentOS.html`, jsonld: "software" },
   { file: "privacy/index.html", prefix: "../", canonical: `${HOST}/privacy/`, jsonld: "website" },
   { file: "terms/index.html", prefix: "../", canonical: `${HOST}/terms/`, jsonld: "website" },
   { file: "accessibility/index.html", prefix: "../", canonical: `${HOST}/accessibility/`, jsonld: "website" },
@@ -71,7 +70,6 @@ function orgJsonLd(page) {
       "GCoin.html": "GCoin",
       "GenesisOS.html": "GenesisOS",
       "GGamingOS.html": "GGamingOS",
-      "GStudentOS.html": "GStudentOS",
     };
     const software = {
       "@type": "SoftwareApplication",
