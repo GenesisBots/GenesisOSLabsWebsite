@@ -1,0 +1,98 @@
+/* GProfessor page polish. Loads after gstudent.css. */
+
+body.aerys-page .aerys-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+body.aerys-page .aerys-hero-chips li {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.aerys-page .lead-form select {
+  width: 100%;
+  min-height: 3.15rem;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--brand-blue);
+  background: var(--brand-black);
+  color: var(--brand-white);
+  font: inherit;
+  font-size: 1.0625rem;
+  border-radius: var(--radius);
+}
+
+.aerys-page .lead-form select:focus {
+  outline: 2px solid var(--brand-white);
+  outline-offset: 2px;
+}
+
+.aerys-page .gs-companion {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.gprofessor-page .section__header + .gs-companion {
+  margin-top: 0;
+}
+
+.gprofessor-page #who,
+.gprofessor-page #companions {
+  margin-top: var(--space-6);
+}
+
+.gprofessor-page #beta .lead-form {
+  gap: 1.25rem;
+}
+
+.gprofessor-page #beta .lead-form .form-group {
+  margin-bottom: 0;
+}
+
+.gprofessor-page #beta .lead-form .btn--block {
+  margin-top: 0.25rem;
+}
+
+.gprofessor-page .lead-form textarea::placeholder {
+  color: color-mix(in srgb, var(--brand-white) 72%, transparent);
+}
+
+.gprofessor-page .section--black .faq-list a {
+  color: var(--brand-blue-on-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.gprofessor-page .section--black .faq-list a:hover,
+.gprofessor-page .section--black .faq-list a:focus-visible {
+  color: var(--brand-white);
+}
+
+body.gprofessor-page .gs-shot {
+  overflow: hidden;
+  background: #f4f1ea;
+}
+
+body.gprofessor-page .gs-shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: none;
+  object-fit: cover;
+  object-position: top center;
+  background: #f4f1ea;
+}
+
+.aerys-page .gs-companion h3 {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 720px) {
+  .aerys-page .gs-companion {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

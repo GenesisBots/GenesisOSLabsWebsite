@@ -147,6 +147,7 @@ function navKeyFromLocation() {
     "CRM.html": "crm",
     "GGamingOS.html": "ggamingos",
     "GStudent.html": "gstudent",
+    "GProfessor.html": "gprofessor",
     "LMS.html": "lms",
     "EnterpriseTokenization.html": "tokenization",
     "GenesisOS.html": "genesisos",
@@ -158,7 +159,7 @@ function navKeyFromLocation() {
 function markCurrentNav() {
   const key = navKeyFromLocation();
   if (!key) return;
-  const productKeys = new Set(["crm", "ggamingos", "gstudent", "lms", "tokenization", "genesisos", "research"]);
+  const productKeys = new Set(["crm", "ggamingos", "gstudent", "gprofessor", "lms", "tokenization", "genesisos", "research"]);
 
   qsa("[data-nav]").forEach((el) => {
     const match = el.getAttribute("data-nav") === key;
@@ -375,6 +376,7 @@ function getFooterTemplate() {
         <li><a href="${prefix}CRM.html">CRM</a></li>
         <li><a href="${prefix}GGamingOS.html">GGamingOS</a></li>
         <li><a href="${prefix}GStudent.html">GStudent</a></li>
+        <li><a href="${prefix}GProfessor.html">GProfessor</a></li>
         <li><a href="${prefix}LMS.html">LMS</a></li>
         <li><a href="${prefix}EnterpriseTokenization.html">Enterprise Tokenization</a></li>
         <li><a href="${prefix}Education.html">Education</a></li>
