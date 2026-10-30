@@ -17,90 +17,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/neon.css?v=brand8">
   <link rel="stylesheet" href="assets/css/style.css?v=brand8">
-  <style>
-    .platform-hero { background: var(--brand-black); color: var(--brand-white); border-bottom: 1px solid var(--brand-blue); padding: var(--space-7) 0; }
-    .platform-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(14rem, 18rem); gap: var(--space-6); align-items: center; }
-    .arcade-mark { display: flex; gap: 0.65rem; margin: 0 0 var(--space-3); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
-    .arcade-mark span:last-child { color: var(--brand-blue-on-dark); }
-    .platform-hero h1 { margin: 0; font-size: clamp(3rem, 7vw, 4.5rem); }
-    .stage-lead { margin: var(--space-3) 0 0; max-width: 36rem; font-size: 1.35rem; line-height: 1.45; }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: var(--space-4) 0 0; padding: 0; list-style: none; }
-    .chips li { border: 1px solid var(--brand-blue); color: var(--brand-blue-on-dark); padding: 0.35rem 0.7rem; font-size: 0.875rem; font-weight: 700; }
-    .featured-callout { display: grid; gap: 0.6rem; color: var(--brand-white); text-decoration: none; border: 1px solid var(--brand-blue); padding: 0.75rem; background: var(--brand-black); }
-    .featured-callout:hover, .featured-callout:focus-visible { color: var(--brand-white); text-decoration: none; border-color: var(--brand-white); }
-    .featured-callout img { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--brand-black); }
-    .featured-callout span { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-blue-on-dark); }
-    .featured-callout strong { font-size: 1.25rem; }
-    .feature-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(16rem, 0.8fr); gap: var(--space-6); align-items: center; }
-    .feature-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-4); }
-    .feature-layout .btn--secondary { color: var(--brand-blue); border-color: var(--brand-blue); }
-    .btn--play { min-height: 3.5rem; padding-inline: 2rem; font-size: 1.125rem; }
-    .poster-frame { margin: 0; background: var(--brand-black); border: 1px solid var(--brand-blue); aspect-ratio: 1; box-shadow: 0 28px 70px rgba(9, 83, 181, 0.35); transition: transform 0.35s ease, box-shadow 0.35s ease; }
-    .poster-frame img { width: 100%; height: 100%; object-fit: contain; background: var(--brand-black); }
-    .poster-frame:hover { transform: translateY(-8px); box-shadow: 0 40px 80px rgba(9, 83, 181, 0.5); }
-    .shot-rail { display: grid; grid-auto-flow: column; grid-auto-columns: 22rem; gap: var(--space-3); margin-top: var(--space-5); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: var(--space-2); }
-    .shot-rail figure { margin: 0; scroll-snap-align: start; }
-    .shot-rail img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: var(--brand-black); border: 1px solid var(--brand-blue); transition: border-color 0.2s ease, transform 0.35s ease; }
-    .shot-rail figure:hover img { border-color: var(--brand-blue); transform: translateY(-4px); }
-    .shot-rail figcaption { margin-top: var(--space-2); font-size: 0.875rem; font-weight: 700; color: var(--brand-black); }
-    .library, .roadmap-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-5); }
-    .lib-card, .road-card { border: 1px solid var(--brand-blue); padding: var(--space-4); min-height: 100%; display: flex; flex-direction: column; gap: var(--space-2); background: var(--brand-white); color: var(--brand-black); }
-    .lib-card h3, .road-card h3 { margin: 0; }
-    .section--black .lib-card h3,
-    .section--black .lib-card p { color: var(--brand-black); }
-    .section--black .lib-card.is-live,
-    .section--black .lib-card.is-live h3,
-    .section--black .lib-card.is-live p { color: var(--brand-white); }
-    .section--black .lib-card .status { color: var(--brand-blue); }
-    .section--black .lib-card.is-live .status,
-    .section--black .lib-card.is-live a { color: var(--brand-blue-on-dark); }
-    .lib-card p, .road-card p { margin: 0; }
-    .status { margin-top: auto; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-blue); }
-    .lib-card.is-live { background: var(--brand-black); color: var(--brand-white); }
-    .lib-card.is-live .status { color: var(--brand-blue-on-dark); }
-    .lib-card.is-live a { color: var(--brand-blue-on-dark); font-weight: 800; }
-    .soon { pointer-events: none; }
-    .demonet-band { background: var(--brand-black); color: var(--brand-white); border-top: 1px solid var(--brand-blue); border-bottom: 1px solid var(--brand-blue); }
-    .demonet-head { width: min(100% - 2rem, 1120px); margin: 0 auto; padding: var(--space-5) 0 var(--space-4); }
-    .demonet-band h2 { margin: 0; color: var(--brand-white); }
-    .demonet-band .section__eyebrow { color: var(--brand-blue-on-dark); }
-    .demonet-lead { margin: var(--space-3) 0 0; max-width: 40rem; color: var(--brand-white); }
-    .demo-flags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: var(--space-4) 0 0; padding: 0; list-style: none; }
-    .demo-flags li { border: 1px solid var(--brand-blue); color: var(--brand-blue-on-dark); padding: 0.35rem 0.7rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
-    .ticker { width: 100%; overflow: hidden; border-top: 1px solid var(--brand-blue); background: var(--brand-black); }
-    .ticker-track { display: flex; width: max-content; animation: ticker-scroll 80s linear infinite; }
-    .ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
-    .ticker-list { display: flex; margin: 0; padding: 0; list-style: none; }
-    .tick { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.95rem 1.5rem; white-space: nowrap; border-right: 1px solid var(--brand-blue); font-size: 1rem; }
-    .tick-tag, .tick-game { color: var(--brand-blue-on-dark); font-weight: 800; }
-    .tick-tag { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .tick-type { font-weight: 800; color: var(--brand-white); }
-    .tick-desc { color: var(--brand-white); }
-    @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    @media (max-width: 900px) {
-      .library, .roadmap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 800px) {
-      .platform-grid, .feature-layout { grid-template-columns: 1fr; }
-      .featured-callout { width: min(100%, 16rem); justify-self: center; }
-      .poster-frame { width: min(100%, 36rem); justify-self: center; }
-      .shot-rail { grid-auto-columns: 82%; }
-    }
-    @media (max-width: 560px) {
-      .library, .roadmap-grid { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .poster-frame, .shot-rail img, .ticker-track { transition: none; animation: none; }
-      .poster-frame:hover, .shot-rail figure:hover img { transform: none; }
-      .ticker { overflow: visible; }
-      .ticker-track { flex-wrap: wrap; width: 100%; }
-      .ticker-list[aria-hidden="true"] { display: none; }
-      .tick { white-space: normal; width: 100%; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/arcade.css?v=arcade2">
   <script src="/runtime/arcade-telemetry.js"></script>
 </head>
-<body>
+<body class="arcade-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <nav class="site-nav" aria-label="Primary">
@@ -118,7 +38,7 @@
         <div class="nav-dropdown__menu" id="products-menu">
           <a href="CRM.html" data-nav="crm">CRM</a>
           <a href="GGamingOS.html" data-nav="ggamingos">GGamingOS</a>
-          <a href="arcade/" data-nav="arcade" aria-current="page">Arcade</a>
+          <a href="Arcade.html" data-nav="arcade" aria-current="page">Arcade</a>
           <a href="GStudent.html" data-nav="gstudent">GStudent</a>
           <a href="GProfessor.html" data-nav="gprofessor">GProfessor</a>
           <a href="LMS.html" data-nav="lms">LMS</a>
@@ -130,6 +50,7 @@
       </div>
       <a href="Education.html" data-nav="education">Education</a>
       <a href="About.html" data-nav="about">About</a>
+      <a class="btn btn--primary nav-cta" href="games/frontier-trail/">Play Now</a>
     </div>
   </nav>
 </header>
@@ -140,18 +61,22 @@
         <p class="arcade-mark"><span>GenesisOS Labs</span><span>Arcade</span></p>
         <h1 id="arcade-title">Arcade</h1>
         <p class="stage-lead">Browser-based games. Instant play. No install required. Play anywhere.</p>
+        <p class="stage-sub"><strong>Now playing: Frontier Trail.</strong> A strategy-survival game. Lead a company 980 miles west and manage food, supplies, travel, and survival.</p>
         <ul class="chips">
           <li>Browser-based games</li>
           <li>Instant play</li>
           <li>No install required</li>
           <li>Play anywhere</li>
         </ul>
+        <div class="btn-group arcade-hero-actions">
+          <a class="btn btn--primary btn--play" href="games/frontier-trail/">Play Now</a>
+          <a class="btn btn--secondary" href="games/frontier-trail/listing.html">Game details</a>
+        </div>
       </div>
-      <a class="featured-callout" href="#featured">
-        <img src="games/frontier-trail/UI/cabinet.jpg" alt="Frontier Trail cabinet artwork. The full poster is shown, from the title rope to the company on the road.">
-        <span>Featured game</span>
-        <strong>Frontier Trail</strong>
-      </a>
+      <figure class="arcade-frame arcade-frame--cabinet">
+        <figcaption class="arcade-frame__bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span> Frontier Trail <b>Featured game</b></figcaption>
+        <img src="games/frontier-trail/UI/cabinet.jpg" width="1800" height="1800" alt="Frontier Trail cabinet artwork. The full poster is shown, from the title rope to the company on the road." decoding="async" fetchpriority="high">
+      </figure>
     </div>
   </section>
 
@@ -160,8 +85,9 @@
       <p class="section__eyebrow">Featured game</p>
       <h2 id="featured-title" class="section__title">Frontier Trail</h2>
       <div class="feature-layout">
-        <figure class="poster-frame">
-          <img src="games/frontier-trail/UI/cabinet.jpg" alt="Frontier Trail cabinet artwork. The full poster is shown, from the title rope to the company on the road.">
+        <figure class="arcade-frame">
+          <figcaption class="arcade-frame__bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span> On the road</figcaption>
+          <img src="games/frontier-trail/UI/shots/travel.jpg" width="1845" height="1038" alt="The wagon on the Eastwood road, with the ledger and camp dock" loading="lazy" decoding="async">
         </figure>
         <div>
           <p>Lead a company from Havenbrook Wharf to Newhaven Claim. Hunt, trade, and keep the wagon alive across 980 miles.</p>
@@ -171,26 +97,22 @@
           </div>
         </div>
       </div>
-      <div class="shot-rail" aria-label="Frontier Trail screenshots">
-        <figure>
-          <img src="games/frontier-trail/UI/shots/travel.jpg" alt="The wagon on the Eastwood road, with the ledger and camp dock">
-          <figcaption>On the road</figcaption>
+      <div class="arcade-shots" aria-label="Frontier Trail screenshots">
+        <figure class="arcade-frame">
+          <figcaption class="arcade-frame__bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span> The road</figcaption>
+          <img src="games/frontier-trail/UI/shots/map.jpg" width="928" height="623" alt="The western road and its landmarks" loading="lazy" decoding="async">
         </figure>
-        <figure>
-          <img src="games/frontier-trail/UI/shots/map.jpg" alt="The western road and its landmarks">
-          <figcaption>The road</figcaption>
+        <figure class="arcade-frame">
+          <figcaption class="arcade-frame__bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span> A choice</figcaption>
+          <img src="games/frontier-trail/UI/shots/event.jpg" width="672" height="559" alt="A stranger on the road, with three choices" loading="lazy" decoding="async">
         </figure>
-        <figure>
-          <img src="games/frontier-trail/UI/shots/event.jpg" alt="A stranger on the road, with three choices">
-          <figcaption>A choice</figcaption>
+        <figure class="arcade-frame">
+          <figcaption class="arcade-frame__bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span> Supplies</figcaption>
+          <img src="games/frontier-trail/UI/shots/inventory.jpg" width="672" height="510" alt="Inventory, pace, and rations" loading="lazy" decoding="async">
         </figure>
-        <figure>
-          <img src="games/frontier-trail/UI/shots/inventory.jpg" alt="Inventory, pace, and rations">
-          <figcaption>Supplies</figcaption>
-        </figure>
-        <figure>
-          <img src="games/frontier-trail/UI/shots/camp.jpg" alt="Camp dock with pace, rations, and trail actions">
-          <figcaption>In camp</figcaption>
+        <figure class="arcade-frame">
+          <figcaption class="arcade-frame__bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span> In camp</figcaption>
+          <img src="games/frontier-trail/UI/shots/camp.jpg" width="1024" height="220" alt="Camp dock with pace, rations, and trail actions" loading="lazy" decoding="async">
         </figure>
       </div>
     </div>
@@ -242,7 +164,7 @@
           <h3>Frontier Trail</h3>
           <p>Wagon-trail survival. Free in the browser.</p>
           <p class="status">Playable</p>
-          <a href="games/frontier-trail/">Play Now</a>
+          <a class="btn btn--primary" href="games/frontier-trail/">Play Now</a>
         </article>
         <article class="lib-card soon"><h3>Starwing Patrol</h3><p class="status">Coming soon</p></article>
         <article class="lib-card soon"><h3>Road Rage</h3><p class="status">Coming soon</p></article>
@@ -256,19 +178,13 @@
     </div>
   </section>
 
-  <section class="section section--white" aria-labelledby="roadmap-title">
+  <section class="section section--blue final-cta" id="play" aria-labelledby="final-title">
     <div class="container">
-      <h2 id="roadmap-title" class="section__title">Games in development</h2>
-      <p class="section__lead">GenesisOS Arcade is growing. These cabinets stay on the floor, and they are not open to play yet.</p>
-      <div class="roadmap-grid">
-        <article class="road-card"><h3>Starwing Patrol</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Road Rage</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Gunsmoke Outriders</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Genesis Strike</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Genesis Frontline</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Genesis Micro Racers</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Pirates: Tides of Booty</h3><p>Future cabinet</p></article>
-        <article class="road-card"><h3>Shadow Protocol</h3><p>Future cabinet</p></article>
+      <h2 id="final-title" class="section__title">Frontier Trail is open.</h2>
+      <p class="section__lead">Browser-based games. Instant play. No install required. Play anywhere.</p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="games/frontier-trail/">Play Now</a>
+        <a class="btn btn--secondary" href="games/frontier-trail/listing.html">Game details</a>
       </div>
     </div>
   </section>
@@ -286,7 +202,7 @@
         <li><a href="GCoin.html">GCoin</a></li>
         <li><a href="CRM.html">CRM</a></li>
         <li><a href="GGamingOS.html">GGamingOS</a></li>
-        <li><a href="arcade/">Arcade</a></li>
+        <li><a href="Arcade.html">Arcade</a></li>
         <li><a href="GStudent.html">GStudent</a></li>
         <li><a href="GProfessor.html">GProfessor</a></li>
         <li><a href="LMS.html">LMS</a></li>
