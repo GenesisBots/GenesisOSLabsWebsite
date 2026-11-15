@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../../runtime/frontiertrail.js","../../runtime/launch-gate.js","../../runtime/runtime.js","../../runtime/runtime.css","./frontiertrail.css"])))=>i.map(i=>d[i]);
+import"../../runtime/modulepreload-polyfill.js";import{h as r,_ as o}from"../../runtime/launch-gate.js";r("frontiertrail",()=>o(()=>import("../../runtime/frontiertrail.js"),__vite__mapDeps([0,1,2,3,4]),import.meta.url));
