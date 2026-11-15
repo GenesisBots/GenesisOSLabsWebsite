@@ -1,0 +1,295 @@
+/* GenesisOS Labs Arcade — page-specific (loads last, @layer page)
+   Shared system: neon.css (@layer brand). Compat: style.css (@layer compat).
+   Scope: body.arcade-page. Tri-color only: --brand-blue | --brand-white | --brand-black
+   (+ --brand-blue-on-dark for text on black).
+
+   Why @layer page: neon.css sets `.section--white a { color: blue }` in @layer brand.
+   That selector (0,1,1) out-ranks `.btn--primary` (0,1,0) in the same layer, which
+   painted button labels blue-on-blue. Rules in a later layer win regardless of
+   specificity, so every CTA rule below is immune to link-colour inheritance. */
+
+@layer compat, brand, page;
+
+@layer page {
+
+  /* =========================================================
+     1. CTA SYSTEM — safeguards for every .btn on the Arcade page
+     ========================================================= */
+
+  .arcade-page a.btn,
+  .arcade-page a.btn:visited { text-decoration: none; }
+
+  .arcade-page .btn:active { transform: translateY(1px); }
+
+  .arcade-page .btn:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 3px;
+  }
+
+  /* --- Primary: white label on blue (default, every surface but blue) --- */
+  .arcade-page .btn--primary,
+  .arcade-page .btn--primary:visited {
+    background: var(--brand-blue);
+    color: var(--brand-white);
+    border-color: var(--brand-blue);
+  }
+
+  /* Dark surfaces: blue-on-black edge is only 2.9:1, so outline the default state
+     in the on-dark blue (7.9:1 against black) to keep the button shape >= 3:1. */
+  .arcade-page .platform-hero .btn--primary:not(:hover):not(:focus-visible):not(:active),
+  .arcade-page .section--black .btn--primary:not(:hover):not(:focus-visible):not(:active),
+  .arcade-page .site-header .btn--primary:not(:hover):not(:focus-visible):not(:active) {
+    border-color: var(--brand-blue-on-dark);
+  }
+
+  /* Light surfaces: hover/focus/active go black so the shape stays visible on white. */
+  .arcade-page .section--white .btn--primary:hover,
+  .arcade-page .section--white .btn--primary:focus-visible,
+  .arcade-page .section--white .btn--primary:active {
+    background: var(--brand-black);
+    color: var(--brand-white);
+    border-color: var(--brand-black);
+  }
+
+  /* Dark surfaces: hover/focus/active invert to white with a blue label. */
+  .arcade-page .platform-hero .btn--primary:hover,
+  .arcade-page .platform-hero .btn--primary:focus-visible,
+  .arcade-page .platform-hero .btn--primary:active,
+  .arcade-page .section--black .btn--primary:hover,
+  .arcade-page .section--black .btn--primary:focus-visible,
+  .arcade-page .section--black .btn--primary:active,
+  .arcade-page .site-header .btn--primary:hover,
+  .arcade-page .site-header .btn--primary:focus-visible,
+  .arcade-page .site-header .btn--primary:active {
+    background: var(--brand-white);
+    color: var(--brand-blue);
+    border-color: var(--brand-white);
+  }
+
+  /* --- Secondary: outlined --- */
+  .arcade-page .btn--secondary,
+  .arcade-page .btn--secondary:visited {
+    background: var(--brand-white);
+    color: var(--brand-blue);
+    border-color: var(--brand-blue);
+  }
+
+  .arcade-page .btn--secondary:hover,
+  .arcade-page .btn--secondary:focus-visible,
+  .arcade-page .btn--secondary:active {
+    background: var(--brand-blue);
+    color: var(--brand-white);
+    border-color: var(--brand-blue);
+  }
+
+  .arcade-page .platform-hero .btn--secondary,
+  .arcade-page .platform-hero .btn--secondary:visited,
+  .arcade-page .section--black .btn--secondary,
+  .arcade-page .section--black .btn--secondary:visited {
+    background: transparent;
+    color: var(--brand-white);
+    border-color: var(--brand-white);
+  }
+
+  .arcade-page .platform-hero .btn--secondary:hover,
+  .arcade-page .platform-hero .btn--secondary:focus-visible,
+  .arcade-page .platform-hero .btn--secondary:active,
+  .arcade-page .section--black .btn--secondary:hover,
+  .arcade-page .section--black .btn--secondary:focus-visible,
+  .arcade-page .section--black .btn--secondary:active {
+    background: var(--brand-white);
+    color: var(--brand-blue);
+    border-color: var(--brand-white);
+  }
+
+  /* --- Blue surfaces (closing CTA) --- */
+  .arcade-page .section--blue .btn--primary,
+  .arcade-page .section--blue .btn--primary:visited {
+    background: var(--brand-white);
+    color: var(--brand-blue);
+    border-color: var(--brand-white);
+  }
+
+  .arcade-page .section--blue .btn--primary:hover,
+  .arcade-page .section--blue .btn--primary:focus-visible,
+  .arcade-page .section--blue .btn--primary:active {
+    background: var(--brand-black);
+    color: var(--brand-white);
+    border-color: var(--brand-white); /* white edge: 7.2:1 against the blue band */
+  }
+
+  .arcade-page .section--blue .btn--secondary,
+  .arcade-page .section--blue .btn--secondary:visited {
+    background: transparent;
+    color: var(--brand-white);
+    border-color: var(--brand-white);
+  }
+
+  .arcade-page .section--blue .btn--secondary:hover,
+  .arcade-page .section--blue .btn--secondary:focus-visible,
+  .arcade-page .section--blue .btn--secondary:active {
+    background: var(--brand-white);
+    color: var(--brand-blue);
+    border-color: var(--brand-white);
+  }
+
+  /* Focus rings that stay visible on dark and blue surfaces. */
+  .arcade-page .platform-hero .btn:focus-visible,
+  .arcade-page .section--black .btn:focus-visible,
+  .arcade-page .site-header .btn:focus-visible { outline-color: var(--brand-blue-on-dark); }
+  .arcade-page .section--blue .btn:focus-visible { outline-color: var(--brand-white); }
+
+  .btn--play { min-height: 3.5rem; padding-inline: 2rem; font-size: 1.125rem; }
+
+  /* Header CTA (matches the nav-cta pattern on Aerys / GStudent / GProfessor). */
+  .arcade-page .nav-links a.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    margin-left: 0.25rem;
+    padding: 0.45rem 0.85rem;
+    border: 2px solid var(--brand-blue);
+    font-size: 0.875rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  /* =========================================================
+     2. HERO
+     ========================================================= */
+  .platform-hero { background: var(--brand-black); color: var(--brand-white); border-bottom: 1px solid var(--brand-blue); padding: var(--space-7) 0; }
+  .platform-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 24rem); gap: var(--space-6); align-items: center; }
+  .arcade-mark { display: flex; gap: 0.65rem; margin: 0 0 var(--space-3); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+  .arcade-mark span:last-child { color: var(--brand-blue-on-dark); }
+  .platform-hero h1 { margin: 0; font-size: clamp(3rem, 7vw, 4.5rem); }
+  .stage-lead { margin: var(--space-3) 0 0; max-width: 36rem; font-size: 1.35rem; line-height: 1.45; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: var(--space-4) 0 0; padding: 0; list-style: none; }
+  .chips li { border: 1px solid var(--brand-blue); color: var(--brand-blue-on-dark); padding: 0.35rem 0.7rem; font-size: 0.875rem; font-weight: 700; }
+  .stage-sub { margin: var(--space-3) 0 0; max-width: 36rem; font-size: 1rem; line-height: 1.55; color: var(--brand-white); }
+  .stage-sub strong { color: var(--brand-blue-on-dark); font-weight: 800; }
+  .arcade-hero-actions { margin-top: var(--space-5); }
+
+  /* =========================================================
+     3. SCREENSHOT FRAMES (same frame language as .aerys-hero-image)
+     ========================================================= */
+  .arcade-frame {
+    margin: 0;
+    border: 1px solid var(--brand-blue);
+    background: var(--brand-black);
+    box-shadow: 0 24px 60px color-mix(in srgb, var(--brand-blue) 28%, transparent);
+  }
+
+  .arcade-frame__bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--brand-blue);
+    color: var(--brand-white);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .arcade-frame__bar span { width: 0.5rem; height: 0.5rem; flex: none; background: var(--brand-blue-on-dark); }
+  .arcade-frame__bar b { margin-left: auto; color: var(--brand-blue-on-dark); font-weight: 800; }
+
+  .arcade-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: var(--brand-black);
+  }
+
+  .arcade-frame--cabinet img { aspect-ratio: 1; }
+
+  .feature-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr); gap: var(--space-6); align-items: center; }
+  .feature-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-4); }
+
+  .arcade-shots {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin-top: var(--space-6);
+  }
+
+  /* =========================================================
+     4. GAME LIBRARY
+     ========================================================= */
+  .library { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-5); }
+  .lib-card { border: 1px solid var(--brand-blue); padding: var(--space-4); min-height: 100%; display: flex; flex-direction: column; gap: var(--space-2); background: var(--brand-white); color: var(--brand-black); }
+  .lib-card h3 { margin: 0; }
+  .section--black .lib-card h3,
+  .section--black .lib-card p { color: var(--brand-black); }
+  .section--black .lib-card.is-live,
+  .section--black .lib-card.is-live h3,
+  .section--black .lib-card.is-live p { color: var(--brand-white); }
+  .section--black .lib-card .status { color: var(--brand-blue); }
+  .section--black .lib-card.is-live .status { color: var(--brand-blue-on-dark); }
+  .lib-card p { margin: 0; }
+  .status { margin-top: auto; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-blue); }
+  .lib-card.is-live { background: var(--brand-black); color: var(--brand-white); }
+  .lib-card.is-live .btn { align-self: flex-start; margin-top: var(--space-2); }
+  .soon { pointer-events: none; }
+
+  /* =========================================================
+     5. DEMONET TICKER (unchanged)
+     ========================================================= */
+  .demonet-band { background: var(--brand-black); color: var(--brand-white); border-top: 1px solid var(--brand-blue); border-bottom: 1px solid var(--brand-blue); }
+  .demonet-head { width: min(100% - 2rem, 1120px); margin: 0 auto; padding: var(--space-5) 0 var(--space-4); }
+  .demonet-band h2 { margin: 0; color: var(--brand-white); }
+  .demonet-band .section__eyebrow { color: var(--brand-blue-on-dark); }
+  .demonet-lead { margin: var(--space-3) 0 0; max-width: 40rem; color: var(--brand-white); }
+  .demo-flags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: var(--space-4) 0 0; padding: 0; list-style: none; }
+  .demo-flags li { border: 1px solid var(--brand-blue); color: var(--brand-blue-on-dark); padding: 0.35rem 0.7rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+  .ticker { width: 100%; overflow: hidden; border-top: 1px solid var(--brand-blue); background: var(--brand-black); }
+  .ticker-track { display: flex; width: max-content; animation: ticker-scroll 80s linear infinite; }
+  .ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
+  .ticker-list { display: flex; margin: 0; padding: 0; list-style: none; }
+  .tick { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.95rem 1.5rem; white-space: nowrap; border-right: 1px solid var(--brand-blue); font-size: 1rem; }
+  .tick-tag, .tick-game { color: var(--brand-blue-on-dark); font-weight: 800; }
+  .tick-tag { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .tick-type { font-weight: 800; color: var(--brand-white); }
+  .tick-desc { color: var(--brand-white); }
+  @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* =========================================================
+     6. CLOSING CTA (shared .final-cta from neon.css + Arcade sizing)
+     ========================================================= */
+  .arcade-page .final-cta .btn { min-height: 3.25rem; padding-inline: 1.35rem; }
+
+  /* =========================================================
+     7. RESPONSIVE
+     ========================================================= */
+  @media (max-width: 960px) {
+    .library { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 800px) {
+    .platform-grid, .feature-layout { grid-template-columns: 1fr; }
+    .arcade-frame--cabinet { width: min(100%, 22rem); justify-self: center; }
+    .arcade-shots { grid-template-columns: 1fr; gap: var(--space-4); }
+  }
+
+  @media (max-width: 560px) {
+    .library { grid-template-columns: 1fr; }
+    .arcade-hero-actions .btn,
+    .feature-actions .btn,
+    .arcade-page .final-cta .btn { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track, .arcade-page .btn { transition: none; animation: none; }
+    .arcade-page .btn:active { transform: none; }
+    .ticker { overflow: visible; }
+    .ticker-track { flex-wrap: wrap; width: 100%; }
+    .ticker-list[aria-hidden="true"] { display: none; }
+    .tick { white-space: normal; width: 100%; }
+  }
+}
